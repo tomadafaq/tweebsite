@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Technical Writers in EU</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- JQuery fadeOut/fadeIn of NAV menu -->
+<script>
+$(document).ready(function(){
+	$("#hide").mouseleave(function(){
+         $("#hide").fadeOut(1000);   });
+		 
+	$("#hide").mouseenter(function(){
+	$("#hide").stop();
+        $("#hide").fadeIn();   });
+});
+</script>
+</head>
+<body>
+<!-- <div id="wrapper"> -->
+<!--the nav menu-->
+<nav class="w3-sidenav w3-black w3-card-2 w3-xlarge" id="hide" style="display:none"  ><!-- "function(w3_close, 3000)"> -->
+  <a href="javascript:void(0)" onclick="w3_close()" 
+  class="w3-closenav w3-right">&times;</a><br>
+  <a href="index.html">Home</a>		
+  <a href="about.html">About us</a>		
+  <a href="whatwedo.html">What we do</a>		
+  <a href="community.html">Community</a>		
+  <a href="contacts.html">Contacts</a>		
+</nav>
+
+<!--the header-->
+<header class="w3-container w3-teal">
+  <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+  <h1 class="w3-jumbo">Welcome to technical writers.eu!</h1>
+  <p class="w3-xlarge">This site is still under construction ...</p>
+</header>
+
+<!--the text containers-->
+<div class="w3-row-padding">
+  <div class="w3-quarter">
+	<h3>Who we are</h3>
+    <p>We are a small group of professional technical writers. We compose, edit and deliver technical content fot the IT community. 
+	<br><br>
+	We like to innovate, experiment and resort to harsh measures with the solid goal of making technical documentation better for everybody.</p>
+  </div>
+  <div class="w3-half">
+	<h3>Our mission</h3>  
+  <p>On a large scale, our mission is to turn <strong>technicalwriters.eu</strong> into a place where people will find high quality technical content for their organisations. On the level of your organisation, our goal is to simplify your documentation, from preparation to delivery; to the actual content. 
+  <br><br>
+  We embrace latest technology trends for best results and offer several outputs for your technical content. We can maintain your portal and take care that your documentaiton is available to users/clients 24/7.</p>
+  </div>
+  <div class="w3-quarter">
+	<h3>Your benefits</h3>  
+    <p>Are you looking for a modern web-oriented content with interactive screens and videos? 
+	<br><br>
+	Do you want a fresh visual and linguistic approach to the instructions for your users or clients? Well, we are your guys!</p>
+  </div>
+</div>
+<div></div>
+<br>
+<!--the sexy Footer-->
+<footer class="w3-container w3-light-blue">
+  <p>Technical writers EU | 2021<p>
+</footer>
+<!-- <div> -->
+
+
+<!-- open NAV menu JS  -->
+
+<script>
+function w3_open() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+}
+function w3_close() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+}
+function w3_fade() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+}
+</script>
+
+
+
+
+</body>
+</html>

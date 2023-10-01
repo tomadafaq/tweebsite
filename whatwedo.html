@@ -18,6 +18,19 @@ $(document).ready(function(){
         $("#hide").fadeIn();   });
 });
 </script>
+
+<style>
+  #footer {
+      position: fixed;
+      padding: 10px 10px 0px 10px;
+      bottom: 0;
+      width: 100%;
+      /* Height of the footer*/
+      height: 40px;
+      background: rgb(135, 206, 235);
+  }
+</style>
+
 </head>
 <body>
 
@@ -26,9 +39,9 @@ $(document).ready(function(){
   <a href="javascript:void(0)" onclick="w3_close()" 
   class="w3-closenav w3-right">&times;</a><br>
   <a href="index.html">Home</a>		
-  <a href="about.html">About us</a>		
+  <a href="about.html">About</a>		
   <a href="whatwedo.html">What we do</a>		
-  <a href="cv.html">Community</a>		
+  <a href="cv.html">Toma's CV</a>		
   <a href="contacts.html">Contacts</a>		
 </nav>
 
@@ -41,27 +54,49 @@ $(document).ready(function(){
 <div class="w3-row-padding">
   <div class="w3-quarter">
 	<h3>What we do?</h3>
-    <p>Our point is: deliver fast & make it brief. We believe in concise and precise text, supplemented with rich content images and video. 
+  <p>We provide tech writing services for the ITY community:</p>
+    <ul>
+      <li>create text, diagrams, images and video technical content from scratch</li>
+      <li>deploy &amp; maintain documentation portals</li>
+      <li>reorganize your library, wiki, blog or doc web portal</li>
+      <li>help establish tech writing processes in your organization</li>
+      <li>migrate documentation to different formats and/or platforms</li>
+      <li>improve content SEO</li>
+      <li>provide consultancy on content strategy</li>
+      <li>consult you on any tech writing-related matter</li>
+    </ul>
+
+    <p>Our moto is: deliver fast & make it brief. We believe in concise and precise text, supplemented with rich content images and video.
 	<br><br>
 	</p>
   </div>
   <div class="w3-half">
-	<h3>Our mission</h3>  
-  <p>On a large scale, our mission is to turn <strong>technicalwriters.eu</strong> into a place where people will find high quality technical content for their organizations. On the level of your organisation, our goal is to simplify your documentation, from preparation to delivery; to the actual content. 
+	<h3>Portfolio</h3>  
+  <p>On a large scale, our mission is to turn <strong>techwriters.eu</strong> into a place where people will find high quality technical content for their organizations. On the level of your organisation, our goal is to simplify your documentation, from preparation to delivery; to the actual content. 
   <br><br>
   We embrace latest technology trends for best results and offer several outputs for your technical content. We can maintain your portal and take care that your documentation is available to users/clients 24/7.</p>
   </div>
   <div class="w3-quarter">
-	<h3>Your benefits</h3>  
-    <p>Are you looking for a modern web-oriented content with interactive screens and videos? 
-	<br><br>
-	Do you want a fresh visual and linguistic approach to the instructions for your users or clients? Well, we are your guys!</p>
+    <h3 id="technical-documentation">Technical documentation</h3>
+    <p>We create and maintain technical documentation.</p>
+    <ul>
+      <li>user guides</li>
+      <li>API references</li>
+      <li>installation &amp; deployment guide</li>
+      <li>administrator guides</li>
+      <li>developer guides</li>
+      <li>marketing and technical articles for blogs</li>
+    </ul>
   </div>
 </div>
 
-<footer class="w3-container w3-light-blue">
-  <p>Technical writers EU | 2021</p>
-</footer>
+<!-- <footer id="footer">
+  <p>Technical writers EU | 2023</p>
+</footer> -->
+
+<div id="footer">
+Tech Writers EU | 2023 | All rights reserved
+</div>
 
 <script>
 function w3_open() {

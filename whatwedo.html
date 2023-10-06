@@ -1,112 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Technical Writers in EU</title>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" type="text/css" href="styles.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>What we do: Technical Writers in EU</title>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Local JS -->
+    <script src="main.js"></script>
 
-<!-- JQuery fadeOut/fadeIn of NAV menu -->
-<script>
-$(document).ready(function(){
-	$("#hide").mouseleave(function(){
-         $("#hide").fadeOut(1000);   });
-		 
-	$("#hide").mouseenter(function(){
-	$("#hide").stop();
-        $("#hide").fadeIn();   });
-});
-</script>
+  </head>
+  
+  <body>
+    <!--the nav menu-->
+    <nav
+      class="w3-sidenav w3-black w3-card-2 w3-xlarge"
+      id="hide"
+      style="display: none"
+    >
+      <!-- "function(w3_close, 3000)"> -->
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-closenav w3-right"
+        >&times;</a
+      ><br />
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="whatwedo.html">What we do</a>
+      <a href="portfolio.html">Toma's CV</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
 
-<!-- CSS - for footer only -->
-<style>
-  #footer {
-      position: fixed;
-      padding: 10px 10px 0px 10px;
-      bottom: 0;
-      width: 100%;
-      /* Height of the footer*/
-      height: 40px;
-      background: rgb(135, 206, 235);
-  }
-</style>
+    <header class="w3-container w3-teal">
+      <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+      <h1 class="w3-jumbo">What we do?</h1>
+      <p class="w3-xlarge">This site is still under construction...</p>
+    </header>
 
-</head>
-<body>
+    <div class="w3-row-padding">
+      <div class="w3-quarter">
+        <h3>What we do?</h3>
+        <p>We provide tech writing services for the IT community:</p>
+        <ul>
+          <li>
+            create text, diagrams, images and video technical content from
+            scratch
+          </li>
+          <li>deploy &amp; maintain documentation portals</li>
+          <li>reorganize your library, wiki, blog or doc web portal</li>
+          <li>help establish tech writing processes in your organization</li>
+          <li>
+            migrate documentation across different platforms and/or formats
+          </li>
+          <li>improve content SEO</li>
+          <li>provide consultancy on content strategy</li>
+          <li>consult you on any tech writing-related matter</li>
+        </ul>
 
-<!--the nav menu-->
-<nav class="w3-sidenav w3-black w3-card-2 w3-xlarge" id="hide" style="display:none"  ><!-- "function(w3_close, 3000)"> -->
-  <a href="javascript:void(0)" onclick="w3_close()" 
-  class="w3-closenav w3-right">&times;</a><br>
-  <a href="index.html">Home</a>		
-  <a href="about.html">About</a>		
-  <a href="whatwedo.html">What we do</a>		
-  <a href="portfolio.html">Toma's CV</a>		
-  <a href="contacts.html">Contacts</a>		
-</nav>
+        <p>
+          Our moto is: deliver fast & make it brief. We believe in concise and precise text, supplemented with rich content, including visuals, like diagrams images and video.
+          <br /><br />
+        </p>
+      </div>
+      <div class="w3-half">
+        
+        <!-- We do Doc portals -->
+        <h3>We know doc portals</h3>
+        <p>Doc portals is what we call any web hosted library of technical documentation. If your library consists of PDFs and/or Word docs, Excel sheets and other supplementary standalone files, that is not really a doc portal. </p>
+        
+        <h4>Create doc portals from scratch</h4>
+        <p>Thats is usually what startup companies need. Whether it is developer's docs, pluggable components, APIs or SDKs, we know what to do. Usually, you just need to decide if you want a CMS or would rather go with a Git repo for the job. The rest is up to us.</p>
+                
+        <h4>Migrate doc portals to better platforms</h4>
+        <p>Usually it happens with companies with a long history that offer multiple products and services. It is hard enough to maintain all documentation sets for all products but as content grows bigger, so do challenges with migrating it to something better. Moving everything from one platform to another is not a simple task: everything you do must be searchable and it's often impossible, for example, to export and import images. We knwo the challenges and are able to do it for you. We also help make the right decisions with all of the above plus so much more.</p>
+        
+        <h4>Reorganize doc portals & update existing documentation</h4>
+        <p>If you have existing doc portal, but aren't happy with its content; or receive negative feedback from your users, we're here to help. You might need help on proof-reading & editing, restructuring of sections, or simply applying best practices. We can consult you on what to do; or you can hire us to do it for you. Depending on the size of your documentation, this may turn out to be a very cumbersome task. <strong>Reorganizing a doc portal</strong> is not easy and often requires you to convey a research in order to identify the weakest spots to address. 
+        </p>
+        <p>We also <strong>update existing documentation</strong>. Updates vary from simple refreshing of images to match the latest UI, to breaking down sections, or removing obsolete content. Don't forget we also do diagrams, videos, GIFs and utilize all forms of visuals, for example font-awesome icons, etc. </p>
+          <p>We have experience with doc portals.</p>
+        
+      </div>
+      <div class="w3-quarter">
+        <h3 id="technical-documentation">We know technical documentation</h3>
+        <p>We create and maintain technical documentation.</p>
+        <ul>
+          <li>user guides</li>
+          <li>API references</li>
+          <li>installation &amp; deployment guide</li>
+          <li>administrator guides</li>
+          <li>developer guides</li>
+          <li>marketing and technical articles for blogs</li>
+        </ul>
+        <br />
+      </div>
+    </div>
 
-<header class="w3-container w3-teal">
-  <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
-  <h1 class="w3-jumbo">What we do?</h1>
-  <p class="w3-xlarge">This site is still under construction ...</p>
-</header>
-
-<div class="w3-row-padding">
-  <div class="w3-quarter">
-	<h3>What we do?</h3>
-  <p>We provide tech writing services for the ITY community:</p>
-    <ul>
-      <li>create text, diagrams, images and video technical content from scratch</li>
-      <li>deploy &amp; maintain documentation portals</li>
-      <li>reorganize your library, wiki, blog or doc web portal</li>
-      <li>help establish tech writing processes in your organization</li>
-      <li>migrate documentation to different formats and/or platforms</li>
-      <li>improve content SEO</li>
-      <li>provide consultancy on content strategy</li>
-      <li>consult you on any tech writing-related matter</li>
-    </ul>
-
-    <p>Our moto is: deliver fast & make it brief. We believe in concise and precise text, supplemented with rich content images and video.
-	<br><br>
-	</p>
-  </div>
-  <div class="w3-half">
-	<h3>Portfolio</h3>  
-  <p>On a large scale, our mission is to turn <strong>techwriters.eu</strong> into a place where people will find high quality technical content for their organizations. On the level of your organization, our goal is to simplify your documentation, from preparation to delivery; to the actual content. 
-  <br><br>
-  We embrace latest technology trends for best results and offer several outputs for your technical content. We can maintain your portal and take care that your documentation is available to users/clients 24/7.</p>
-  </div>
-  <div class="w3-quarter">
-    <h3 id="technical-documentation">Technical documentation</h3>
-    <p>We create and maintain technical documentation.</p>
-    <ul>
-      <li>user guides</li>
-      <li>API references</li>
-      <li>installation &amp; deployment guide</li>
-      <li>administrator guides</li>
-      <li>developer guides</li>
-      <li>marketing and technical articles for blogs</li>
-    </ul>
-  </div>
-</div>
-
-<!-- <footer id="footer">
+    <!-- <footer id="footer">
   <p>Technical writers EU | 2023</p>
 </footer> -->
 
-<div id="footer">
-Tech Writers EU | 2023 | All rights reserved
-</div>
+    <div id="footer">Tech Writers EU | 2023 | All rights reserved</div>
 
-<script>
-function w3_open() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-}
-function w3_close() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-}
-</script>
-
-</body>
+  </body>
 </html>

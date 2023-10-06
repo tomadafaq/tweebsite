@@ -8,44 +8,20 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-		<!-- JQuery fadeOut/fadeIn of NAV menu -->
-		<script>
-			$(document).ready(function(){
-			$("#hide").mouseleave(function(){
-			$("#hide").fadeOut(1000);   });
-
-			$("#hide").mouseenter(function(){
-			$("#hide").stop();
-			$("#hide").fadeIn();   });
-			});
-		</script>
-
-		<!-- CSS - for footer only -->
-		<style>
-			#footer {
-			position: fixed;
-			padding: 10px 10px 0px 10px;
-			bottom: 0;
-			width: 100%;
-			/* Height of the footer*/
-			height: 40px;
-			background: rgb(135, 206, 235);
-			}
-		</style>
+		<!-- Local JS -->
+		<script src="main.js"></script>
 
 	</head>
 	<body>
 
 		<!--the nav menu-->
-		<nav class="w3-sidenav w3-black w3-card-2 w3-xlarge" id="hide" style="display:none"  ><!-- "function(w3_close, 3000)"> -->
-			<a href="javascript:void(0)" onclick="w3_close()" 
-					class="w3-closenav w3-right">&times;</a><br>
-				<a href="index.html"><span style="padding-right: 0.7em;">Home</span></a>		
-				<a href="about.html"><span style="padding-right: 0.7em;">About</span></a>		
-				<a href="whatwedo.html"><span style="padding-right: 0.7em;">What we do</span></a>		
-				<a href="portfolio.html"><span style="padding-right: 0.7em;">CVs and Portfolio</span></a> 
-				<a href="contacts.html"><span style="padding-right: 0.7em;">Contacts</span></a>		
+		<nav class="w3-sidenav w3-dark-grey w3-card-2 w3-xlarge" id="hide" style="display:none"  ><!-- "function(w3_close, 3000)"> -->
+			<a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-right">&times;</a><br />
+			<a href="index.html"><span style="padding-right: 0.7em;">Home</span></a>		
+			<a href="about.html"><span style="padding-right: 0.7em;">About</span></a>		
+			<a href="whatwedo.html"><span style="padding-right: 0.7em;">What we do</span></a>		
+			<a href="portfolio.html"><span style="padding-right: 0.7em;">CVs and Portfolio</span></a> 
+			<a href="contacts.html"><span style="padding-right: 0.7em;">Contacts</span></a>		
 		</nav>
 
 		<header class="w3-container w3-teal">
@@ -58,7 +34,7 @@
 
 			<div class="w3-half">
 				<h3>Some words about Toma</h3>  
-				<p>Toma Kashamov is the founder and key figure behind <strong>techwriters.eu</strong>. Born in Sofia, Bulgaria, his story in writing begins ever since he was a kid. He had a passion for writing and learning for languages, which actually helped shape his linguistic skills, even though he did not realize it at the time.</p>
+				<p>Toma Kashamov is the founder and key figure behind <strong>techwriters.eu</strong>. Born in Sofia, Bulgaria, his story in writing begins ever since he was a kid. He had a passion for writing and learning languages, which helped shape his linguistic skills, even though he did not realize it at the time.</p>
 
 				<h4>Becoming a translator</h4>
 				<p>In college times he knew he had to find a job. His fluency in English helped him find translation projects English to Bulgarian and vice-versa. But English is the most popular language for translations and competition was harsh. To keep the inflow of projects, he had to stick to one of the less coveted options that were still popular: legal or technical texts.</p>
@@ -73,7 +49,7 @@
 			<div class="w3-quarter">
 				<h3>Educational section</h3>  
 				<p>This page contains samples that showcase what we can do. This is for our customers. Alongside, we also want to share knowledge. A lot of the content in our portfolio and knowledge sections display different ways to present documentation and information. Sections Knowledge > Education and Knowledge >  Widgets offer useful info to everyone not just people in tech.
-					<br><br>
+					<br /><br />
 							Our Educational section is meant to help and inspire other technical writers as well. 
 							<!-- Techwriters.eu is dedicated  -->
 				</p>
@@ -81,26 +57,26 @@
 
 			<div class="w3-quarter">
 				<h3>A responsive pine tree</h3>  
-				<p>The content for this space is not complete, so here's a resizable responsive pine tree instead. When you zoom this webpage in or out, the tree's size remains the same. However, it adjusts its size depending on the window or screen size that you watch it on.<br><br> Be nice to our planet, keep it green and clean, plant a tree.
-					<div class="w3-center" style="font-size: 20vw; position: centered;"><em class="fa fa-tree w3-text-teal w3-hover-opacity"></em></div>
+				<p>The content for this space is not complete, so here's an animated responsive pine tree instead. When you zoom this webpage in or out, the tree's size remains the same. However, it adjusts its size depending on the window or screen size that you watch it on.<br /><br /> Be nice to our planet, keep it green and clean, plant a tree.
+					<div class="w3-center w3-animate-zoom" style="font-size: 20vw; position: centered;"><em class="fa fa-tree w3-text-teal w3-hover-opacity"></em></div>
 				</p>
 			</div>
 		</div>			
-			<br>
+			<br />
 			<!-- <footer class="w3-container w3-light-blue"><p>Technical writers EU | 2023</p></footer> -->
 
 		<div id="footer">
 			Tech Writers EU | 2023 | All rights reserved
 		</div>
 
-		<script>
+		<!-- <script>
 			function w3_open() {
 			document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
 			}
 			function w3_close() {
 			document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
 			}
-		</script>
+		</script> -->
 
 	</body>
 </html>

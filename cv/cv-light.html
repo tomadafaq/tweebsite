@@ -5,14 +5,50 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="The CV of Toma Kashamov, Technical writer" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Local JS -->
+    <script src="../main.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        $("#hide").mouseleave(function(){
+        $("#hide").fadeOut(1000);});
+        $("#hide").mouseenter(function(){
+        $("#hide").stop();
+        $("#hide").fadeIn();   });
+        });
+    </script>
+
 	<style>
 		html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	</style>
 </head>
+
 <body class="w3-light-grey">
+
+    <nav class="w3-sidenav w3-dark-grey w3-card-2 w3-xlarge" id="hide" style="display:none"> <!-- "function(w3_close, 3000)"> -->
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-right">&times;</a><br />
+        <a href="../index.html"><span style="padding-right: 0.7em;">Home</span></a>		
+        <a href="../about.html"><span style="padding-right: 0.7em;">About</span></a>		
+        <a href="../whatwedo.html"><span style="padding-right: 0.7em;">What we do</span></a>		
+        <a href="../portfolio.html"><span style="padding-right: 0.7em;">CVs and Portfolio</span></a> 
+        <a href="../contacts.html"><span style="padding-right: 0.7em;">Contacts</span></a>		
+    </nav>
+
+    <header class="w3-container w3-teal">
+        <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+        <!-- <button class="w3-btn w3-dark-grey w3-spacing-small w3-border w3-round-large w3-right">See Dark version</button>         -->
+        <!-- <h3>This CV is prepared using W3.CSS</h3> -->
+    </header>
+
+    <div class="w3-container" >
+        <a href="../portfolio.html" class="w3-button w3-xlarge w3-circle w3-blue-grey w3-display-left"><span class="fa fa-arrow-left w3-text"></span></a>
+        <!-- <button class="w3-button w3-xlarge w3-circle w3-blue-grey w3-display-left"><span class="fa fa-arrow-left w3-text"></span></button> -->
+    </div>
 
 	<!-- Page Container -->
 	<div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -27,8 +63,7 @@
 					<div class="w3-display-container">
 						<img src="../img/tom-004-old-fine-wall.png" style="max-width:100%" alt="Toma Kashamov" />
 						<div class="w3-display-bottomleft w3-container w3-text-black">
-							<h3 style="color:rgb(114, 255, 255)">Toma Kashamov</h3>
-							<!-- <h3 style="color:rgb(31, 223, 223)">Toma Kashamov</h3> -->
+							<h3 style="color:rgb(114, 255, 255)">Toma Kashamov</h3>							
 						</div>
 					</div>
 					<div class="w3-container">
@@ -235,13 +270,10 @@
 						<hr />
 					</div>					
 				</div>
-
-				
 				
 				<!-- End Right Column -->
 			</div>
 
-			
 		<!-- End Grid -->		
 		</div>
 	
@@ -257,6 +289,17 @@
 				<em class="fa fa-linkedin w3-hover-opacity"></em>-->
 			<!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
 		</footer>
+
+
+        <!-- nav appearing / disappearing  -->
+		<!-- <script>
+			function w3_open() {
+			document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+			}
+			function w3_close() {
+			document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+			}
+		</script> -->
 
 	</body>
 </html>

@@ -8,21 +8,48 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery lib -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Local JS -->
+    <script src="../main.js"></script>
+
     <style>
-    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
-    hr {border: 0 solid #454a4d; border-top: 1px solid #eee;}
+      hr {border: 0 solid #454a4d; border-top: 1px solid #eee;}
 
-    .work-experience {color: rgb(99, 255, 240) !important;}
+      .work-experience {color: rgb(99, 255, 240) !important;}
 
-    p {color: rgb(232, 230, 227);}
+      p {color: rgb(232, 230, 227);}
 
-    .greybox {background-color: rgb(24, 26, 27);}
-
+      .greybox {background-color: rgb(24, 26, 27);}
     </style>
   </head>
+
   <body style="background-color: #202324;">
 
+    <nav class="w3-sidenav w3-dark-grey w3-card-2 w3-xlarge" id="hide" style="display:none"> <!-- "function(w3_close, 3000)"> -->
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-right">&times;</a><br />
+      <a href="../index.html"><span style="padding-right: 0.7em;">Home</span></a>		
+      <a href="../about.html"><span style="padding-right: 0.7em;">About</span></a>		
+      <a href="../whatwedo.html"><span style="padding-right: 0.7em;">What we do</span></a>		
+      <a href="../portfolio.html"><span style="padding-right: 0.7em;">CVs and Portfolio</span></a> 
+      <a href="../contacts.html"><span style="padding-right: 0.7em;">Contacts</span></a>		
+    </nav>
+
+    <header class="w3-container w3-teal">
+      <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+      <!-- <h3>This CV is prepared using W3.CSS</h3> -->
+    </header>
+
+    <div class="w3-container">
+        <a href="../portfolio.html" class="w3-button w3-xlarge w3-circle w3-blue-grey w3-display-left"><span class="fa fa-arrow-left w3-text"></span></a>
+        <!-- <button class="w3-button w3-xlarge w3-circle w3-blue-grey w3-display-left"><span class="fa fa-arrow-left w3-text"></span></button> -->
+    </div>
+
+    <!-- <div class="w3-container w3-teal w3-text-light-grey" >
+      <h3>This CV is prepared using W3.CSS</h3>
+    </div> -->
 
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -35,7 +62,7 @@
       
         <div class="greybox w3-text w3-card-4">
           <div class="w3-display-container" style="background-color:rgb(24 26 27);">
-            <img src="..\img\tom-004-old-fine-wall.png" style="max-width:100%" alt="Toma Kashamov">
+            <img src="..\img\tom-004-old-fine-wall.png" style="max-width:100%" alt="Toma Kashamov" />
             <div class="w3-display-bottomleft w3-container w3-text-black">
               <h3 style="color:rgb(114, 255, 255)">Toma Kashamov</h3>
               <!-- <h3 style="color:rgb(31, 223, 223)">Toma Kashamov</h3> -->
@@ -46,7 +73,7 @@
             <p><em class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal" style="color: rgb(99, 255, 240) !important;"></em>Sofia, Bulgaria</p>
             <p><em class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal" style="color: rgb(99, 255, 240) !important;"></em>contact@techwriters.eu</p>
             <p><em class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal" style="color: rgb(99, 255, 240) !important;"></em>+359889452410</p>
-            <hr>
+            <hr />
   <!-- Skills -->
             <p class="w3-large"><b><em class="fa fa-asterisk fa-fw w3-margin-right" style="color: rgb(99, 255, 240) !important;"></em>Skills</b></p>
             
@@ -91,8 +118,8 @@
               <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:65%">65%</div>
             </div>
             
-            <br>
-            <hr>
+            <br />
+            <hr />
   <!-- Languages -->
             <p class="w3-large w3-text-theme"><b><em class="fa fa-globe fa-fw w3-margin-right w3-text-teal" style="color: rgb(99, 255, 240) !important;"></em>Languages</b></p>
             <p>English</p>
@@ -115,9 +142,9 @@
             <div class="w3-dark-grey w3-round-xlarge">
               <div class="w3-round-xlarge w3-teal" style="height:24px;width:10%"></div>
             </div>
-            <br>
+            <br />
           </div>
-        </div><br>
+        </div><br />
 
       <!-- End Left Column -->
       </div>
@@ -136,7 +163,7 @@
               <li class="w3-text">Preparation of Marketing &amp; PR articles, preparation of Next Basket&rsquo;s knowledgebase from scratch (on Hubspot), all maintained in a Git repo, using a structure prepared in MkDocs (doc-as-code platform)</li>
               <li class="w3-text">Setup of tech writers&rsquo; work processes in Jira to fit the SCRUM/Agile approach for deliveries</li>
             </ul>
-            <hr>
+            <hr />
           </div>
           <!-- Qredo -->
           <div class="w3-container">
@@ -145,7 +172,7 @@
             <ul>
               <li class="w3-text">Preparation of technical documentation for Qredo&rsquo;s APIs and pluggable components, including API reference guides, developer guides, technical papers</li>
             </ul>
-            <hr>
+            <hr />
           </div>
           <!-- Axway -->
           <div class="w3-container">
@@ -155,7 +182,7 @@
               <li class="w3-text">Preparation of technical documentation for Axway&rsquo;s SecureTransport platform, an enterprise-level MFT (Managed File Transfer) solution, including administrator guides, user guides, release notes, developer guides, etc. and maintaining documentation up to date with releases of patches and new versions</li>
               <li class="w3-text">Setup of complex tech writers&rsquo; work processes in Jira to fit the SCRUM/Agile approach for deliveries</li>
             </ul>
-            <hr>
+            <hr />
           </div>
           <!-- Secure Group Labs -->
           <div class="w3-container">
@@ -164,7 +191,7 @@
               <ul>
                 <li class="w3-text">Preparation and updating of technical documentation for the product line of encrypted solutions for mobile devices, including the complete revamp of the company&rsquo;s WordPress Heroic Knowledgebase; and Inline Manual webhelp documentation tool for interactive web tutorials.</li>              
               </ul>
-              <hr>
+              <hr />
           </div>
           
           <!-- Naxex -->
@@ -174,7 +201,7 @@
               <ul>
                 <li class="w3-text">Preparation and updating of technical documentation for the Naxex&rsquo; FOREX trading platform, including release notes; user guides (including in both Webhelp and print format).</li>              
               </ul>
-              <hr>
+              <hr />
           </div>
           
           <!-- Tradologic -->
@@ -184,7 +211,7 @@
               <ul>
                   <li class="w3-text">Preparation and updating of technical documentation for the Tradologic&rsquo;s binary options trading platform, including release notes; user guides; integration guides; (API) reference guides.</li>              
               </ul>
-              <hr>
+              <hr />
           </div>
           
           <!-- Zoiper II -->
@@ -195,7 +222,7 @@
                   <li class="w3-text">In charge of enterprise customers who require technically advanced aid for the purchase, customization, and deployment of VoIP software, mostly regarding Zoiper softphone.</li>
                   <li class="w3-text">Updated existing technical documentation plus created and edited templates for tech support responses.</li>
               </ul>
-              <hr>
+              <hr />
           </div>
           
           <!-- ProSyst -->
@@ -205,7 +232,7 @@
               <ul>
                   <li class="w3-text">Preparation and updating of user and developer guides for home automation modules of Prosyst&rsquo;s proprietary OSGi-based platform; most documentation published as web content.</li>                
                   </ul>
-              <hr>
+              <hr />
           </div>
 
           <!-- Playtech -->
@@ -215,7 +242,7 @@
               <ul>
                   <li class="w3-text">Preparation and updating of user and developer guides for home automation modules of Prosyst&rsquo;s proprietary OSGi-based platform; most documentation published as web content.</li>                
                   </ul>
-              <hr>
+              <hr />
           </div>
 
           <!-- Zoiper I -->
@@ -226,12 +253,12 @@
                   <li class="w3-text">Preparation and updating technical documentation for Zoiper softphone, including user manuals, API reference guides, provisioning documentation, etc.</li>
                   <li class="w3-text">Preparation and publishing of news articles, press releases and other marketing documentation; website content; search engine optimization (SEO)</li>
               </ul>
-              <hr>
+              <hr />
           </div>
           <div style=" background-color: rgb(32, 35, 36); border-left: 6px solid rgb(99, 255, 240) !important; padding: 3px 0px 3px 10px; margin-left:1em;">
               <p class="w3-text"><strong>Note:</strong> This list of past jobs is not complete. For the sake of brevity, it only includes roles that are pertinent to IT, software and technical or marketing content.</p>
           </div>
-          <br>
+          <br />
          <!-- End Past jobs -->
         </div>
   
@@ -243,7 +270,7 @@
             <h5 class="w3-opacity"><b>Technical University of Sofia</b></h5>
             <h6 class="work-experience"><em class="fa fa-calendar fa-fw w3-margin-right"></em>1997 - 2004</h6>
             <p class="w3-text">Master's Degree in Electrical Engineering</p>
-            <hr>
+            <hr />
           </div>
         </div>
         
@@ -253,18 +280,10 @@
       </div>
       
       <!-- End Page Container -->
-    </div>
-  
+    </div>  
 
     <footer class="w3-container w3-teal w3-center w3-margin-top">
       <p>Find me on LinkedIn:&nbsp;&nbsp;<a href="https://www.linkedin.com/in/toma-k-71695a49/" target="_blank"><em class="fa fa-linkedin w3-hover-opacity"></em></a></p>
-      <!-- <em class="fa fa-facebook-official w3-hover-opacity"></em>
-      <em class="fa fa-instagram w3-hover-opacity"></em>
-      <em class="fa fa-snapchat w3-hover-opacity"></em>
-      <em class="fa fa-pinterest-p w3-hover-opacity"></em>
-      <em class="fa fa-twitter w3-hover-opacity"></em> 
-      <em class="fa fa-linkedin w3-hover-opacity"></em>-->
-      <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
     </footer>
 
   </body>

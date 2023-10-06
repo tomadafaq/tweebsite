@@ -1,39 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <title>Technical Writers in EU</title>
+  <title>What we do: Technical Writers in EU</title>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Local JS -->
+    <script src="main.js"></script>
 
-    <!-- JQuery fadeOut/fadeIn of NAV menu -->
-    <script>
-      $(document).ready(function () {
-        $("#hide").mouseleave(function () {
-          $("#hide").fadeOut(1000);
-        });
-
-        $("#hide").mouseenter(function () {
-          $("#hide").stop();
-          $("#hide").fadeIn();
-        });
-      });
-    </script>
-
-    <!-- CSS - for footer only -->
-    <style>
-      #footer {
-        position: fixed;
-        padding: 10px 10px 0px 10px;
-        bottom: 0;
-        width: 100%;
-        /* Height of the footer*/
-        height: 40px;
-        background: rgb(135, 206, 235);
-      }
-    </style>
   </head>
+  
   <body>
     <!--the nav menu-->
     <nav
@@ -64,7 +41,7 @@
     <div class="w3-row-padding">
       <div class="w3-quarter">
         <h3>What we do?</h3>
-        <p>We provide tech writing services for the ITY community:</p>
+        <p>We provide tech writing services for the IT community:</p>
         <ul>
           <li>
             create text, diagrams, images and video technical content from
@@ -82,20 +59,31 @@
         </ul>
 
         <p>
-          Our moto is: deliver fast & make it brief. We believe in concise and
-          precise text, supplemented with rich content images and video.
+          Our moto is: deliver fast & make it brief. We believe in concise and precise text, supplemented with rich content, including visuals, like diagrams images and video.
           <br /><br />
         </p>
       </div>
       <div class="w3-half">
-        <h3>Portfolio</h3>
-        <p>
-          There's a lot we can do. The portfolio as of now hardly presents the
-          variety of tasks we can perform.
+        
+        <!-- We do Doc portals -->
+        <h3>We know doc portals</h3>
+        <p>Doc portals is what we call any web hosted library of technical documentation. If your library consists of PDFs and/or Word docs, Excel sheets and other supplementary standalone files, that is not really a doc portal. </p>
+        
+        <h4>Create doc portals from scratch</h4>
+        <p>Thats is usually what startup companies need. Whether it is developer's docs, pluggable components, APIs or SDKs, we know what to do. Usually, you just need to decide if you want a CMS or would rather go with a Git repo for the job. The rest is up to us.</p>
+                
+        <h4>Migrate doc portals to better platforms</h4>
+        <p>Usually it happens with companies with a long history that offer multiple products and services. It is hard enough to maintain all documentation sets for all products but as content grows bigger, so do challenges with migrating it to something better. Moving everything from one platform to another is not a simple task: everything you do must be searchable and it's often impossible, for example, to export and import images. We knwo the challenges and are able to do it for you. We also help make the right decisions with all of the above plus so much more.</p>
+        
+        <h4>Reorganize doc portals & update existing documentation</h4>
+        <p>If you have existing doc portal, but aren't happy with its content; or receive negative feedback from your users, we're here to help. You might need help on proof-reading & editing, restructuring of sections, or simply applying best practices. We can consult you on what to do; or you can hire us to do it for you. Depending on the size of your documentation, this may turn out to be a very cumbersome task. <strong>Reorganizing a doc portal</strong> is not easy and often requires you to convey a research in order to identify the weakest spots to address. 
         </p>
+        <p>We also <strong>update existing documentation</strong>. Updates vary from simple refreshing of images to match the latest UI, to breaking down sections, or removing obsolete content. Don't forget we also do diagrams, videos, GIFs and utilize all forms of visuals, for example font-awesome icons, etc. </p>
+          <p>We have experience with doc portals.</p>
+        
       </div>
       <div class="w3-quarter">
-        <h3 id="technical-documentation">Technical documentation</h3>
+        <h3 id="technical-documentation">We know technical documentation</h3>
         <p>We create and maintain technical documentation.</p>
         <ul>
           <li>user guides</li>
@@ -115,14 +103,5 @@
 
     <div id="footer">Tech Writers EU | 2023 | All rights reserved</div>
 
-    <script>
-      function w3_open() {
-        document.getElementsByClassName("w3-sidenav")[0].style.display =
-          "block";
-      }
-      function w3_close() {
-        document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-      }
-    </script>
   </body>
 </html>

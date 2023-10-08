@@ -29,28 +29,24 @@ Stress survivor with curiosity beyond requirements, including interests in basic
 ## Highlights
 ---
 
-<table>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Technical and marketing content writer</li>
-                    <li>Cross-team communicator</li>
-                    <li>Tech-savvy expert</li>
-                    <li>Coordinator of multiple stakeholders</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>Creative thinker</li>
-                    <li>Team leader and mentor</li>
-                    <li>Self-organized, versatile deliverer</li>
-                    <li>Sparer of colleagues' time & efforts</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="two-cols">
+	<span style="margin: auto; display: inline-block;">
+		<ul>
+			<li>Technical and marketing content writer</li>
+			<li>Cross-team communicator</li>
+			<li>Tech-savvy expert</li>
+			<li>Coordinator of multiple stakeholders</li>
+		</ul>
+	</span>
+	<span style="display: inline-block;">
+		<ul>
+			<li>Creative thinker</li>
+			<li>Team leader and mentor</li>
+			<li>Self-organized, versatile deliverer</li>
+			<li>Sparer of colleagues' time & efforts</li>
+		</ul>
+	</span>
+</div>
 
 ## Experience
 ---
@@ -147,28 +143,24 @@ Some unmentioned previous roles include:
 ## Personal interests
 ---
 
-<table>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>acoustic and electric guitar player</li>
-                    <li>multi-sports enthusiast</li>
-                    <li>poet, writer and copywriter</li>
-                    <li>basic web programmer</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>crypto proponent and occasional trader</li>
-                    <li>standup comedy fanatic</li>
-                    <li>casual gardener</li>
-                    <li>eco-friendly lifestyle evangelist</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="two-cols">
+	<span style="margin: auto; display: inline-block;">
+		<ul>
+			<li>acoustic and electric guitar player</li>
+			<li>multi-sports enthusiast</li>
+			<li>poet, writer and copywriter</li>
+			<li>basic web programmer</li>
+		</ul>	
+	</span>
+	<span style="margin: auto; display: inline-block;">
+		<ul>
+			<li>crypto proponent and occasional trader</li>
+			<li>standup comedy fanatic</li>
+			<li>casual gardener</li>
+			<li>eco-friendly lifestyle evangelist</li>
+		</ul>	
+	</span>
+</div>
 
 ---
 

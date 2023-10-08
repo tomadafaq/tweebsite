@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Toma-Kashamov-2023.md</title>
+<title>Toma-Kashamov CV 2023</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css" />
 
 <style>
 /* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
@@ -303,14 +304,87 @@ pre code {
 </style>
 
 <style>
+
+
+/* My CSS */
+/* My Header  */
+
+div.headerz {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.left {
+			order: 1;
+			margin-bottom: 1rem;
+		}
+		.right {
+			order: 2;
+			margin-bottom: 1rem;	
+		}
+
+		@media screen and (max-width: 640px) {
+			div.headerz {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			.right {
+				order: 1;
+				margin-top: 0;
+				margin-bottom: 1rem;
+			}
+		}
+
+/* landing page: screen only: mid screen */
+
+@media screen and (max-width: 640px)
+    {
+        .two-cols
+    {
+        column-count: 1;
+        column-gap: 30px;
+        column-rule: none 1px lightgrey;
+    }	
+}
+
+@media screen and (min-width: 640px)
+{
+.two-cols
+    {
+        column-count: 2;
+        column-gap: 30px;
+        column-rule: none 1px lightgrey;
+    }
+}				
+
+
 /*
  * Markdown PDF CSS
  */
 
  body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
+	padding: 0 12px;	
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+            background-color: #1a1a1a;
+	
 }
+
+
+main {
+			max-width: 80%;
+			width: 100%;
+			margin: auto;
+			padding: 1rem;
+			background-color: #e6e6e6; 
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+		}
+
 
 pre {
 	background-color: #f8f8f8;
@@ -357,6 +431,8 @@ code {
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
+
+	<main>
   <script>
     mermaid.initialize({
       startOnLoad: true,
@@ -365,22 +441,21 @@ code {
           : 'default'
     });
   </script>
-<div style="border-size: 1px; background-color: #006699; border-block: 3px solid grey; color: white">
-    <table width="98%">
-        <tbody>
-            <tr>
-                <td min-width="60%">
-                    <p style="font-size: 33px; margin: 11px 0px 3px 0px;">Toma Kashamov </p>
-                    <p style="font-size: 18px;">&nbsp;Technical writer & Content strategist</p>
-                </td>
-                <td width="40%">
-                    <p style="margin: 19px 0px -3px 0px;"> &nbsp;&nbsp;mobile:&nbsp;&nbsp;+359&nbsp;889&nbsp;452 410</p>
-                    <p>&nbsp;&nbsp;email:&nbsp;&nbsp; 
-                    <a href="mailto:toma.kashamov@gmail.com"  style="color: lightgrey;">toma.kashamov@gmail.com</a></p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="" style="border-size: 1px; background-color: #006699; border-block: 3px solid grey; color: white">
+    
+	<div class="headerz">
+		
+		<span class="left" style="display:block; min-width: 50%;">
+			<div style="font-size: 33px; margin: 11px 0px 3px 7px;">Toma Kashamov </div>
+			<div style="font-size: 18px; margin: 20px 0px 3px 7px;">Technical writer & Content strategist</div>
+		</span>			
+		<span class="right" style="display:inline-block; margin-right: 1em;">
+			<p style="margin: 19px 0px -3px 7px;">mobile:&nbsp;&nbsp;+359&nbsp;889&nbsp;452 410</p>
+            <p style="margin: 19px 0px 10px 7px;">email:&nbsp;&nbsp; 
+            <a href="mailto:toma.kashamov@gmail.com"  style="color: lightgrey;">toma.kashamov@gmail.com</a></p>
+		</span>
+	</div>
+
 </div>
 <h2 id="summary">Summary</h2>
 <hr />
@@ -389,175 +464,196 @@ code {
 <p>Stress survivor with curiosity beyond requirements, including interests in basic web programming technologies like HTML5, JavaScript, and CSS.</p>
 <h2 id="highlights">Highlights</h2>
 <hr />
-<table>
-    <tbody>
-        <tr>
-            <td>
-                <ul>
-                    <li>Technical and marketing content writer</li>
-                    <li>Cross-team communicator</li>
-                    <li>Tech-savvy expert</li>
-                    <li>Coordinator of multiple stakeholders</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>Creative thinker</li>
-                    <li>Team leader and mentor</li>
-                    <li>Self-organized, versatile deliverer</li>
-                    <li>Sparer of colleagues' time & efforts</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
+
+<div class="two-cols">
+	<span style="margin: auto; display: inline-block;">
+		<ul>
+			<li>Technical and marketing content writer</li>
+			<li>Cross-team communicator</li>
+			<li>Tech-savvy expert</li>
+			<li>Coordinator of multiple stakeholders</li>
+		</ul>
+	</span>
+	<span style="display: inline-block;">
+		<ul>
+			<li>Creative thinker</li>
+			<li>Team leader and mentor</li>
+			<li>Self-organized, versatile deliverer</li>
+			<li>Sparer of colleagues' time & efforts</li>
+		</ul>
+	</span>
+</div>
+
 <h2 id="experience">Experience</h2>
 <hr />
 <p><strong>Senior Technical &amp; Content writer</strong> - 04/2023 to 08/2023 in Next Basket, Sofia, Bulgaria</p>
 <ul>
-<li>Preparation of Marketing &amp; PR articles, preparation of Next Basket’s knowledgebase from scratch (on Hubspot), all maintained in a Git repo, using a structure prepared in MkDocs (doc-as-code platform)</li>
-<li>Setup of tech writers' work processes in Jira to fit the SCRUM/Agile approach for deliveries</li>
+	<li>Preparation of Marketing &amp; PR articles, preparation of Next Basket’s knowledgebase from scratch (on Hubspot), all maintained in a Git repo, using a structure prepared in MkDocs (doc-as-code platform)</li>
+	<li>Setup of tech writers' work processes in Jira to fit the SCRUM/Agile approach for deliveries</li>
 </ul>
 <p><strong>Senior Technical writer</strong> - 06/2021 to 10/2022 in Qredo, Sofia, Bulgaria</p>
 <ul>
-<li>Preparation of technical documentation for Qredo’s APIs and pluggable components, including API reference guides, developer guides, technical papers</li>
+	<li>Preparation of technical documentation for Qredo’s APIs and pluggable components, including API reference guides, developer guides, technical papers</li>
 </ul>
 <p><strong>Senior Technical writer</strong> - 03/2017 to 06/2021 in Axway, Sofia, Bulgaria</p>
 <ul>
-<li>Preparation of technical documentation for Axway’s SecureTransport platform, an enterprise-level MFT (Managed File Transfer) solution, including administrator guides, user guides, release notes, developer guides, etc. and maintaining documentation up to date with releases of patches and new versions</li>
-<li>Setup of complex tech writers' work processes in Jira to fit the SCRUM/Agile approach for deliveries</li>
+	<li>Preparation of technical documentation for Axway’s SecureTransport platform, an enterprise-level MFT (Managed File Transfer) solution, including administrator guides, user guides, release notes, developer guides, etc. and maintaining documentation up to date with releases of patches and new versions</li>
+	<li>Setup of complex tech writers' work processes in Jira to fit the SCRUM/Agile approach for deliveries</li>
 </ul>
 <p><strong>Senior Technical writer</strong> - 12/2015 to 02/2017 in Secure Group Labs, Sofia, Bulgaria</p>
 <ul>
-<li>Preparation and updating of technical documentation for the product line of encrypted solutions for mobile devices, including the complete revamp of the company’s WordPress Heroic Knowledgebase; and Inline Manual webhelp documentation tool for interactive web tutorials.</li>
+	<li>Preparation and updating of technical documentation for the product line of encrypted solutions for mobile devices, including the complete revamp of the company’s WordPress Heroic Knowledgebase; and Inline Manual webhelp documentation tool for interactive web tutorials.</li>
 </ul>
 <p><strong>Senior Technical writer</strong> - 12/2014 to 12/2015 in Naxex, Sofia, Bulgaria</p>
 <ul>
-<li>Preparation and updating of technical documentation for the Naxex’ FOREX trading platform, including release notes; user guides (including in both Webhelp and print format).</li>
+	<li>Preparation and updating of technical documentation for the Naxex’ FOREX trading platform, including release notes; user guides (including in both Webhelp and print format).</li>
 </ul>
 <p><strong>Senior Technical writer</strong> - 09/2012 to 08/2014 in TradoLogic, Sofia, Bulgaria</p>
 <ul>
-<li>Preparation and updating of technical documentation for the Tradologic’s binary options trading platform, including release notes; user guides; integration guides; (API) reference guides.</li>
+	<li>Preparation and updating of technical documentation for the Tradologic’s binary options trading platform, including release notes; user guides; integration guides; (API) reference guides.</li>
 </ul>
 <p><strong>Sales manager and Technical writer</strong> - 04/2012 to 08/2012 in Zoiper, Sofia, Bulgaria</p>
 <ul>
-<li>In charge of enterprise customers who require technically advanced aid for the purchase, customization, and deployment of VoIP software, mostly regarding Zoiper softphone.</li>
-<li>Updated existing technical documentation plus created and edited templates for tech support responses.</li>
+	<li>In charge of enterprise customers who require technically advanced aid for the purchase, customization, and deployment of VoIP software, mostly regarding Zoiper softphone.</li>
+	<li>Updated existing technical documentation plus created and edited templates for tech support responses.</li>
 </ul>
 <p><strong>Technical writer</strong> - 11/2010 to 08/2011 in ProSyst, Sofia, Bulgaria</p>
 <ul>
-<li>Preparation and updating of user and developer guides for home automation modules of Prosyst’s proprietary OSGi-based platform; most documentation published as web content.</li>
+	<li>Preparation and updating of user and developer guides for home automation modules of Prosyst’s proprietary OSGi-based platform; most documentation published as web content.</li>
 </ul>
 <p><strong>Technical writer</strong> - 05/2008 to 09/2010 in Playtech, Sofia, Bulgaria</p>
 <ul>
-<li>Preparation and updating of technical documentation for the online Bingo and Poker gaming platforms, including release notes, user guides, reference guides, and API reference guides.</li>
+	<li>Preparation and updating of technical documentation for the online Bingo and Poker gaming platforms, including release notes, user guides, reference guides, and API reference guides.</li>
 </ul>
 <p><strong>Technical and Marketing Content writer</strong> - 09/2006 to 05/2008 in Zoiper, Sofia, Bulgaria</p>
 <ul>
-<li>Preparation and updating technical documentation for Zoiper softphone, including user manuals, API reference guides, provisioning documentation, etc.</li>
-<li>Preparation and publishing of news articles, press releases and other marketing documentation; website content; search engine optimization (SEO).</li>
+	<li>Preparation and updating technical documentation for Zoiper softphone, including user manuals, API reference guides, provisioning documentation, etc.</li>
+	<li>Preparation and publishing of news articles, press releases and other marketing documentation; website content; search engine optimization (SEO).</li>
 </ul>
 <blockquote>
-<p><strong>Note:</strong>	This list of past jobs is not complete. For the sake of brevity, it only includes the most significant roles pertinent to IT, software and technical or marketing content.</p>
+	<p><strong>Note:</strong>	This list of past jobs is not complete. For the sake of brevity, it only includes the most significant roles pertinent to IT, software and technical or marketing content.</p>
 </blockquote>
 <h2 id="education">Education</h2>
 <hr />
 <p>1997-2004 -  Master's Degree, Electrical Engineering; Technical University, Sofia <br />
-1992-1996 - 127th High School, Sofia<br />
-1991-1992 - Junior High School 190, New York City, USA<br />
-1989-1990 - 7th Elementary School, Sofia<br />
-1985-1988 - 6th Elementary School, Sofia</p>
+	1992-1996 - 127th High School, Sofia<br />
+	1991-1992 - Junior High School 190, New York City, USA<br />
+	1989-1990 - 7th Elementary School, Sofia<br />
+	1985-1988 - 6th Elementary School, Sofia</p>
 <h2 id="it-skills">IT skills</h2>
 <hr />
 <p>This comprehensive list is not entirely complete but rather provides useful insight.</p>
 <table>
-<thead>
-<tr>
-<th><strong>Software Type</strong></th>
-<th><strong>Software Name</strong></th>
-<th><strong>Skill Level</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Operating Systems</td>
-<td>MS Windows<br />Ubuntu, Linux mint, Mac OS, Android</td>
-<td>Advanced<br />Medium</td>
-</tr>
-<tr>
-<td>Office Tools</td>
-<td>MS Office: Word, Excel, PowerPoint, Outlook, Visio, OneNote<br />Open Office suite</td>
-<td>Advanced<br /><br />Advanced</td>
-</tr>
-<tr>
-<td>Document Portals</td>
-<td>MS Sharepoint<br />WordPress Heroic Knowledgebase<br />Zendesk<br />Hubspot<br />Confluence<br /></td>
-<td>Medium<br /> Advanced<br /> Medium<br /> Medium<br />Advanced</td>
-</tr>
-<tr>
-<td>Authoring Tools<br /> (WYSIWYG)</td>
-<td>MadCap Flare<br /> DrExplain<br /> Inline Manual</td>
-<td>Advanced<br /> Advanced <br />Medium</td>
-</tr>
-<tr>
-<td>Authoring Tools<br /> (Doc-as-code)</td>
-<td>Slate<br /> Docusaurus <br /> MkDocs <br /></td>
-<td>Medium <br />Medium  <br /> Advanced</td>
-</tr>
-<tr>
-<td>ScreenCapturing Tools</td>
-<td>TechSmith SnagIt, MS snippet tool, ScreenRec, OBS Studio, Greenshot</td>
-<td>Advanced</td>
-</tr>
-<tr>
-<td>Graphics Editor</td>
-<td>Adobe Photoshop<br />Paint.NET <br /> Techsmith Snagit Editor</td>
-<td>Basic <br /> Medium <br /> Advanced</td>
-</tr>
-<tr>
-<td>Programming Languages / Frameworks</td>
-<td>HTML, XML, JSON, CSS, W3.CSS, Bootstrap, JS, JQuery<br />PHP, Java, Python, C++, Delphi, Pascal* <br /> <div  style="font-size: 11px;">*Limited use and experience with these languages.</div></td>
-<td>Medium  <br /> Basic <div  style="font-size: 11px;"><br /></div></td>
-</tr>
-<tr>
-<td>Source Control</td>
-<td>CVS, SVN Git</td>
-<td>Basic to Medium</td>
-</tr>
-<tr>
-<td>Collaboration &amp; Issue tracking software</td>
-<td>JIRA, TFS, Bugzilla, ClickUp, Kanbanize</td>
-<td>Basic to Medium</td>
-</tr>
-</tbody>
+	<thead>
+		<tr>
+			<th><strong>Software Type</strong></th>
+			<th><strong>Software Name</strong></th>
+			<th><strong>Skill Level</strong></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Operating Systems</td>
+			<td>MS Windows<br />Ubuntu, Linux mint, Mac OS, Android</td>
+			<td>Advanced<br />Medium</td>
+		</tr>
+		<tr>
+			<td>Office Tools</td>
+			<td>MS Office: Word, Excel, PowerPoint, Outlook, Visio, OneNote<br />Open Office suite</td>
+			<td>Advanced<br /><br />Advanced</td>
+		</tr>
+		<tr>
+			<td>Document Portals</td>
+			<td>MS Sharepoint<br />WordPress Heroic Knowledgebase<br />Zendesk<br />Hubspot<br />Confluence<br /></td>
+			<td>Medium<br /> Advanced<br /> Medium<br /> Medium<br />Advanced</td>
+		</tr>
+		<tr>
+			<td>Authoring Tools<br /> (WYSIWYG)</td>
+			<td>MadCap Flare<br /> DrExplain<br /> Inline Manual</td>
+			<td>Advanced<br /> Advanced <br />Medium</td>
+		</tr>
+		<tr>
+			<td>Authoring Tools<br /> (Doc-as-code)</td>
+			<td>Slate<br /> Docusaurus <br /> MkDocs <br /></td>
+			<td>Medium <br />Medium  <br /> Advanced</td>
+		</tr>
+		<tr>
+			<td>ScreenCapturing Tools</td>
+			<td>TechSmith SnagIt, MS snippet tool, ScreenRec, OBS Studio, Greenshot</td>
+			<td>Advanced</td>
+		</tr>
+		<tr>
+			<td>Graphics Editor</td>
+			<td>Adobe Photoshop<br />Paint.NET <br /> Techsmith Snagit Editor</td>
+			<td>Basic <br /> Medium <br /> Advanced</td>
+		</tr>
+		<tr>
+			<td>Programming Languages / Frameworks</td>
+			<td>HTML, XML, JSON, CSS, W3.CSS, Bootstrap, JS, JQuery<br />PHP, Java, Python, C++, Delphi, Pascal* <br /> <div  style="font-size: 11px;">*Limited use and experience with these languages.</div></td>
+			<td>Medium  <br /> Basic <div  style="font-size: 11px;"><br /></div></td>
+		</tr>
+		<tr>
+			<td>Source Control</td>
+			<td>CVS, SVN Git</td>
+			<td>Basic to Medium</td>
+		</tr>
+		<tr>
+			<td>Collaboration &amp; Issue tracking software</td>
+			<td>JIRA, TFS, Bugzilla, ClickUp, Kanbanize</td>
+			<td>Basic to Medium</td>
+		</tr>
+	</tbody>
 </table>
 <h2 id="personal-data">Personal data</h2>
 <hr />
 <ul>
-<li>Year of birth: 1978</li>
-<li>Marital status: not married</li>
-<li>Citizenship: Bulgarian</li>
-<li>Current location: Sofia, Bulgaria</li>
+	<li>Year of birth: 1978</li>
+	<li>Marital status: not married</li>
+	<li>Citizenship: Bulgarian</li>
+	<li>Current location: Sofia, Bulgaria</li>
 </ul>
 <h2 id="human-languages">Human Languages</h2>
 <hr />
 <ul>
-<li>Bulgarian – mother tongue</li>
-<li>English – excellent – certificate from 1st English Language High-School in Sofia, Bulgaria</li>
-<li>Spanish – basic to medium level</li>
-<li>Russian – basic</li>
-<li>German – basic</li>
+	<li>Bulgarian – mother tongue</li>
+	<li>English – excellent – certificate from 1st English Language High-School in Sofia, Bulgaria</li>
+	<li>Spanish – basic to medium level</li>
+	<li>Russian – basic</li>
+	<li>German – basic</li>
 </ul>
 <h2 id="miscellaneous">Miscellaneous</h2>
 <hr />
 <p>Some unmentioned previous roles include:</p>
 <ul>
-<li>(2004-2006) Translator of English books (English to Bulgarian) for Riva Publishers: “Mr. Nice” by Howard D. Marks and “Adept” by Robert Finn</li>
-<li>(1996-2010) Two-way freelance translator (English and Bulgarian) for different technical documentation, including user guides and specifications for various technology products; translations of legal documentation; translations and composing of website content</li>
-<li>(2004-2008) Two-way freelance translator (English and Bulgarian) for Butex Translations agency, Bulgaria</li>
+	<li>(2004-2006) Translator of English books (English to Bulgarian) for Riva Publishers: “Mr. Nice” by Howard D. Marks and “Adept” by Robert Finn</li>
+	<li>(1996-2010) Two-way freelance translator (English and Bulgarian) for different technical documentation, including user guides and specifications for various technology products; translations of legal documentation; translations and composing of website content</li>
+	<li>(2004-2008) Two-way freelance translator (English and Bulgarian) for Butex Translations agency, Bulgaria</li>
 </ul>
 <h2 id="personal-interests">Personal interests</h2>
 <hr />
+
+<div class="two-cols">
+	<span style="margin: auto; display: inline-block;">
+		<ul>
+			<li>acoustic and electric guitar player</li>
+			<li>multi-sports enthusiast</li>
+			<li>poet, writer and copywriter</li>
+			<li>basic web programmer</li>
+		</ul>	
+	
+	</span>
+	<span style="margin: auto; display: inline-block;">
+		<ul>
+			<li>crypto proponent and occasional trader</li>
+			<li>standup comedy fanatic</li>
+			<li>casual gardener</li>
+			<li>eco-friendly lifestyle evangelist</li>
+		</ul>	
+	</span>
+</div>
+
+
+<!-- 
 <table>
     <tbody>
         <tr>
@@ -579,8 +675,10 @@ code {
             </td>
         </tr>
     </tbody>
-</table>
+</table> -->
 <hr />
 <div style="font-size: 11px; color: darkgrey"> This document is prepared from scratch using Markdown, HTML and CSS. Written in VSCode editor and published to PDF with the Markdown PDF plugin.</div>
+
+</main>
 </body>
 </html>

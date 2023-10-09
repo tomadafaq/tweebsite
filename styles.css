@@ -78,8 +78,8 @@ div.multi-cols
 /* experimental dark mode */
 
 .dark-mode {
-    background-color: black;
-    color: white;
+    background-color: #202324;
+    color: rgb(241, 241, 241);
   }
 
 

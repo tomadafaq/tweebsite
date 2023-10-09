@@ -75,10 +75,12 @@ div.multi-cols
     }
 }					
 
+/* experimental dark mode */
 
-
-
-
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
 
 
 /* #hide {

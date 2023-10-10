@@ -25,9 +25,6 @@ $(document).ready(function(){
 </script>
 
 <!-- CSS - for footer only -->
-<style>
-
-</style>
 
 </head>
 <body>
@@ -45,28 +42,44 @@ $(document).ready(function(){
 
 <header class="w3-container w3-teal">
   <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
-      <span class="w3-xxlarge w3-right" onclick="darkModeFn()"><em class="fa fa-adjust fa-fw w3-margin w3-right w3-text-white"></em></span>  <h1 class="w3-jumbo">Contacts</h1>
-  <p class="w3-large">Reach out to us to discuss your needs and receive our quotes.</p>
+      <span class="w3-xxlarge w3-right" onclick="darkModeFn()"><em class="fa fa-adjust fa-fw w3-margin w3-right w3-text-white"></em></span>  <h1 class="w3-xxxlarge">Contacts</h1>
+  <p class="w3-large">Reach out to us to discuss your needs and request quotes.</p>
 </header>
 
-<p>
-  <div class="w3-container w3-border-left w3-border-right">	    
-    We do everything related to technical content. And we do it good.
+
+  <div class="w3-container">	    
+  <p>We do everything related to technical content. And we do it good.</p>
   </div>
-</p>
-<br />
-<p>
-<div class="w3-container w3-border-left w3-border-right">	
-	<em class="w3-xxlarge material-icons" style="vertical-align:middle;padding:4px">email</em>
-	contact@techwriters.eu
+
+  <hr />
+
+  <!-- EM4iL hide from the eye -->
+
+<div class="w3-container">	
+	<p><em class="w3-xxlarge material-icons" style="vertical-align:middle;padding:4px" >&#101;m&#97;i&#108;</em>
+    <a href="mailto:contactATtechwritersDOTeu" onclick = "this.href=this.href 
+    .replace(/AT/,'&#64;') .replace(/DOT/,'&#46;')" style="text-decoration: none;">cont&#97;ct<span class="twmail">techwriters.eu</span></a></p>
 </div>
 
-<p>
-<div class="w3-container w3-border-left w3-border-right">
-	<em class="w3-xxlarge material-icons" style="vertical-align:middle;padding:4px">phone</em>
-	+359889452410
+<!-- CSS obfscate m41L -->
+
+
+
+
+<!-- PH0N3 -->
+
+<div class="w3-container">
+	<p><em class="w3-xxlarge material-icons" style="vertical-align:middle;padding:4px">ph&#111;n&#101;</em>
+	+&#51;59&#56;&#56;9&#52;5&#50;4&#49;0</p>
 </div>
-<p>
+
+<hr />
+
+<div class="w3-container w3-quarter">
+  <p class="w3-opacity">In time we will we populate this page with meaningful content. Until then, here's this badass UTF-8 character: the almighty keyboard!<br /><br />For real, one of the best oldschool chars ever!</p>
+
+  <div class="w3-text-teal w3-center w3-animate-bottom" style="font-size: 15em; margin-top:-0.3em;">&#9000;</div>
+</div>
 
 <!-- <footer class="w3-container w3-light-blue">
   <p>Technical writers EU | 2023<p>
@@ -75,15 +88,6 @@ $(document).ready(function(){
 <div id="footer">
   Tech Writers EU | 2023 | All rights reserved
 </div>
-
-<script>
-function w3_open() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-}
-function w3_close() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-}
-</script>
 
 </body>
 </html> 

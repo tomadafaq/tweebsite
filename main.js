@@ -1,5 +1,6 @@
 
 
+// Nav menu
 
 $(document).ready(function () {
     $("#hide").mouseleave(function () {
@@ -13,7 +14,7 @@ $(document).ready(function () {
   });
 
 
-// Functions for how navigation opens and closes
+// Nav menu functions 
 
   function w3_open() {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
@@ -24,3 +25,11 @@ $(document).ready(function () {
   function w3_fade() {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
   }
+
+  // dark theme JS
+    
+    function darkModeFn() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+  

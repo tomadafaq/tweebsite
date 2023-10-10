@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Local JS -->
+    <script src="main.js"></script>
     <!-- Local JS -->
     <script src="main.js"></script>
 
@@ -34,13 +37,14 @@
 
     <header class="w3-container w3-teal">
       <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
-      <h1 class="w3-jumbo">What we do?</h1>
-      <p class="w3-xlarge">This site is still under construction...</p>
+      <span class="w3-xxlarge w3-right" onclick="darkModeFn()"><em class="fa fa-adjust fa-fw w3-margin w3-right w3-text-white"></em></span>      
+      <h1 class="w3-xxxlarge">Why tech<span class="w3-text-aqua">writers</span>.eu?</h1>
+      <p class="w3-xlarge">We author, update and maintain technical documentation for you!</p>
     </header>
 
     <div class="w3-row-padding">
       <div class="w3-quarter">
-        <h3>What we do?</h3>
+        <h3>Everything about tech docs</h3>
         <p>We provide tech writing services for the IT community:</p>
         <ul>
           <li>
@@ -83,7 +87,7 @@
         
       </div>
       <div class="w3-quarter">
-        <h3 id="technical-documentation">We know technical documentation</h3>
+        <h3 id="technical-documentation">Technical documentation covered</h3>
         <p>We create and maintain technical documentation.</p>
         <ul>
           <li>user guides</li>

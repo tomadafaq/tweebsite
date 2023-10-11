@@ -43,19 +43,27 @@ The TL;DR is that it is based on a blockchain model, much similar to crypto and 
 
 The end users would essentially have experience, similar to web2: they will be use web apps and access websites in a similar way. Depending on economics models in these apps, some users would be able to monetize on web 3.
 
-### Is web3 a cryptocurrency?
+### How is web3 a cryptocurrency?
 
-First of all, the idea of crypto itself is beyond just a cryptocurrency already. The success of long-term cryptocurrencies usually lies in the tokenomics model and development of capabilities of the crypto protocols. 
+First of all, the idea of crypto itself is beyond just a cryptocurrency already. The success of long-term cryptocurrencies usually lies in the tokenomics models and development of the crypto protocols' capabilities. 
 
-So back to the question: ideally, all the protocols that operate web3 networks will interact with one another to form the ecosystem of web3. There is a lot that can happen 
-
+So back to the question: ideally, all the protocols that operate web3 networks will seamlessly interact with one another to form the ecosystem of web3. There is a lot to happen and we probably don't even know a huge chunk of what technology will achieve. 
 
 It is not the subject of this article to name specific projects, so we won't.
 
-## Perfectly useful links
+### Free Crypto Tools
 
-There are several categories:
+The tools listed are just for references. This list is not comprehensive or complete in ay way.
 
-* news-related
-* price action and tracking
-  
+> **Disclaimer:** 
+> **techwriters.eu** is in no way associated with any of the projects listed herein. In no way do we recommend or endorse any of these tools over others. Basically, this is a selection of the list composed by the guys at  [CoinBureau](https://www.coinbureau.com/review/crypto-research-tools/).
+
+By the way, these tools are well-known within the community anyway.
+
+* A great news aggregator, also available on mobile: [Crypto Panic](https://cryptopanic.com/)
+* A loveable market price & market cap data aggregator: [Coin Gecko](coingecko.com/)
+* A popular screener and crypto intelligence: [Messari](https://messari.io/)
+
+## Final words
+
+In time, **techwriters.eu** will offer a blog portal with a dedicated crypto section in there.  

@@ -1,18 +1,21 @@
-# Crypto space (not only) for tech writers
 
-Initially, this page will be a placeholder for useful resources related to **crypto** and **web3**. Later, this content will be added to our blog. 
+
+# Why do we need crypto and Web3?
+
+<!-- Initially, this page will be a placeholder for useful resources related to **crypto** and **Web3**. Later, this content will be added to our blog.  -->
+
+This article explains what cryptocurrency means, how it evolves into Web3 and point you to some popular free crypto tools.
 
 > **Disclaimer:** Did you come here for financial advice? Well, you are not going to find it here. TechWriters.eu does not offer any financial advice whatsoever and never will.
-
 
 ## Why crypto?
 
 It breaks our hearts that as late as towards the end of 2023, there are still people who openly question the motivation for crypto; or openly label it "a scam".
 
-So, while we are well aware that there is a long way to go, let us make it clear why techwriters.eu have a stance on crypto:
+So, while we are well aware that there is a long way to go, let us make it clear why we, at techwriters.eu have a stance on crypto:
 
 > **What is a crypto currency?** 
-> Cryptocurrencies are a form of digital currencies that use blockchain technology.
+> A cryptocurrency is a form of *digital currency* that uses blockchain technology.
 
 A "reliable" cryptocurrency project must clearly meet several criteria: 
 
@@ -27,11 +30,11 @@ A "reliable" cryptocurrency project must clearly meet several criteria:
 
 There are other characteristics and the discussion is long. Like, really long. The key take-away here is that these criteria are the pillars of the concept of a truly *decentralized* financial model: which is intended to guarantee financial freedom of the network users.
 
-However, one of the major caveats that crypto might fall into, is simply the current Internet: the widely used web2, or as we call it, **the Internet!**, is centralized and under the rule of governments and agencies across the world. This means that they can easily ban crypto trading or mining, and not just that.
+However, one of the major caveats that crypto might fall into, is simply the current Internet. The widely used Web2, or as we call it, **the Internet**, is centralized and under the rule of governments and agencies across the world. This means that they can easily ban crypto trading, crypto mining, crypto transactions and not just that.
 
 So this is one of the reasons for Web3 to emerge as a concept of the decentralized internet. 
 
-## Why web3?
+## Why Web3?
 
 Because 3 > 2 so it's better, duuh? 
 
@@ -39,15 +42,15 @@ Seriously, the idea of a decentralized internet effectively means that no one ow
 
 ### What is Decentralized Internet?
 This is the conceptual part so just submerge yourself into it.
-The TL;DR is that it is based on a blockchain model, much similar to crypto and NFTs but all websites and apps run on top and you can even earn some cash, even end users. ISPs responsibilities would be distributed across the nodes that operate the blockchain, which is natively hooked to the application layer. Thus exchange of data is attached to transactions and this adds incentivization to Web3. So, it is again servers and services but operations and payload are all paid for depending on the tokenomics model. 
+In short, it operates on a blockchain network similar to crypto and NFTs. However, its unique aspect is that it supports all websites and applications, allowing both developers and end users to earn some money from it. ISPs responsibilities would be distributed across the nodes that operate the blockchain, which is natively hooked to the application layer. Thus exchange of data is attached to transactions and this adds incentivization to Web3. So, it is again servers and services but operations and payload are all paid for depending on the tokenomics model. 
 
-The end users would essentially have experience, similar to web2: they will be use web apps and access websites in a similar way. Depending on economics models in these apps, some users would be able to monetize on web 3.
+The end users would essentially have experience, similar to Web2: they will use web apps and access websites in a similar way. Depending on economics models in these apps, some users would be able to monetize on web 3.
 
-### How is web3 a cryptocurrency?
+### How is Web3 a cryptocurrency?
 
 First of all, the idea of crypto itself is beyond just a cryptocurrency already. The success of long-term cryptocurrencies usually lies in the tokenomics models and development of the crypto protocols' capabilities. 
 
-So back to the question: ideally, all the protocols that operate web3 networks will seamlessly interact with one another to form the ecosystem of web3. There is a lot to happen and we probably don't even know a huge chunk of what technology will achieve. 
+So back to the question: ideally, all the protocols that operate Web3 networks will seamlessly interact with one another to form the ecosystem of Web3. There is a lot to happen and we probably don't even know a huge chunk of what technology will achieve. 
 
 It is not the subject of this article to name specific projects, so we won't.
 
@@ -58,7 +61,7 @@ The tools listed are just for references. This list is not comprehensive or comp
 > **Disclaimer:** 
 > **techwriters.eu** is in no way associated with any of the projects listed herein. In no way do we recommend or endorse any of these tools over others. Basically, this is a selection of the list composed by the guys at  [CoinBureau](https://www.coinbureau.com/review/crypto-research-tools/).
 
-By the way, these tools are well-known within the community anyway.
+These tools are well-known within the community anyway. At some point we may add others for the sake of making this list more complete.
 
 * A great news aggregator, also available on mobile: [Crypto Panic](https://cryptopanic.com/)
 * A loveable market price & market cap data aggregator: [Coin Gecko](coingecko.com/)

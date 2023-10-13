@@ -26,10 +26,29 @@ $(document).ready(function () {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
   }
 
+
+  // Nav menu functions 
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+
+
+
   // dark theme JS
     
     function darkModeFn() {
        var element = document.body;
-       element.classList.toggle("dark-mode");
+       element.classList.toggle("dark-mode");       
     }
-  
+
+    // dark-quote - make sure to replace `<blockquote` with `<blockquote id="dark-quote"` in the HTML that calls this func 
+    function darkQuoteFn() {
+      var element = document.getElementsByTagName("blockquote");
+      element.classList.toggle("dark-quote");       
+   }
+    

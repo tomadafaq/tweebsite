@@ -30,6 +30,12 @@ $(document).ready(function () {
     
     function darkModeFn() {
        var element = document.body;
-       element.classList.toggle("dark-mode");
+       element.classList.toggle("dark-mode");       
     }
-  
+
+    // dark-quote - make sure to replace `<blockquote` with `<blockquote id="dark-quote"` in the HTML that calls this func 
+    function darkQuoteFn() {
+      var element = document.getElementsByTagName("blockquote");
+      element.classList.toggle("dark-quote");       
+   }
+    

@@ -26,6 +26,19 @@ $(document).ready(function () {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
   }
 
+
+  // Nav menu functions 
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+
+
+
   // dark theme JS
     
     function darkModeFn() {

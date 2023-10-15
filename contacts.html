@@ -13,6 +13,18 @@
     <script src="main.js"></script>
 
 <!-- JQuery fadeOut/fadeIn of NAV menu -->
+
+<style>
+p.hideText {
+  @media screen and (max-width: 800px) {display: none;}
+}
+
+span.hideText {
+  @media screen and (max-width: 1200px) {font-weight: bold; color: orangered;"}
+}
+
+</style>
+
 <script>
 $(document).ready(function(){
 	$("#hide").mouseleave(function(){
@@ -47,8 +59,8 @@ $(document).ready(function(){
 </header>
 
 
-<div class="w3-row-padding">
-  <div class="w3-third"> 
+<div class="w3-row">
+  <div class="w3-third w3-padding"> 
     <div class="w3-container">
     <p>We do everything related to technical content. And we do it good.</p>
     </div>
@@ -89,9 +101,12 @@ $(document).ready(function(){
   <p>Technical writers EU | 2023<p>
 </footer> -->
 
-<div class="w3-display-container w3-twothird w3-card-4">
+<div class="w3-display-container w3-twothird" style="padding-top: 1%; padding-right: 0.3%;">
   <img src="img/flat-lay-workstation-with-copy-space-laptop.jpg" alt="TechWriters.eu" class="w3-image">
-  <div class="w3-display-topleft w3-container w3-text-light-grey w3-large w3-padding-16" style="padding-left: 2em;">There is some meaningful text we want to see</div>
+  <div class="w3-display-topleft w3-container w3-text-light-grey w3-large w3-padding-16" style="padding-left: 1em;">
+    <p class="hideText">A fun CSS demo:</p>
+    <p class="hideText">This sentence changes behavior <span class="hideText">when you resize your screen.</span></p>
+  </div>
 </div>
 
 <div id="footer">

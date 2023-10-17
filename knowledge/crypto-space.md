@@ -44,7 +44,7 @@ Seriously, the idea of a decentralized internet effectively means that no one ow
 This is the conceptual part so just submerge yourself into it.
 In short, it operates on a blockchain network similar to crypto and NFTs. However, its unique aspect is that it supports all websites and applications, allowing both developers and end users to earn some money from it. ISPs responsibilities would be distributed across the nodes that operate the blockchain, which is natively hooked to the application layer. Thus exchange of data is attached to transactions and this adds incentivization to Web3. So, it is again servers and services but operations and payload are all paid for depending on the tokenomics model. 
 
-The end users would essentially have experience, similar to Web2: they will use web apps and access websites in a similar way. Depending on economics models in these apps, some users would be able to monetize on web 3.
+The end users would essentially have experience, similar to Web2: they will use web apps and access websites in a similar way. Depending on economics models in these apps, some users would be able to monetize on Web3.
 
 ### How is Web3 a cryptocurrency?
 

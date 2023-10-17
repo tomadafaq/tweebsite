@@ -13,6 +13,18 @@
     <script src="main.js"></script>
 
 <!-- JQuery fadeOut/fadeIn of NAV menu -->
+
+<style>
+p.hideText {
+  @media screen and (max-width: 800px) {display: none;}
+}
+
+span.hideText {
+  @media screen and (max-width: 1200px) {font-weight: bold; color: orangered;"}
+}
+
+</style>
+
 <script>
 $(document).ready(function(){
 	$("#hide").mouseleave(function(){
@@ -31,8 +43,7 @@ $(document).ready(function(){
 
 <!--the nav menu-->
 <nav class="w3-sidenav w3-dark-grey w3-card-2 w3-xlarge" id="hide" style="display:none"  ><!-- "function(w3_close, 3000)"> -->
-  <a href="javascript:void(0)" onclick="w3_close()" 
-  class="w3-closenav w3-right">&times;</a><br />
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-right">&times;</a><br />
   <a href="index.html"><span style="padding-right: 0.7em;">Home</span></a>		
   <a href="about.html"><span style="padding-right: 0.7em;">About</span></a>		
   <a href="whatwedo.html"><span style="padding-right: 0.7em;">What we do</span></a>		
@@ -42,48 +53,60 @@ $(document).ready(function(){
 
 <header class="w3-container w3-teal">
   <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
-      <span class="w3-xxlarge w3-right" onclick="darkModeFn()"><em class="fa fa-adjust fa-fw w3-margin w3-right w3-text-white"></em></span>  <h1 class="w3-xxxlarge">Contacts</h1>
+      <span class="w3-xxlarge w3-right" onclick="darkModeFn()"><em class="fa fa-adjust fa-fw w3-margin-top w3-right w3-text-white"></em></span>  <h1 class="w3-xxxlarge">Contacts</h1>
   <p class="w3-large">Reach out to us to discuss your needs and request quotes.</p>
 </header>
 
 
-  <div class="w3-container">	    
-  <p>We do everything related to technical content. And we do it good.</p>
+<div class="w3-row">
+  <div class="w3-third w3-padding"> 
+    <div class="w3-container">
+    <p>We do everything related to technical content. And we do it good.</p>
+    </div>
+
+     <hr />
+
+    <!-- EM4iL hide from the eye -->
+
+    <div class="w3-container">	
+    <p><em class="w3-xxlarge material-icons" style="vertical-align:middle;padding:4px" >&#101;m&#97;i&#108;</em>
+      <a href="mailto:contactATtechwritersDOTeu" onclick = "this.href=this.href 
+      .replace(/AT/,'&#64;') .replace(/DOT/,'&#46;')" style="text-decoration: none;">cont&#97;ct<span class="twmail">techwriters.eu</span></a></p>
+  </div>
+  
+
+
+  <!-- CSS obfscate m41L -->
+
+
+
+
+  <!-- PH0N3 -->
+
+  <div class="w3-container">
+    <p><em class="w3-xxlarge material-icons" style="vertical-align:middle;padding:4px">ph&#111;n&#101;</em>
+    +&#51;59&#56;&#56;9&#52;5&#50;4&#49;0</p>
   </div>
 
   <hr />
 
-  <!-- EM4iL hide from the eye -->
+  <div class="w3-container">
+    <p class="w3-opacity">In time we will populate this page with meaningful content. Until then, here's this badass UTF-8 character: the almighty keyboard!<br /><br />For real, one of the best oldschool chars ever!</p>
 
-<div class="w3-container">	
-	<p><em class="w3-xxlarge material-icons" style="vertical-align:middle;padding:4px" >&#101;m&#97;i&#108;</em>
-    <a href="mailto:contactATtechwritersDOTeu" onclick = "this.href=this.href 
-    .replace(/AT/,'&#64;') .replace(/DOT/,'&#46;')" style="text-decoration: none;">cont&#97;ct<span class="twmail">techwriters.eu</span></a></p>
+    <div class="w3-text-teal w3-center w3-animate-left" style="font-size: 15em; margin-top:-0.3em;">&#9000;</div>
+  </div>
 </div>
-
-<!-- CSS obfscate m41L -->
-
-
-
-
-<!-- PH0N3 -->
-
-<div class="w3-container">
-	<p><em class="w3-xxlarge material-icons" style="vertical-align:middle;padding:4px">ph&#111;n&#101;</em>
-	+&#51;59&#56;&#56;9&#52;5&#50;4&#49;0</p>
-</div>
-
-<hr />
-
-<div class="w3-container w3-quarter">
-  <p class="w3-opacity">In time we will populate this page with meaningful content. Until then, here's this badass UTF-8 character: the almighty keyboard!<br /><br />For real, one of the best oldschool chars ever!</p>
-
-  <div class="w3-text-teal w3-center w3-animate-bottom" style="font-size: 15em; margin-top:-0.3em;">&#9000;</div>
-</div>
-
 <!-- <footer class="w3-container w3-light-blue">
   <p>Technical writers EU | 2023<p>
 </footer> -->
+
+<div class="w3-display-container w3-twothird" style="padding-top: 1%; padding-right: 0.3%;">
+  <img src="img/flat-lay-workstation-with-copy-space-laptop.jpg" alt="TechWriters.eu" class="w3-image">
+  <div class="w3-display-topleft w3-container w3-text-light-grey w3-large w3-padding-16" style="padding-left: 1em;">
+    <p class="hideText">A fun CSS demo:</p>
+    <p class="hideText">This sentence changes behavior <span class="hideText">when you resize your screen.</span></p>
+  </div>
+</div>
 
 <div id="footer">
   <span>Tech Writers EU | 2023 | All rights reserved</span>

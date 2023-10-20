@@ -17,11 +17,18 @@
 <body>
 
     <div class="topnav">
+        <span class="tooltip w3-right">
+            <a href="../../portfolio.html" alt="back to Portfolios">							
+                <span class="tooltip" style="font-size: 1.7em; margin-bottom: -10px; margin-top: -19px; padding-bottom: 0px; ">
+                    <em class="fa fa-arrow-circle-o-left"></em>
+                <span class="tooltiptext" style="font-size: small;">&nbsp;Back to Portfolios&nbsp;</span>
+                </span>
+            </a>
+        </span>
         <a href="index.html">Home</a>
         <a class="active" href="crypto.html">Crypto</a>
         <a href="sports.html">Sports</a>
         <a href="weather.html">Weather</a>
-        <a href="../../portfolio.html" alt="back to Home" class="w3-right"><span class="fa fa-arrow-circle-o-left" style="font-size: 1.4em; padding-bottom: -5px;"></span></a>
     </div>
 
 
@@ -36,7 +43,7 @@
     <span style="margin: auto; display: inline-block; min-width:60%;">
 
         <h2>24hr Price action</h2>
-        <!-- <p>Quotes provided by crypto.com. Prices may differ from those of widgets, provided by others.</p> -->
+        <p>Provides quotes of some top currencies provided by crypto.com.</p>
         <script src="https://price-static.crypto.com/latest/public/static/widget/index.js"></script>
         <div
           id="crypto-widget-CoinList"          
@@ -49,7 +56,7 @@
     <span style="margin: auto; display: inline-block;">
 
         <h2>Crypto news</h2>
-        <!-- <p>Quotes provided by cointelegraph.com. Prices may differ from those of widgets, provided by others.</p> -->
+        <p>Provides news feed by cointelegraph</p>
         <span>
             <script src="https://cointelegraph.com/news-widget" data-ct-widget-limit="20" data-ct-widget-theme="dark" data-ct-widget-size="medium" data-ct-widget-priceindex="true" data-ct-widget-currency="USD" data-ct-widget-language="en"></script>
         </span>
@@ -61,6 +68,7 @@
 <hr />
 
 <h2>Cryptomarkets market cap</h2>
+<p>Provides market cap data by TradingView.</p>
 <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
     <!--<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a> by TradingView</div>-->

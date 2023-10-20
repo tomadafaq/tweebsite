@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>    
+<head>
+    <title>Crypto widgets</title>
+    <!-- The favicon -->
+    <link rel="icon" href="btcvico.png" type="image/gif" sizes="32x32">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Ref to my CSS -->
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- Link to W3.CSS stylesheet -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- Link to font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a class="active" href="crypto.html">Crypto</a>
+        <a href="sports.html">Sports</a>
+        <a href="weather.html">Weather</a>
+        <a href="../../portfolio.html" alt="back to Home" class="w3-right"><span class="fa fa-arrow-circle-o-left" style="font-size: 1.4em; padding-bottom: -5px;"></span></a>
+    </div>
+
+
+  <h1>Crypto widgets</h1>
+  <p>Widgets for the crypto industry. This page will evolve. Prices displayed in one widget may differ from those of other widgets, especially when provided by other quote providers.</p>
+
+
+<!-- 2 cols DIV --><div class="two-cols">
+    <!-- Price movements -->
+    
+
+    <span style="margin: auto; display: inline-block; min-width:60%;">
+
+        <h2>24hr Price action</h2>
+        <!-- <p>Quotes provided by crypto.com. Prices may differ from those of widgets, provided by others.</p> -->
+        <script src="https://price-static.crypto.com/latest/public/static/widget/index.js"></script>
+        <div
+          id="crypto-widget-CoinList"          
+          data-theme="dark"
+          data-design="classic"
+          data-coin-ids="1,166,20,1986,440,29,418,1381,2511,2283"></div>        
+
+    </span>
+
+    <span style="margin: auto; display: inline-block;">
+
+        <h2>Crypto news</h2>
+        <!-- <p>Quotes provided by cointelegraph.com. Prices may differ from those of widgets, provided by others.</p> -->
+        <span>
+            <script src="https://cointelegraph.com/news-widget" data-ct-widget-limit="20" data-ct-widget-theme="dark" data-ct-widget-size="medium" data-ct-widget-priceindex="true" data-ct-widget-currency="USD" data-ct-widget-language="en"></script>
+        </span>
+    
+    </span>
+
+<!-- End two-cols -->
+</div>
+<hr />
+
+<h2>Cryptomarkets market cap</h2>
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <!--<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a> by TradingView</div>-->
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+        {
+        "width": 1000,
+        "height": 490,
+        "defaultColumn": "overview",
+        "screener_type": "crypto_mkt",
+        "displayCurrency": "USD",
+        "colorTheme": "dark",
+        "locale": "en"
+        }
+    </script>
+</div>
+
+
+
+
+
+</body>
+</html>

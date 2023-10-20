@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Widgets - crypto, weather, sports</title>
+		<!-- The favicon -->
+		<link rel="icon" href="btcvico.png" type="image/gif" sizes="32x32">
+		<link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<!-- Ref to my CSS -->
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<!-- Link to W3.CSS stylesheet -->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+		<!-- Link to font awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style>
+		</style>
+	</head>
+	<body>
+
+		<!-- Navigation pages -->
+
+		<div class="topnav">
+			<a class="active" href="">Home</a>
+			<a href="crypto.html">Crypto</a>
+			<a href="sports.html">Sports</a>
+			<a href="weather.html">Weather</a>
+			<a href="../../portfolio.html" alt="back to Home" class="w3-right"><span class="fa fa-arrow-circle-o-left" style="font-size: 1.4em; padding-bottom: -5px;"></span></a>
+		</div>
+
+		<h1>Widgets</h1>
+		<p>This simple string of web pages demonstrate embedded widgets. The widgets added here offer data related to cryptomarkets, sports, news weather. These pages are experimental and subject to future changes.</p>
+
+		<!-- <h2>Major coins</h2> -->
+		<hr />
+
+
+		<!-- 2 cols DIV -->
+		<div class="two-cols">
+		
+			<span style="margin: auto; display: inline-block; min-width:60%;">
+		
+				<h2>24hr Price action</h2>   
+				<p>Provides current market prices to top currencies.</p>
+				<script src="https://price-static.crypto.com/latest/public/static/widget/index.js"></script>
+				<div
+				  id="crypto-widget-CoinList"          
+				  data-theme="dark"
+				  data-design="classic"
+				  data-coin-ids="1,166,20,1986,440,29,418,1381,2511,2283"></div>        
+		
+			</span>
+		
+			<span style="margin: auto; display: inline-block;">
+		
+				<h2>Crypto news</h2>
+				<p>Provides current cypto news. Live BTC & ETH prices at the bottom.</p>
+				<span>
+					<script src="https://cointelegraph.com/news-widget" data-ct-widget-limit="20" data-ct-widget-theme="dark" data-ct-widget-size="medium" data-ct-widget-priceindex="true" data-ct-widget-currency="USD" data-ct-widget-language="en"></script>
+				</span>
+			
+			</span>
+		
+		<!-- End two-cols -->
+		</div>
+		<br />
+		<!-- TradingView Widget END -->
+		<hr />
+
+	<!-- Weather widgets -->					
+		<!-- 2 cols DIV -->
+		<div class="two-cols">
+
+		<!-- MeteoBlue Sofia Widget-->
+			<span style="margin: auto; display: block" class="meteoBlue">
+				<h2><a href="https://www.meteoblue.com/en/weather/week/sofia_bulgaria_727011?utm_source=weather_widget&utm_medium=linkus&utm_content=three&utm_campaign=Weather%2BWidget" target="_blank">Sofia weather</a></h2>
+				<p>Quotes by MeteoBlue. </p>
+				<iframe src="https://www.meteoblue.com/en/weather/widget/three/sofia_bulgaria_727011?geoloc=fixed&nocurrent=0&noforecast=0&days=5&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 575px; height: 611px"></iframe>
+			</span>	
+
+		<!-- Euronews Widget-->
+		<span style="margin: auto; display: inline-block;">
+
+			<h2>Euronews widget</h2>
+			<p>Hover with your mouse point over the widget to scroll through latest news.</p>
+
+			<iframe src="https://euronews.com/embed/timeline" scrolling="no" style="border:none; min-height:425px; width:100%; height:100%;"></iframe>
+
+
+		</span>
+	</div>				
+	<br />
+	<hr />
+		
+		
+		<!-- Widget Links -->
+		<span style="display: inline; margin-left: 100px;">				
+			<h2>Widget links</h2>
+			<p></p>
+			<ul>
+				<li><a href="https://cointelegraph.com/widgets" target="blank"target="_blank">Crypto-news widget</a></li>
+				<li><a href="https://nomics.com/assets/btc-bitcoin/widget" target="blank"target="_blank">Nomics widget</a></li>
+				<li><a href="https://www.tradingview.com/widget/crypto-mkt-screener/" target="_blank">TradingView widget</a></li>
+				<li><a href="https://coinmarketcap.com/widget/price-blocks/" target="_blank">CoinMarketCap widget</a></li>
+				<li><a href="https://www.snow-forecast.com/pages/configure_feed1">Borovets widget</a></li>
+				<li><a href="https://www.meteoblue.com/en/weather/widget/setupthree/sofia_bulgaria_727011" target="_blank">Meteo blue - Sofia</a></li>
+				<li><a href="https://www.meteoblue.com/en/weather/widget/setupthree/plovdiv_bulgaria_728193" target="_blank">Meteo blue - Plovidv</a></li>
+
+			</ul>
+		</span>
+	</body>
+</html>

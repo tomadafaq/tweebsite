@@ -21,8 +21,13 @@ p.hideText {
 }
 
 span.hideText {
-  @media screen and (max-width: 1200px) {font-weight: bold; color: orangered;"}
+  @media screen and (max-width: 1200px) {font-weight: bold; color: aquamarine;"}
 }
+
+body {
+  /* The image used */
+  background-image: url("img/flat-lay-workstation-with-copy-space-laptop.jpg");}
+
 
 </style>
 
@@ -55,14 +60,14 @@ $(document).ready(function(){
 <header class="w3-container w3-teal">
   <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
       <span class="w3-xxlarge w3-right" onclick="darkModeFn()"><em class="fa fa-adjust fa-fw w3-margin-top w3-right w3-text-white"></em></span>  <h1 class="w3-xxxlarge">Contacts</h1>
-  <p class="w3-large">Reach out to us to discuss your needs and request quotes.</p>
+  <!-- <p class="w3-large"></p> -->
 </header>
 
 
 <div class="w3-row">
-  <div class="w3-third w3-padding"> 
+  <div class="w3-padding"> 
     <div class="w3-container">
-    <p>We do everything related to technical content. And we do it good.</p>
+    <p>We do everything related to technical content. And we do it good. Reach out to us to discuss your needs and request quotes.</p>
     </div>
 
      <hr />
@@ -88,25 +93,30 @@ $(document).ready(function(){
     <p><em class="w3-xxlarge material-icons" style="vertical-align:middle;padding:4px">ph&#111;n&#101;</em>
     +&#51;59&#56;&#56;9&#52;5&#50;4&#49;0</p>
   </div>
-
+<!-- End dic row3 -->
+</div>
   <hr />
 
-  <div class="w3-container">
+  <!-- <div class="w3-container">
     <p class="w3-opacity">In time we will populate this page with meaningful content. Until then, here's this badass UTF-8 character: the almighty keyboard!<br /><br />For real, one of the best oldschool chars ever!</p>
 
     <div class="w3-text-teal w3-center w3-animate-left" style="font-size: 15em; margin-top:-0.3em;">&#9000;</div>
-  </div>
+  </div> -->
 </div>
 <!-- <footer class="w3-container w3-light-blue">
   <p>Technical writers EU | 2023<p>
 </footer> -->
 
-<div class="w3-display-container w3-twothird" style="padding-top: 1%; padding-right: 0.3%;">
+<div class="w3-row">
+<div class="w3-display-container" style="padding-top: 1%; padding-right: 0%;">
   <img src="img/flat-lay-workstation-with-copy-space-laptop.jpg" alt="TechWriters.eu" class="w3-image">
   <div class="w3-display-topleft w3-container w3-text-light-grey w3-large w3-padding-16" style="padding-left: 1em;">
     <p class="hideText">A fun CSS demo:</p>
     <p class="hideText">This sentence changes behavior <span class="hideText">when you resize your screen.</span></p>
+    <p class="hideText w3-medium">Zooming in or out <span class="hideText">is not the same as resizing.</span></p>
   </div>
+</div>
+
 </div>
 
 <div id="footer">
@@ -114,8 +124,7 @@ $(document).ready(function(){
 </div>
 
 
-<!-- End dic row3 -->
-</div>
+
 
 </body>
 </html>

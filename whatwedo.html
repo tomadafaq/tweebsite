@@ -9,6 +9,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Local JS -->
     <script src="main.js"></script>
+  
+    <!-- COllapsibles styles -->
+    <style>
+      .collapsible {
+        background-color: lightgrey;
+        color: inherit;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        border-top: solid 1px lightgrey;
+        font-size: 15px;
+      }
+      
+      .active, .collapsible:hover {
+        background-color: grey;
+      }
+      
+      .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: lightgrey;
+      }
+      </style>
+  
   </head>
   
   <body>
@@ -39,9 +67,10 @@
       <p class="w3-xlarge">We author, update and maintain technical documentation for you!</p>
     </header>
 
+    
     <div class="w3-row-padding">
-      <div class="w3-quarter">
-        <h3>Everything about tech docs</h3>
+      <div class="w3-container w3-half w3-padding">
+        <h2>Everything about tech docs</h2>
         <p>We provide tech writing services for the IT community:</p>
         <ul>
           <li>
@@ -60,30 +89,79 @@
         </ul>
 
         <p>
-          Our moto is: deliver fast & make it brief. We believe in concise and precise text, supplemented with rich content, including visuals, like diagrams images and video.
-          <br /><br />
+          We believe in concise and precise text, supplemented with rich content, including visuals, like diagrams images and video.          
         </p>
+
+        
+        
+  
+        <!-- <button class="collapsible">User guides, API reference guides, Release Notes, etc. Hit this area to learn more:</button>
+        <div class="content">
+          <ul>
+              <li>user guides and manuals</li>
+              <li>API references SDKs and developer guides</li>
+              <li>installation &amp; deployment guide</li>
+              <li>administrator guides</li>          
+              <li>marketing and technical articles for blogs</li>
+              <li>release notes</li>
+              <li>whatever tech-related you might think of</li>
+            </ul>
+        </div> -->
+
+
+        
+        <h3 id="technical-documentation">Any type of tech docs</h3>
+        <p>We create and maintain technical documentation:</p>
+        <ul>
+          <li>user guides and manuals</li>
+          <li>API references SDKs and developer guides</li>
+          <li>installation &amp; deployment guide</li>
+          <li>administrator guides</li>          
+          <li>marketing and technical articles for blogs</li>
+          <li>release notes</li>
+          <li>whatever tech-content related you might think of</li>
+        </ul>
+        
+        
+        <h3>We know formats</h3>
+        <p>We can work with any format or toolset. We'd rather focus on doc-as-code platforms because they are easy to maintain and have a low footprint on your systems.</p>
+        <!-- <ul class="fa-ul"> -->
+        <ul>
+          <li><span class="fa-li"><i class="fa fa-check-square w3-text"></i></span>good old Word files, DOC, DOCX or ODT</li>
+          <li><span class="fa-li"><i class="fa fa-check-square w3-text"></i></span>XML-based WYSIWYG authoring tools, like Madcap Flare</li>
+          <li><span class="fa-li"><i class="fa fa-check-square w3-text"></i></span>doc-as-code platforms, like MkDocs, Slate, Docusaurus, Jekyll</li>
+          <li><span class="fa-li"><i class="fa fa-check-square w3-text"></i></span>web portals, such as Zendesk, Helpdesk, Hubspot</li>
+          <li><span class="fa-li"><i class="fa fa-check-square w3-text"></i></span>wikis, including Confluence and Wikimedia</li>
+        </ul>
+        
+      
       </div>
-      <div class="w3-half">
+      
+    
+      <div class="w3-container w3-half w3-right w3-padding">
         
         <!-- We do Doc portals -->
-        <h3>All about doc portals</h3>
-        <p>Doc portals is what we call any web hosted library of technical documentation. If your library consists of PDFs and/or Word docs, Excel sheets and other supplementary standalone files, that is not really a doc portal. </p>
+        <h2>All about doc portals</h2>
+        <p>Documentation portals is a website that contains all technical documentation content and resources.</p>
         
-        <h4>Create doc portals from scratch</h4>
-        <p>Thats is usually what startup companies need. Whether it is developer's docs, pluggable components, APIs or SDKs, we know what to do. Usually, you just need to decide if you want a CMS or would rather go with a Git repo for the job. The rest is up to us.</p>
+        <h4>Doc portals from scratch</h4>
+        <p>That's usually for startup companies.         
+
+          Whether it is developer's docs, pluggable components, APIs or SDKs, we know what to do. We can help you pick the CMS for your documentation and approaches to your deliveries.</p>
+          
                 
         <h4>Migrate doc portals to better platforms</h4>
-        <p>Usually it happens with companies with a long history that offer multiple products and services. It is hard enough to maintain all documentation sets for all products but as content grows bigger, so do challenges with migrating it to something better. Moving everything from one platform to another is not a simple task: everything you do must be searchable and it's often impossible, for example, to export and import images. We knwo the challenges and are able to do it for you. We also help make the right decisions with all of the above plus so much more.</p>
+        <p>Normally, it's companies with multiple products and services that need such a radical change. As content grows bigger in time, so do challenges with migrating it to something better. Moving everything from one platform to another is not a simple task and we know the challenges. We also help identify possible points of failure and you take the right decisions.</p>
         
         <h4>Reorganize doc portals & update existing documentation</h4>
-        <p>If you have existing doc portal, but aren't happy with its content; or receive negative feedback from your users, we're here to help. You might need help on proof-reading & editing, restructuring of sections, or simply applying best practices. We can consult you on what to do; or you can hire us to do it for you. Depending on the size of your documentation, this may turn out to be a very cumbersome task. <strong>Reorganizing a doc portal</strong> is not easy and often requires you to convey a research in order to identify the weakest spots to address. 
+        <p>We can help boost your doc portal success. Proof-reading & editing, restructuring of sections, or simply applying best practices, we offer it all. We can consult you on what to do; or you can hire us to do it for you. Depending on the size of your documentation, this may turn out to be a very cumbersome task. 
         </p>
-        <p>We also <strong>update existing documentation</strong>. Updates vary from simple refreshing of images to match the latest UI, to breaking down sections, or removing obsolete content. Don't forget we also do diagrams, videos, GIFs and utilize all forms of visuals, for example font-awesome icons, etc. </p>
-          <p>We have experience with doc portals.</p>
+        
+        <h4>Doc portal SEO</h4>
+        <p>We also know how to do SEO and we can help you implement a strategy for you to collect valuable metrics and reduce the bounce rate across your pages.</p>
         
       </div>
-      <div class="w3-quarter">
+      <!-- <div class="w3-quarter">
         <h3 id="technical-documentation">Technical documentation covered</h3>
         <p>We create and maintain technical documentation. Our experience is with various </p>
         <ul>
@@ -99,24 +177,24 @@
         <div>
         <h4>We know formats</h4>
         <p>We can work with any format or toolset. We'd rather focus on doc-as-code platforms because the output does not matter but everything else is fine.</p>
-        <!-- <ul class="fa-ul"> -->
-        <ul>
+        <ul class="fa-ul"> -->
+        <!-- <ul>
           <li><span class="fa-li"><i class="fa fa-check-square w3-text"></i></span>good old Word files, DOC, DOCX or ODT</li>
           <li><span class="fa-li"><i class="fa fa-check-square w3-text"></i></span>XML-based WYSIWYG authoring tools, like Madcap Flare</li>
           <li><span class="fa-li"><i class="fa fa-check-square w3-text"></i></span>doc-as-code platforms, like MkDocs, Slate, Docusaurus, Jekyll, etc.</li>
           <li><span class="fa-li"><i class="fa fa-check-square w3-text"></i></span>web portals, such as Zendesk, Helpdesk, Hubspot, etc.</li>
           <li><span class="fa-li"><i class="fa fa-check-square w3-text"></i></span>wikis, including Confluence, Wikimedia, etc.</li>
-        </ul>  
-      </div>
+        </ul>   -->
+      <!-- </div> 
 
-      </div>
+      </div> -->
     </div>
+    <p></p><p></p>
 
     <!-- <footer id="footer">
   <p>Technical writers EU | 2023</p>
 </footer> -->
 
     <div id="footer"><span>Tech Writers EU | 2023 | All rights reserved</span></div>
-
   </body>
 </html>

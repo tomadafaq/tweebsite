@@ -10,7 +10,7 @@
                 <td width="40%">
                     <p style="margin: 19px 0px -3px 0px;"> &nbsp;&nbsp;mobile:&nbsp;&nbsp;+359&nbsp;889&nbsp;452 410</p>
                     <p>&nbsp;&nbsp;email:&nbsp;&nbsp; 
-                    <a href="mailto:toma.kashamov@gmail.com"  style="color: lightgrey;">toma.kashamov@gmail.com</a></p>
+                    <a href="mailto:contact@techwriters.eu"  style="color: lightgrey;">contact@techwriters.eu</a></p>
                 </td>
             </tr>
         </tbody>

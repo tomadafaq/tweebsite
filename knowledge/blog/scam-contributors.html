@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>scam-contributors.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="how-to-easily-identify-scam-contributors">How to <s>easily</s> identify scam contributors</h1>
+<p>Anyone with more than just a few years of experience has seen at least one suchlike figure. Usually this person comes up like an expert but ultimately brings no value to the company or the products. It is fair to note that the presence of that someone for longer periods might damage the company culture for good.</p>
+<p>In my career I have been in multiple companies but only recently did I realize that the scam contributors seem to be multiplying lately. Maybe it was my luck or the lack of it but in the end, the impact over the affected teams piles up in a way much similar to the butterfly effect.</p>
+<p>In other words, the longer the stay, the worse it gets and the harder it is to repair the damage. The aftermath leaves colleagues confused, focus of squads smeared and leadership decisions deemed as questionable.</p>
+<p>This is why you should always stay aware since there's nearly zero chance to resolve the problem instantly. The further from management you are, the less options you have for quick ways to survive the scam contributors.</p>
+<p>Before I go deeper, I should explain that I am an IT guy and most of my work experience is in IT companies. I am specifically a technical writer, which is a role that often interacts with different teams. Also, I am not discussing tech writers only. Note that being &quot;scam&quot; does not necessarily mean they are worthless in skill: it is more about attitude, lack of respect and unwillingness to identify themselves with the organization goals.</p>
+<p>When I met the very first scam contributor, I could not really tell where this would be going. But after several encounters with others years on, I can now detect most of them nearly instantly. The scam contributor is not necessarily completely useless or a constant underperformer. Typically they are educated, and can express themselves well. They also claim to have a solid background with some impressive achievements, whether written down a CV or spoken out at job interviews. Also, they usually don't last long in a company but this is good enough as their ambitions are as far as the scam would work. To help raise awareness about the scam contributor, today I will summarize and present to the wide audience the 5 common traits I've seen in nearly every one I've encountered.</p>
+<ol>
+<li>They come as experts. Usually they have a degree in an entirely different field but when you meet them, they already have experience. I have seen some with resumes listing really impressive companies. None of their stints last more than a year or two, though. It would be a far stretch to claim they are always lying on their CVs but that surely is a possibility. I've seen FCs with alleged freelance experience. Note that they are a step ahead of you so they are not boasting bold statements or total fiction: it's just that facts and fiction are mixed. This is particularly popular with people claiming to have been team leaders and who have managed a crowd of people.</li>
+<li>They don't exactly have a portfolio to present. In most cases they're well aware of the right lingo and associated tech terminology, but have seemingly never had enough interest to leave a trace anywhere. So if that's a programmer, they would have a project of their own, a github repo to present but these type of persons don't. With tech writers they tend to be people who don't write anything besides social media posts: they are not really writers per se. The tech part is also hard to identify as it is easy to explain how software or documentation in previous companies is not publicly available without paid subscription so you just have to trust their word for it. When you work with FCs and get to know them better, you eventually see they don't really have much passion for whatever profession they have chosen.</li>
+<li>They nearly instantly become very proactive on communication channels and usually exert the rhetoric of how important their engagement is. More often than never, they would start making meetings with different people and offer to help with tasks or stuff nobody thought as that important or immediately necessary. Do not mistake a possible backlog where actual work is in the wait list. Nope, it is mostly stuff no one considered at all. Some of the examples are hilarious. Check this out: a junior to mid-level programmer gets GitHub access and notices something in the Readme instruction in a repo: &quot;Never push changes to master branch. Always work in your dev branch and perform a pull request when you must publish to master.&quot; In that moment, the scam contributor loses their mind over the use of the obsolete term &quot;master&quot;. Suddenly, a bunch of meetings are organized and different teams and team leaders are contacted over the distasteful use of hurtful language. The FC adds a lot of hassle and takes liberal values as a way to seem busy and engaged. Everyone agrees that insolent language must be removed from the company infrastructure and documentation but this is presented as a suddenly super important issue by a newcomer. Another notable example is for someone who cherry picks the easiest of tasks in the backlog. Usually they can get away with that for the first few months until other team members or the team leader weigh in.</li>
+</ol>
+<!-- After all, a herd is as fast as its slowest member and distribution of workload is .  -->
+<p>So, time and time again, the FC would make e few initiatives of this kind with pretty much anyone who might have a stake in them.</p>
+<ol>
+<li>They know that sooner or later the scheme will be revealed, most likely by their peers. This is why in the very beginning, they are always overly excited to see you, or chat with you until you start to question their involvement or skills. Then they suddenly change the friendly demeanor with a far more hostile one. The point is simple: drag the suspecting colleague out of their comfort zone so they can fight to remove them from the company. Most tech people I know are really not comfortable in conflicts and are not necessarily known for their healthy ways of expressing. Tech people might let improper wording slip out of their mouth and this is what the FC is waiting for. The FC leverages that and contacts all managers possible, including HR. If written, they take screenshots with the intolerable communication and escalate to as high as they can reach. My favorite example here is how the FC starts to update build job configurations and messes up the build targets. They start to accuse the &quot;responsible&quot; engineer from DevOps for lack of engagement. After some futile attempts to calm down the FC and get hold of the situation, the DevOps person types down the words: Please stop creating problems and don't play with things you aren't qualified for. The FC loses their mind over this insult and proceeds with the imminent escalation. So bear in mind that people like this tend to be very proud and easy to offend. They like to provoke a colleague with out-of-scope requirements for lack of involvement with their personal agenda to look important.</li>
+<li>With the advancement of the fake engagement, these personal problems start to aggregate but they usually are consistent with diversions when they feel endangered. This perfectly combines with the previous point of how they handle whistleblowers. All of a sudden they get sick, or appear to have a problem with their partner, or unexpectedly start to suffer from unorthodox low impact health issues but present them as huge ones. This will be used for an excuse every time someone would begin to address poor performance. When combining their personal problems with the inevitable conflicts at work, you may guess the rhetoric: it goes around how they have personal issues to address at home and up until just now work was their safe spot. Now this is taken away because of someone. They would also let everyone know how attacked and vulnerable <strong>that feels</strong>. By that time the build up is complete and usually leaders are forced to make decisions. However, some company policies don't allow this to happen right away. This also adds some detriment to relations within the team members involved. Damage is done and valuable contributors would have had enough.</li>
+</ol>
+<p>Some other notable items from the scam contributor spec:</p>
+<ul>
+<li>More likely to appear in large enterprise companies or companies that currently undergo rapid growth.</li>
+<li>Typically would go for low-level management. I have seen programmer's team lead role with questionable experience in software engineering. Or could be a job that is somehow solo: a tech writer, a dedicated sales, a marketing team member, be it front end engineer or a web/graphical designer.</li>
+<li>They don't make friends with colleagues but are very friendly with everyone until they get revealed.</li>
+<li>They tend to break commitment and promises regarding their work and expected deliveries. This is important to know since they often pick low-priority items that are not critical to deliveries but help them buy some time.</li>
+</ul>
+<p>Please do not use the comment section to discredit particular people who you would identify as scam contributors. The intention of this essay article is to raise awareness, not to create grounds for retributions.</p>
+
+</body>
+</html>

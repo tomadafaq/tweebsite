@@ -1,0 +1,2746 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Countries of the world: info, capital, flags, population</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px; background-color: #1c1c1c; color: lightgrey;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+	padding: 3px 3px 3px 3px;
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="world-geographical-info">World Geographical info</h1>
+<p>This is an experimental table with actual info about the countries of the world.
+The content herein is not verified by an independent source and is intended entirely for educational purposes. Content may be subject to occasional updates. Created from scratch using markdown.</p>
+<blockquote><b>Disclaimer:</b> This page displays no political, religious, cultural or ethnical bias or preferences, whatsoever. The content herein is solely used for educational purposes. TechWriters.eu is in no way responsible for audience perception. Everyone is free to agree or disagree. Feel free to <a href="../../../contacts.html">contact us</a> if you find erroneous content. </blockquote>
+
+<h2 id="countries-flags-and-general-info">Countries, flags and general info</h2>
+<table class="table table-hover table-condensed">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Country</th>
+            <th style="min-width: 20%">&nbsp;&nbsp;&nbsp;Flag&nbsp;&nbsp;&nbsp;</th>
+            <th style="text-align: center;">Population <br />Area (Km&sup2;)</th>
+            <th style="text-align: right;">Currency<br />ISO Code</th>
+            <th style="text-align: right;">Capital</th>
+        </tr>
+    </thead>
+	<tbody>
+		<tr><!-- Afghanistan -->
+			<td>1</td>
+			<td style="font-weight: bold; font-size: 15px;">Afghanistan
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, Central/South</em>
+				</div>				
+			</td>
+			<td><img alt="Afghanistan" src="flag-icons-main\flag-icons-main\flags\4x3\af.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/afghanistan-population/">42,239,854</a><br />652,860
+			</td>
+			<td style="text-align: right;">Afghan&nbsp;afghani<br />AFN</td>
+			<td style="text-align: right;">Kabul</td>
+		</tr>
+		<tr><!-- Albania -->
+			<td>2</td>
+			<td style="font-weight: bold; font-size: 15px;">Albania
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, East; Balkans</em>
+				</div>		
+			</td>
+			<td><img alt="Albania" src="flag-icons-main\flag-icons-main\flags\4x3\al.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/albania-population/">2,832,439</a><br />27,400</td>
+			<td style="text-align: right;">Albanian lek<br />ALL</td>
+			<td style="text-align: right;">Tirana</td>
+		</tr>
+		<tr><!-- Algeria -->
+			<td>3</td>
+			<td style="font-weight: bold; font-size: 15px;">Algeria
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, North</em>
+				</div>
+			</td>
+			</td>
+			<td><img alt="Algeria" src="flag-icons-main\flag-icons-main\flags\4x3\dz.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/algeria-population/">45,606,480</a><br />2,381,740</td>
+			<td style="text-align: right;">Algerian dinar<br />DZD</td>
+			<td style="text-align: right;">Algiers</td>
+		</tr>
+		<tr><!-- Andorra -->
+			<td>4</td>
+			<td style="font-weight: bold; font-size: 15px;">Andorra
+			<div style="color: grey; font-size: 12px;">
+					<em>Europe, West</em>
+				</div>
+			</td>
+			<td><img alt="Andorra" src="flag-icons-main\flag-icons-main\flags\4x3\ad.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/andorra-population/">80,088</a><br />470</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Andorra la Vella</td>
+		</tr>
+		<tr><!-- Angola -->
+			<td>5</td>
+			<td style="font-weight: bold; font-size: 15px;">Angola<br>
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, SE</em>
+				</div>
+			</td>
+			<td><img alt="Angola" src="flag-icons-main\flag-icons-main\flags\4x3\ao.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/angola-population/">36,684,202</a><br />1,246,700</td>
+			<td style="text-align: right;">Angolan kwanza<br />AOA</td>
+			<td style="text-align: right;">Luanda</td>
+		</tr>
+		<tr><!-- Antigua and Barbuda -->
+			<td>6</td>
+			<td style="font-weight: bold; font-size: 15px;">
+				Antigua and Barbuda<br />
+				<div style="color: grey; font-size: 12px;">	
+					<em>Caribbean Islands, East</em>
+				</div>
+			</td>
+			<td><img alt="Antigua and Barbuda" src="flag-icons-main\flag-icons-main\flags\4x3\ag.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/antigua-and-barbuda-population/">94,298</a><br />440</td>
+			<td style="text-align: right;">East Caribbean dollar<br />XCD</td>
+			<td style="text-align: right;">Saint John's</td>
+		</tr>
+		<tr><!-- Argentina -->
+			<td>7</td>
+			<td style="font-weight: bold; font-size: 15px;">Argentina
+				<div style="color: grey; font-size: 12px;">
+					<em>S. America, South</em>
+				</div>		
+			</td>
+			<td><img alt="Argentina" src="flag-icons-main\flag-icons-main\flags\4x3\ar.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/argentina-population/">45,773,884</a><br />2,736,690</td>
+			<td style="text-align: right;">Argentine peso<br />ARS</td>
+			<td style="text-align: right;">Buenos Aires</td>
+		</tr>
+		<tr><!-- Armenia -->
+			<td>8</td>
+			<td style="font-weight: bold; font-size: 15px;">Armenia
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, West</em>
+				</div>		
+			</td>
+			<td><img alt="Armenia" src="flag-icons-main\flag-icons-main\flags\4x3\am.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/armenia-population/">2,777,970</a><br />28,470</td>
+			<td style="text-align: right;">Armenian dram<br />AMD</td>
+		<td style="text-align: right;">Yerevan</td>
+		</tr>
+		<tr><!-- Australia -->
+			<td>9</td>
+			<td style="font-weight: bold; font-size: 15px;">Australia<br />
+				<div style="color: grey; font-size: 12px;">
+					<em>Australia, Oceania</em>
+				</div>
+			</td>
+			<td><img alt="Australia" src="flag-icons-main\flag-icons-main\flags\4x3\au.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/australia-population/">26,439,111</a><br />7,682,300</td>
+			<td style="text-align: right;">Australian dollar<br />AUD</td>
+			<td style="text-align: right;">Canberra</td>
+		</tr>
+		<tr><!-- Austria -->
+			<td>10</td>
+			<td style="font-weight: bold; font-size: 15px;">Austria
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, Central</em>
+				</div>
+			</td>
+			<td><img alt="Austria" src="flag-icons-main\flag-icons-main\flags\4x3\at.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/austria-population/">8,958,960</a><br />82,409</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Vienna</td>
+		</tr>
+		<tr><!-- Azerbaijan -->
+			<td>11</td>
+			<td style="font-weight: bold; font-size: 15px;">Azerbaijan
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, West</em>
+				</div>		
+			</td>
+			<td><img alt="Azerbaijan" src="flag-icons-main\flag-icons-main\flags\4x3\az.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/azerbaijan-population/">10,412,651</a><br />82,658</td>
+			<td style="text-align: right;">Azerbaijani&nbsp;manat<br />AZN</td>
+			<td style="text-align: right;">Baku</td>
+		</tr>
+		<tr><!-- Bahamas -->
+			<td>12</td>
+			<td style="font-weight: bold; font-size: 15px;">Bahamas
+				<div style="color: grey; font-size: 12px;">
+					<em>Islands in Atlantic, West Indies</em>
+				</div>
+			</td>
+			<td><img alt="Bahamas" src="flag-icons-main\flag-icons-main\flags\4x3\bs.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/bahamas-population/">412,623</a><br />10,010</td>
+			<td style="text-align: right;">	Bahamian dollar<br />BSD</td>
+			<td style="text-align: right;">Nassau</td>
+		</tr>
+		<tr><!-- Bahrain -->
+			<td>13</td>
+			<td style="font-weight: bold; font-size: 15px;">Bahrain<br />
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, Persian Gulf</em>
+				</div>
+			</td>
+			<td><img alt="Bahrain" src="flag-icons-main\flag-icons-main\flags\4x3\bh.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/bahrain-population/">1,485,509</a><br />760</td>
+			<td style="text-align: right;">Bahraini dinar<br />BHD</td>
+			<td style="text-align: right;">Manama</td>
+		</tr>
+		<tr><!-- Bangladesh -->
+			<td>14</td>
+			<td style="font-weight: bold; font-size: 15px;">Bangladesh
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, South</em>
+				</div>
+			</td>
+			<td><img alt="Bangladesh" src="flag-icons-main\flag-icons-main\flags\4x3\bd.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/bangladesh-population/">172,954,319</a><br />130,170</td>
+			<td style="text-align: right;">Bangladeshi taka<br />BDT</td>
+			<td style="text-align: right;">Dhaka</td>
+		</tr>
+		<tr><!-- Barbados -->
+			<td>15</td>
+			<td style="font-weight: bold; font-size: 15px;">Barbados<br />
+				<div style="color: grey; font-size: 12px;">
+					<em>Eastern Caribbean island</em>
+				</div>	
+			</td>
+			<td><img alt="Barbados" src="flag-icons-main\flag-icons-main\flags\4x3\bb.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/barbados-population/">281,995</a><br />430</td>
+			<td style="text-align: right;">Barbadian dollar<br>BBD</td>
+			<td style="text-align: right;">Bridgetown</td>
+		</tr>
+		<tr><!-- Belarus -->
+			<td>16</td>
+			<td style="font-weight: bold; font-size: 15px;">Belarus
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, East</em>
+				</div>
+			</td>
+				<td><img alt="Belarus" src="flag-icons-main\flag-icons-main\flags\4x3\by.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/belarus-population/">9,498,238</a><br />202,910</td>
+			<td style="text-align: right;">Belarusian&nbsp;ruble<br>BYN</td>
+			<td style="text-align: right;">Minsk</td>
+		</tr>
+		<tr><!-- Belgium -->
+			<td>17</td>
+			<td style="font-weight: bold; font-size: 15px;">Belgium
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, West</em>
+				</div>
+			</td>
+				<td><img alt="Belgium" src="flag-icons-main\flag-icons-main\flags\4x3\be.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/belgium-population/">11,686,140</a><br />30,280</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Brussels</td>
+		</tr>
+		<tr><!-- Belize -->
+			<td>18</td>
+			<td style="font-weight: bold; font-size: 15px;">Belize
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America, NE</em>
+				</div>
+			</td>
+			<td><img alt="Belize" src="flag-icons-main\flag-icons-main\flags\4x3\bz.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/belize-population/">410,825</a><br />22,810</td>
+			<td style="text-align: right;">Belize dollar<br>BZD</td>
+			<td style="text-align: right;">Belmopan</td>
+		</tr>
+		<tr><!-- Benin -->
+			<td>19</td>
+			<td style="font-weight: bold; font-size: 15px;">Benin
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, East; Gulf of Guinea</em>
+				</div>                
+			</td>
+			<td><img alt="Benin" src="flag-icons-main\flag-icons-main\flags\4x3\bj.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/benin-population/">13,712,828</a><br />112,760</td>
+			<td style="text-align: right;">West African CFA franc<br>XOF</td>
+			<td style="text-align: right;">Porto Novo</td>
+		</tr>
+		<tr><!-- Bhutan -->
+			<td>20</td>
+			<td style="font-weight: bold; font-size: 15px;">Bhutan
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, SE <br />- kingdom</em>
+				</div>   
+			</td>
+				<td><img alt="Bhutan" src="flag-icons-main\flag-icons-main\flags\4x3\bt.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/bhutan-population/">787,424</a><br>38,117</td>
+			<td style="text-align: right;">Bhutanese ngultrum<br>BTN</td>
+			<td style="text-align: right;">Thimphu</td>
+		</tr>
+		<tr><!-- Bolivia -->
+			<td>21</td>
+			<td style="font-weight: bold; font-size: 15px;">Bolivia
+				<div style="color: grey; font-size: 12px;">
+					<em>S. America, West-central</em>
+				</div>   
+			</td>
+				<td><img alt="Bolivia" src="flag-icons-main\flag-icons-main\flags\4x3\bo.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/bolivia-population/">12,388,571</a><br />1,083,300</td>
+			<td style="text-align: right;">Bolivian boliviano<br>BOB</td>
+			<td style="text-align: right;">Sucre</td>
+		</tr>
+		<tr><!-- Bosnia and Herzegovina -->
+			<td>22</td>
+			<td style="font-weight: bold; font-size: 15px;">Bosnia and Herzegovina
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, SE; Balkans</em>
+				</div>   
+			</td>
+				<td><img alt="Bosnia and Herzegovina" src="flag-icons-main\flag-icons-main\flags\4x3\ba.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/bosnia-and-herzegovina-population/">3,210,847</a><br />51,000</td>
+			<td style="text-align: right;">B & H convertible mark<br>BAM</td>
+			<td style="text-align: right;">Sarajevo</td>
+		</tr>
+		<tr><!-- Botswana -->
+			<td>23</td>
+			<td style="font-weight: bold; font-size: 15px;">Botswana
+			<div style="color: grey; font-size: 12px;">
+				<em>Africa, South; N to RSA</em>
+			</div>	
+			</td>
+			<td><img alt="Botswana" src="flag-icons-main\flag-icons-main\flags\4x3\bw.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/botswana-population/">2,675,352</a><br />566,730</td>
+			<td style="text-align: right;">Botswana pula<br>BWP</td>
+			<td style="text-align: right;">Gaborone</td>
+		</tr>
+		<tr><!-- Brazil -->
+			<td>24</td>
+			<td style="font-weight: bold; font-size: 15px;">Brazil
+				<div style="color: grey; font-size: 12px;">
+					<em>S. America, West</em>
+				</div>	
+			</td>
+			<td><img alt="Brazil" src="flag-icons-main\flag-icons-main\flags\4x3\br.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/brazil-population/">216,422,446</a><br />8,358,140</td>
+			<td style="text-align: right;">	Brazilian real<br>BRL</td>
+			<td style="text-align: right;">Brasilia</td>
+		</tr>
+		<tr><!-- Brunei -->
+			<td>25</td>
+			<td style="font-weight: bold; font-size: 15px;">Brunei
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, SE <br />- sultanate </em>
+				</div>                
+			</td>
+			<td><img alt="Brunei" src="flag-icons-main\flag-icons-main\flags\4x3\bn.svg" data-file-width="900" data-file-height="600"></td>                
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/brunei-darussalam-population/">452,524</a><br />5,270</td>
+			<td style="text-align: right;">	Brunei dollar<br>BND</td>
+			<td style="text-align: right;">Bandar Seri Begawan</td>
+		</tr>
+		<tr><!-- Bulgaria -->
+			<td>26</td>
+			<td style="font-weight: bold; font-size: 15px;">Bulgaria
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, SE </em>
+				</div>
+			</td>
+			<td><img alt="Bulgaria" src="flag-icons-main\flag-icons-main\flags\4x3\bg.svg" data-file-width="900" data-file-height="600"></td>                
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/bulgaria-population/">6,687,717</a><br />108,560</td>
+			<td style="text-align: right;">	Bulgarian lev<br>BGN</td>
+			<td style="text-align: right;">Sofia</td>
+		</tr>
+		<tr><!-- Burkina Faso -->
+			<td>27</td>
+			<td style="font-weight: bold; font-size: 15px;">Burkina Faso
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, West</em>
+				</div>                
+			</td>
+			<td><img alt="Burkina Faso" src="flag-icons-main\flag-icons-main\flags\4x3\bf.svg" data-file-width="900" data-file-height="600"></td>                
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/burkina-faso-population/">23,251,485</a><br />273,600</td>
+			<td style="text-align: right;">West African CFA franc<br>XOF</td>
+			<td style="text-align: right;">Ouagadougou</td>
+		</tr>
+		<tr> <!-- Bulgaria -->
+			<td>28</td>
+			<td style="font-weight: bold; font-size: 15px;">Burundi
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, Central; Lake Tanganyika</em>
+				</div>				
+			</td>
+			<td><img alt="Burundi" src="flag-icons-main\flag-icons-main\flags\4x3\bi.svg" data-file-width="900" data-file-height="600"></td>                
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/burundi-population/">13,238,559</a><br /></td>
+			<td style="text-align: right;">25,680</td>
+			<td style="text-align: right;">Gitega</td>
+		</tr>
+		<tr><!-- Cote d'Ivoire -->
+			<td>29</td>
+			<td style="font-weight: bold; font-size: 15px;">C&ocirc;te d'Ivoire
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, West</em>
+				</div>		
+			</td>
+			<td><img alt="Cote d'Ivoire" src="flag-icons-main\flag-icons-main\flags\4x3\ci.svg" data-file-width="900" data-file-height="600"></td>                
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/cote-d-ivoire-population/">28,873,034</a><br />318,000</td>
+			<td style="text-align: right;">West African CFA franc<br>XOF</td>
+			<td style="text-align: right;">Yamoussoukro</td>
+		</tr>
+		<tr><!-- Cabo Verde -->
+			<td>30</td>
+			<td style="font-weight: bold; font-size: 15px;">Cabo Verde
+				<div style="color: grey; font-size: 12px;">
+					<em>Island in Atlantic, W to Africa</em>
+				</div>		
+			</td>
+			<td><img alt="Cabo Verde" src="flag-icons-main\flag-icons-main\flags\4x3\cv.svg" data-file-width="900" data-file-height="600"></td>                
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/cabo-verde-population/">598,682</a><br /></td>
+			<td style="text-align: right;">4,030</td>
+			<td style="text-align: right;">Praia</td>
+		</tr>
+		<tr><!-- Cambodia -->
+			<td>31</td>
+			<td style="font-weight: bold; font-size: 15px;">Cambodia
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, SE <br />- kingdom</em>
+				</div>
+			</td>
+			<td><img alt="Cambodia" src="flag-icons-main\flag-icons-main\flags\4x3\kh.svg" data-file-width="900" data-file-height="600"></td>                
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/cambodia-population/">16,944,826</a><br /></td>
+			<td style="text-align: right;">176,520</td>
+			<td style="text-align: right;">Phnom Penh</td>
+		</tr>
+		<tr><!-- Cameroon -->
+			<td>32</td>
+			<td style="font-weight: bold; font-size: 15px;">Cameroon
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, Central, Gulf of Guinea</em>
+				</div>
+			</td>
+			<td><img alt="Cameroon" src="flag-icons-main\flag-icons-main\flags\4x3\cm.svg" data-file-width="900" data-file-height="600"></td>                
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/cameroon-population/">28,647,293</a><br />472,710</td>
+			<td style="text-align: right;">Central African CFA franc<br>XAF</td>
+			<td style="text-align: right;">Yaounde</td>
+		</tr>
+		<tr><!-- Canada -->
+			<td>33</td>
+			<td style="font-weight: bold; font-size: 15px;">Canada
+				<div style="color: grey; font-size: 12px;">
+					<em>N. America</em>
+				</div>
+			</td>
+			<td><img alt="Canada" src="flag-icons-main\flag-icons-main\flags\4x3\ca.svg" data-file-width="900" data-file-height="600"></td>                
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/canada-population/">38,781,291</a><br /></td>
+			<td style="text-align: right;">9,093,510</td>
+			<td style="text-align: right;">Ottawa</td>
+		</tr>
+		<tr><!-- Central African Republic -->
+			<td>34</td>
+			<td style="font-weight: bold; font-size: 15px;">Central African Republic
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, Central</em>
+				</div>
+			</td>
+			<td><img alt="Central African Republic" src="flag-icons-main\flag-icons-main\flags\4x3\cf.svg" data-file-width="900" data-file-height="600"></td>    
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/central-african-republic-population/">5,742,315</a><br />622,980</td>
+			<td style="text-align: right;">Central African CFA franc<br>XAF</td>
+			<td style="text-align: right;">Bangui</td>
+		</tr>
+		<tr><!-- Chad -->
+			<td>35</td>
+			<td style="font-weight: bold; font-size: 15px;">Chad
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, Central</em>
+				</div>
+			</td>
+			<td><img alt="Central African Republic" src="flag-icons-main\flag-icons-main\flags\4x3\td.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/chad-population/">18,278,568</a><br />1,259,200</td>
+			<td style="text-align: right;">Central African CFA franc<br>XAF</td>
+			<td style="text-align: right;">N'Djamena</td>
+		</tr>
+		<tr><!-- Chile -->
+			<td>36</td>
+			<td style="font-weight: bold; font-size: 15px;">Chile
+				<div style="color: grey; font-size: 12px;">
+					<em>S. America, most southern</em>
+				</div>
+			</td>
+			<td><img alt="Chile" src="flag-icons-main\flag-icons-main\flags\4x3\cl.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/chile-population/">19,629,590</a><br /></td>
+			<td style="text-align: right;">743,532</td>
+			<td style="text-align: right;">Santiagoa</td>
+		</tr>
+		<tr><!-- China -->
+			<td>37</td>
+			<td style="font-weight: bold; font-size: 15px;">China
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, East</em>
+				</div>
+			</td>
+			<td><img alt="China" src="flag-icons-main\flag-icons-main\flags\4x3\cn.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/china-population/">1,425,671,352</a><br /></td>
+			<td style="text-align: right;">9,388,211</td>
+			<td style="text-align: right;">	Beijing</td>
+		</tr>
+		<tr><!-- Colombia -->
+			<td>38</td>
+			<td style="font-weight: bold; font-size: 15px;">Colombia
+				<div style="color: grey; font-size: 12px;">
+					<em>S. America, North</em>
+				</div>
+			</td>
+			<td><img alt="Colombia" src="flag-icons-main\flag-icons-main\flags\4x3\co.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/colombia-population/">52,085,168</a><br />1,109,500</td>
+			<td style="text-align: right;">Colombian peso<br>COP</td>
+			<td style="text-align: right;">Bogota</td>
+		</tr>
+		<tr><!-- Comoros -->
+			<td>39</td>
+			<td style="font-weight: bold; font-size: 15px;">Comoros
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, SE; Islands</em>
+				</div>
+			</td>
+			<td><img alt="Comoros" src="flag-icons-main\flag-icons-main\flags\4x3\cf.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/comoros-population/">852,075</a><br />1,861</td>
+			<td style="text-align: right;">Comorian franc<br>KMF</td>
+			<td style="text-align: right;">Moroni</td>
+		</tr>
+		<tr><!--Congo-Brazzaville-->
+			<td>40</td>
+			<td style="font-weight: bold; font-size: 15px;">Congo (Congo-Brazzaville)
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, Central</em>
+				</div>
+			</td>
+			<td><img alt="Republic of the Congo" src="flag-icons-main\flag-icons-main\flags\4x3\cg.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/congo-population/">6,106,869</a><br />341,500</td>
+			<td style="text-align: right;">Central African CFA franc<br>XAF</td>
+			<td style="text-align: right;">Brazzaville</td>
+		</tr>
+		<tr><!--Costa Rica-->
+			<td>41</td>
+			<td style="font-weight: bold; font-size: 15px;">Costa Rica
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America, N. of Panama</em>
+				</div>
+			</td>
+			<td><img alt="Costa Rica" src="flag-icons-main\flag-icons-main\flags\4x3\cr.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/costa-rica-population/">5,212,173</a><br />51,060</td>
+			<td style="text-align: right;"></td>
+			<td style="text-align: right;">San Jose</td>
+		</tr>
+		<tr><!-- Croatia -->
+			<td>42</td>
+			<td style="font-weight: bold; font-size: 15px;">Croatia
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, Balkans</em>
+				</div>
+			</td>
+			<td><img alt="Croatia" src="flag-icons-main\flag-icons-main\flags\4x3\hr.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/croatia-population/">4,008,617</a><br />55,960</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Zagreb</td>
+		</tr>
+		<tr><!-- Cuba -->
+			<td>43</td>
+			<td style="font-weight: bold; font-size: 15px;">Cuba
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America, island</em>
+				</div>
+			</td>
+			<td><img alt="Cuba" src="flag-icons-main\flag-icons-main\flags\4x3\cu.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/cuba-population/">11,194,449</a><br /></td>
+			<td style="text-align: right;">106,440</td>
+			<td style="text-align: right;">Havana</td>
+		</tr>
+		<tr><!-- Cyprus -->
+			<td>44</td>
+			<td style="font-weight: bold; font-size: 15px;">Cyprus
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, East; Mediterranean island</em>
+				</div>
+			</td>
+			<td><img alt="Cyprus" src="flag-icons-main\flag-icons-main\flags\4x3\cy.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/cyprus-population/">1,260,138</a><br />9,240</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Nicosia</td>
+		</tr>
+		<tr><!-- Czechia -->
+			<td>45</td>
+			<td style="font-weight: bold; font-size: 15px;">Czechia (Czech Republic)</td>
+			<td><img alt="Czechia" src="flag-icons-main\flag-icons-main\flags\4x3\cz.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/czech-republic-population/">10,495,295</a><br /></td>
+			<td style="text-align: right;">77,240</td>
+			<td style="text-align: right;">Prague</td>
+		</tr>
+		<tr><!--   -->
+			<td>46</td>
+			<td style="font-weight: bold; font-size: 15px;">Congo (Congo-Kinshasa)
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, Central</em>
+				</div>
+			</td>
+			<td><img alt="Democratic Republic of the Congo" src="flag-icons-main\flag-icons-main\flags\4x3\cd.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/democratic-republic-of-the-congo-population/">102,262,808</a><br /></td>
+			<td style="text-align: right;">2,267,050</td>
+			<td style="text-align: right;">Kinshasa</td>
+		</tr>
+		<tr><!-- Denmark -->
+			<td>47</td>
+			<td style="font-weight: bold; font-size: 15px;">Denmark				
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, North</em>
+				</div>
+			</td>
+			<td><img alt="Denmark" src="flag-icons-main\flag-icons-main\flags\4x3\dk.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/denmark-population/">5,910,913</a><br /></td>
+			<td style="text-align: right;">42,430</td>
+			<td style="text-align: right;">Copenhagen</td>
+		</tr>
+		<tr><!-- Djibouti -->
+			<td>48</td>
+			<td style="font-weight: bold; font-size: 15px;">Djibouti
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, East</em>
+				</div>
+			</td>
+			<td><img alt="Djibouti" src="flag-icons-main\flag-icons-main\flags\4x3\dj.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/djibouti-population/">1,136,455</a><br /></td>
+			<td style="text-align: right;">23,180</td>
+			<td style="text-align: right;">Djibouti</td>
+		</tr>
+		<tr><!-- Dominica -->
+			<td>49</td>
+			<td style="font-weight: bold; font-size: 15px;">
+			Dominica
+				<div style="color: grey; font-size: 12px;">
+					<em>Caribbean, island</em>
+				</div>
+			</td>
+			<td><img alt="Dominica" src="flag-icons-main\flag-icons-main\flags\4x3\dm.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/dominica-population/">73,040</a><br />750</td>
+			<td style="text-align: right;">East Caribbean dollar<br />XCD</td>
+			<td style="text-align: right;">Roseau</td>
+		</tr>
+		<tr><!-- Dominican Republic -->
+			<td>50</td>
+			<td style="font-weight: bold; font-size: 15px;">Dominican Republic
+				<div style="color: grey; font-size: 12px;">
+					<em>Caribbean, island</em>
+				</div>
+			</td>
+			<td><img alt="Dominican Republic" src="flag-icons-main\flag-icons-main\flags\4x3\do.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/dominican-republic-population/">11,332,972</a><br /></td>
+			<td style="text-align: right;">48,320</td>
+			<td style="text-align: right;">Santo Domingo</td>
+		</tr>
+		<tr><!-- Ecuador -->
+			<td>51</td>
+			<td style="font-weight: bold; font-size: 15px;">Ecuador
+				<div style="color: grey; font-size: 12px;">
+					<em>S. America, NW</em>
+				</div>
+			</td>
+			<td><img alt="Ecuador" src="flag-icons-main\flag-icons-main\flags\4x3\ec.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/ecuador-population/">18,190,484</a><br />248,360</td>
+			<td style="text-align: right;">United States dollar<br>USD</td>
+			<td style="text-align: right;">Quito</td>
+		</tr>
+		<tr><!-- Egypt -->
+			<td>52</td>
+			<td style="font-weight: bold; font-size: 15px;">Egypt
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, NE</em>
+				</div>
+			</td>
+			<td><img alt="Egypt" src="flag-icons-main\flag-icons-main\flags\4x3\eg.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/egypt-population/">112,716,598</a><br /></td>
+			<td style="text-align: right;">995,450</td>
+			<td style="text-align: right;">Cairo</td>
+		</tr>
+		<tr><!-- El Salvador -->
+			<td>53</td>
+			<td style="font-weight: bold; font-size: 15px;">El Salvador
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="El Salvador" src="flag-icons-main\flag-icons-main\flags\4x3\sv.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/el-salvador-population/">6,364,943</a><br />20,720</td>
+			<td style="text-align: right;">United States dollar<br>USD</td>
+			<td style="text-align: right;">San Salvador</td>
+		</tr>
+		<tr><!-- Equatorial Guinea -->
+			<td>54</td>
+			<td style="font-weight: bold; font-size: 15px;">Equatorial Guinea
+				<div style="color: grey; font-size: 12px;">
+					<em>C. Africa, West</em>
+				</div>
+			</td>
+			<td><img alt="Equatorial Guinea" src="flag-icons-main\flag-icons-main\flags\4x3\gq.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/equatorial-guinea-population/">1,714,671</a><br />28,050</td>
+			<td style="text-align: right;">Central African CFA franc<br>XAF</td>
+			<td style="text-align: right;">Malabo (current)<br />
+			Ciudad de la Paz (future capital, formerly Oyala)</td>
+		</tr>
+		<tr><!-- Eritrea -->
+			<td>55</td>
+			<td style="font-weight: bold; font-size: 15px;">Eritrea
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, East; Red sea</em>
+				</div>
+			</td>
+			<td><img alt="Eritrea" src="flag-icons-main\flag-icons-main\flags\4x3\er.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/eritrea-population/">3,748,901</a><br />101,000</td>
+			<td style="text-align: right;">Eritrean nakfa<br>ERN</td>
+			<td style="text-align: right;">Asmara</td>
+		</tr>
+		<tr><!-- Estonia -->
+			<td>56</td>
+			<td style="font-weight: bold; font-size: 15px;">Estonia
+				<div style="color: grey; font-size: 12px;">
+					<em>N. Europe, Baltic sea</em>
+				</div>
+			</td>
+			<td><img alt="Estonia" src="flag-icons-main\flag-icons-main\flags\4x3\ee.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/estonia-population/">1,322,765</a><br />42,390</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Tallinn</td>
+		</tr>
+		<tr><!-- Eswatini -->
+			<td>57</td>
+			<td style="font-weight: bold; font-size: 15px;">Eswatini (fmr. "Swaziland")
+				<div style="color: grey; font-size: 12px;">
+					<em>N. Europe, Baltic sea<br />- kingdom</em>
+				</div>
+			</td>
+			<td><img alt="Eswatini" src="flag-icons-main\flag-icons-main\flags\4x3\sz.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/swaziland-population/">1,210,822</a><br />17,200</td>
+			<td style="text-align: right;">	Swazi lilangeni<br>SZL</td>
+			<td style="text-align: right;">Mbabane (administrative)<br />Lobamba (legislative, royal)</td>
+		</tr>
+		<tr><!-- Ethiopia -->
+			<td>58</td>
+			<td style="font-weight: bold; font-size: 15px;">Ethiopia
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, NE</em>
+				</div>
+			</td>
+			<td><img alt="Ethiopia" src="flag-icons-main\flag-icons-main\flags\4x3\et.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/ethiopia-population/">126,527,060</a><br />1,000,000</td>
+			<td style="text-align: right;">Ethiopian birr<br>ETB</td>
+			<td style="text-align: right;">Addis Ababa</td>
+		</tr>
+		<tr><!-- Fiji -->
+			<td>59</td>
+			<td style="font-weight: bold; font-size: 15px;">Fiji
+				<div style="color: grey; font-size: 12px;">
+					<em>Pacific, island; East to Australia</em>
+				</div>
+			</td>
+			<td><img alt="Fiji" src="flag-icons-main\flag-icons-main\flags\4x3\fj.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/fiji-population/">936,375</a><br />18,270</td>
+			<td style="text-align: right;">Fijian dollar<br>FJD</td>
+			<td style="text-align: right;">Suva</td>
+		</tr>
+		<tr><!-- Finland -->
+			<td>60</td>
+			<td style="font-weight: bold; font-size: 15px;">Finland
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, North</em>
+				</div>
+			</td>
+			<td><img alt="Finland" src="flag-icons-main\flag-icons-main\flags\4x3\fi.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/finland-population/">5,545,475</a><br />303,890</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Helsinki</td>
+		</tr>
+		<tr><!-- France -->
+			<td>61</td>
+			<td style="font-weight: bold; font-size: 15px;">France
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, SW</em>
+				</div>
+			</td>
+			<td><img alt="France" src="flag-icons-main\flag-icons-main\flags\4x3\fr.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/france-population/">64,756,584</a><br />547,557</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Paris</td>
+		</tr>
+		<tr><!-- Gabon -->
+			<td>62</td>
+			<td style="font-weight: bold; font-size: 15px;">Gabon
+				<div style="color: grey; font-size: 12px;">
+					<em>C. Africa, East; Gulf of Guinea</em>
+				</div>
+			</td>
+			<td><img alt="Gabon" src="flag-icons-main\flag-icons-main\flags\4x3\ga.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/gabon-population/">2,436,566</a><br />257,670</td>
+			<td style="text-align: right;">Central African CFA franc<br>XAF</td>
+			<td style="text-align: right;">Libreville</td>
+		</tr>
+		<tr><!-- Gambia -->
+			<td>63</td>
+			<td style="font-weight: bold; font-size: 15px;">Gambia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. Africa, East</em>
+				</div>
+			</td>
+			<td><img alt="Gambia" src="flag-icons-main\flag-icons-main\flags\4x3\gm.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/gambia-population/">2,773,168</a><br />10,120</td>
+			<td style="text-align: right;">Gambian dalasi<br>GMD</td>
+			<td style="text-align: right;">274</td>
+		</tr>
+		<tr><!-- Georgia -->
+			<td>64</td>
+			<td style="font-weight: bold; font-size: 15px;">Georgia
+				<div style="color: grey; font-size: 12px;">
+					<em>E. Europe /W. Asia</em>
+				</div>
+			</td>
+			<td><img alt="Georgia" src="flag-icons-main\flag-icons-main\flags\4x3\ge.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/georgia-population/">3,728,282</a><br />69,490</td>
+			<td style="text-align: right;">Georgian lari<br>GEL</td>
+			<td style="text-align: right;">Tbilisi</td>
+		</tr>
+		<tr><!-- Germany -->
+			<td>65</td>
+			<td style="font-weight: bold; font-size: 15px;">Germany
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, West</em>
+				</div>
+			</td>
+			<td><img alt="Germany" src="flag-icons-main\flag-icons-main\flags\4x3\de.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/germany-population/">83,294,633</a><br />348,560</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Berlin</td>
+		</tr>
+		<tr><!-- Ghana -->
+			<td>66</td>
+			<td style="font-weight: bold; font-size: 15px;">Ghana				
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, East; Gulf of Guinea</em>
+				</div>
+			</td>
+			<td><img alt="Ghana" src="flag-icons-main\flag-icons-main\flags\4x3\gh.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/ghana-population/">34,121,985</a><br />227,540</td>
+			<td style="text-align: right;">Ghanaian cedi<br>GHS</td>
+			<td style="text-align: right;">Accra</td>
+		</tr>
+		<tr><!-- Greece -->
+			<td>67</td>
+			<td style="font-weight: bold; font-size: 15px;">Greece
+			<div style="color: grey; font-size: 12px;">
+					<em>Europe, SE</em>
+				</div>
+			</td>
+			<td><img alt="Greece" src="flag-icons-main\flag-icons-main\flags\4x3\gr.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/greece-population/">10,341,277</a><br />128,900</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Athens</td>
+		</tr>
+		<tr><!-- Grenada -->
+			<td>68</td>
+			<td style="font-weight: bold; font-size: 15px;">Grenada
+				<div style="color: grey; font-size: 12px;">
+					<em>Caribbean, island</em>
+				</div>
+			</td>
+			<td><img alt="Grenada" src="flag-icons-main\flag-icons-main\flags\4x3\gd.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/grenada-population/">126,183</a><br />340</td>
+			<td style="text-align: right;">East Caribbean dollar<br />XCD</td>
+			<td style="text-align: right;">Saint George's</td>
+		</tr>
+		<tr><!-- Guatemala -->
+			<td>69</td>
+			<td style="font-weight: bold; font-size: 15px;">Guatemala
+			<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\gt.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/guatemala-population/">18,092,026</a><br />107,160</td>
+			<td style="text-align: right;">Guatemalan quetzal<br>GTQ</td>
+			<td style="text-align: right;">Guatemala City</td>
+		</tr>
+		<tr><!-- Guinea -->
+			<td>70</td>
+			<td style="font-weight: bold; font-size: 15px;">Guinea
+			<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guinea" src="flag-icons-main\flag-icons-main\flags\4x3\gn.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/guinea-population/">14,190,612</a><br />245,720</td>
+			<td style="text-align: right;">Guinean franc<br>GNF</td>
+			<td style="text-align: right;">Conakry</td>
+		</tr>
+		<tr><!-- Guinea-Bissau -->
+			<td>71</td>
+			<td style="font-weight: bold; font-size: 15px;">Guinea-Bissau
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guinea-Bissau" src="flag-icons-main\flag-icons-main\flags\4x3\gw.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/guinea-bissau-population/">2,150,842</a><br />28,120</td>
+			<td style="text-align: right;">West African CFA franc<br>XOF</td>
+			<td style="text-align: right;">Bissau</td>
+		</tr>
+		<tr><!-- Guyana -->
+			<td>72</td>
+			<td style="font-weight: bold; font-size: 15px;">Guyana
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guyana" src="flag-icons-main\flag-icons-main\flags\4x3\gy.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/guyana-population/">813,834</a><br />196,850</td>
+			<td style="text-align: right;">	Guyanese dollar<br>GYD</td>
+			<td style="text-align: right;">Georgetown</td>
+		</tr>
+		<tr><!-- Haiti -->
+			<td>73</td>
+			<td style="font-weight: bold; font-size: 15px;">Haiti
+				<div style="color: grey; font-size: 12px;">
+					<em>Caribbean</em>
+				</div>
+			</td>
+			<td><img alt="Haiti" src="flag-icons-main\flag-icons-main\flags\4x3\ht.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/haiti-population/">11,724,763</a><br />27,560</td>
+			<td style="text-align: right;">Haitian gourde<br>HTG</td>
+			<td style="text-align: right;">Port-au-Prince</td>
+		</tr>
+		<tr><!--Vatican -->
+			<td>74</td>
+			<td style="font-weight: bold; font-size: 15px;">Holy See (Vatican)
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Vatican" src="flag-icons-main\flag-icons-main\flags\4x3\va.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/holy-see-population/">518</a><br>0</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Vatican</td>
+		</tr>
+		<tr><!-- Honduras -->
+			<td>75</td>
+			<td style="font-weight: bold; font-size: 15px;">Honduras
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Honduras" src="flag-icons-main\flag-icons-main\flags\4x3\hn.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/honduras-population/">10,593,798</a><br />111,890</td>
+			<td style="text-align: right;">Honduran lempira<br>HNL</td>
+			<td style="text-align: right;">Tegucigalpa</td>
+		</tr>
+		<tr><!-- Hungary -->
+			<td>76</td>
+			<td style="font-weight: bold; font-size: 15px;">Hungary
+				<div style="color: grey; font-size: 12px;">
+					<em>C. Europe</em>
+				</div>
+			</td>
+			<td><img alt="Hungary" src="flag-icons-main\flag-icons-main\flags\4x3\hu.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/hungary-population/">10,156,239</a><br />90,530</td>
+			<td style="text-align: right;">Hungarian forint<br>HUF</td>
+			<td style="text-align: right;">Budapest</td>
+		</tr>
+		<tr><!-- Iceland -->
+			<td>77</td>
+			<td style="font-weight: bold; font-size: 15px;">Iceland
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Iceland" src="flag-icons-main\flag-icons-main\flags\4x3\is.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/iceland-population/">375,318</a><br />100,250</td>
+			<td style="text-align: right;">	Icelandic króna<br>ISK</td>
+			<td style="text-align: right;">Reykjavik</td>
+		</tr>
+		<tr><!-- India -->
+			<td>78</td>
+			<td style="font-weight: bold; font-size: 15px;">India
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia</em>
+				</div>
+			</td>
+			<td><img alt="India" src="flag-icons-main\flag-icons-main\flags\4x3\in.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/india-population/">1,428,627,663</a><br />2,973,190</td>
+			<td style="text-align: right;">Indian rupee<br>INR</td>
+			<td style="text-align: right;">New Delhi</td>
+		</tr>
+		<tr><!-- Indonesia -->
+			<td>79</td>
+			<td style="font-weight: bold; font-size: 15px;">Indonesia
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, islands, Pacific</em>
+				</div>
+			</td>
+			<td><img alt="Indonesia" src="flag-icons-main\flag-icons-main\flags\4x3\id.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/indonesia-population/">277,534,122</a><br />1,811,570</td>
+			<td style="text-align: right;">Indonesian rupiah<br>IDR</td>
+			<td style="text-align: right;">Jakarta</td>
+		</tr>		
+		<tr><!-- Iran -->
+			<td>80</td>
+			<td style="font-weight: bold; font-size: 15px;">Iran
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, Middle East</em>
+				</div>
+			</td>
+			<td><img alt="Iran" src="flag-icons-main\flag-icons-main\flags\4x3\ir.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/iran-population/">89,172,767</a><br />1,628,550</td>
+			<td style="text-align: right;">Iranian rial<br>IRR</td>
+			<td style="text-align: right;">Tehran</td>
+		</tr>
+		<tr><!-- Iraq -->
+			<td>81</td>
+			<td style="font-weight: bold; font-size: 15px;">Iraq
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, Middle East</em>
+				</div>
+			</td>
+			<td><img alt="Iraq" src="flag-icons-main\flag-icons-main\flags\4x3\iq.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/iraq-population/">45,504,560</a><br />434,320</td>
+			<td style="text-align: right;">Iranian rial<br>IQD</td>
+			<td style="text-align: right;">Baghdad</td>
+		</tr>
+		<tr><!-- Ireland -->
+			<td>82</td>
+			<td style="font-weight: bold; font-size: 15px;">Ireland
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Ireland" src="flag-icons-main\flag-icons-main\flags\4x3\ie.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/ireland-population/">5,056,935</a><br />68,890</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Dublin</td>
+		</tr>
+		<tr><!-- Israel -->
+			<td>83</td>
+			<td style="font-weight: bold; font-size: 15px;">Israel
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>			
+			<td><img alt="Israel" src="flag-icons-main\flag-icons-main\flags\4x3\il.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/israel-population/">9,174,520</a><br />21,640</td>
+			<td style="text-align: right;">Israeli new shekel<br>ILS</td>
+			<td style="text-align: right;">Jerusalem</td>
+		</tr>
+		<tr><!-- Italy -->
+			<td>84</td>
+			<td style="font-weight: bold; font-size: 15px;">Italy
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Italy" src="flag-icons-main\flag-icons-main\flags\4x3\it.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/italy-population/">58,870,762</a><br />294,140</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Rome</td>
+		</tr>
+		<tr><!-- Jamaica -->
+			<td>85</td>
+			<td style="font-weight: bold; font-size: 15px;">Jamaica
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Jamaica" src="flag-icons-main\flag-icons-main\flags\4x3\jm.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/jamaica-population/">2,825,544</a><br />10,830</td>
+			<td style="text-align: right;">Jamaican dollar<br>JMD</td>
+			<td style="text-align: right;">Kingston</td>
+		</tr>
+		<tr><!-- Japan -->
+			<td>86</td>
+			<td style="font-weight: bold; font-size: 15px;">Japan
+				<div style="color: grey; font-size: 12px;">
+					<em>Pacific, islands</em>
+				</div>
+			</td>
+			<td><img alt="Japan" src="flag-icons-main\flag-icons-main\flags\4x3\jp.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/japan-population/">123,294,513</a><br />364,555</td>
+			<td style="text-align: right;">Japanese yen<br>JPY</td>
+			<td style="text-align: right;">Tokyo</td>
+		</tr>
+		<tr><!-- Jordan -->
+			<td>87</td>
+			<td style="font-weight: bold; font-size: 15px;">Jordan
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Jordan" src="flag-icons-main\flag-icons-main\flags\4x3\jo.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/jordan-population/">11,337,052</a><br /></td>
+			<td style="text-align: right;">88,780</td>
+			<td style="text-align: right;">Amman</td>
+		</tr>
+		<tr><!-- Kazakhstan -->
+			<td>88</td>
+			<td style="font-weight: bold; font-size: 15px;">Kazakhstan
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Kazakhstan" src="flag-icons-main\flag-icons-main\flags\4x3\kz.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/kazakhstan-population/">19,606,633</a><br /></td>
+			<td style="text-align: right;">2,699,700</td>
+			<td style="text-align: right;">Astana</td>
+		</tr>
+		<tr><!-- Kenya -->
+			<td>89</td>
+			<td style="font-weight: bold; font-size: 15px;">Kenya
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\ke.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/kenya-population/">55,100,586</a><br /></td>
+			<td style="text-align: right;">569,140</td>
+			<td style="text-align: right;">Nairobi</td>
+		</tr>
+		<tr><!-- Kiribati -->
+			<td>90</td>
+			<td style="font-weight: bold; font-size: 15px;">Kiribati
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\ki.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/kiribati-population/">133,515</a><br /></td>
+			<td style="text-align: right;">810</td>
+			<td style="text-align: right;">Tarawa</td>
+		</tr>
+		<tr><!-- Kuwait -->
+			<td>91</td>
+			<td style="font-weight: bold; font-size: 15px;">Kuwait
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\kw.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/kuwait-population/">4,310,108</a><br /></td>
+			<td style="text-align: right;">17,820</td>
+			<td style="text-align: right;">Kuwait City</td>
+		</tr>
+		<tr><!-- Kyrgyzstan -->
+			<td>92</td>
+			<td style="font-weight: bold; font-size: 15px;">Kyrgyzstan
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\kg.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/kyrgyzstan-population/">6,735,347</a><br /></td>
+			<td style="text-align: right;">191,800</td>
+			<td style="text-align: right;">Bishkek</td>
+		</tr>
+		<tr><!-- Laos -->
+			<td>93</td>
+			<td style="font-weight: bold; font-size: 15px;">Laos
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\la.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/laos-population/">7,633,779</a><br /></td>
+			<td style="text-align: right;">230,800</td>
+			<td style="text-align: right;">Vientiane</td>
+		</tr>
+		<tr><!-- Latvia -->
+			<td>94</td>
+			<td style="font-weight: bold; font-size: 15px;">Latvia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\lv.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/latvia-population/">1,830,211</a><br />62,200</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Riga</td>
+		</tr>
+		<tr><!-- Lebanon -->
+			<td>95</td>
+			<td style="font-weight: bold; font-size: 15px;">Lebanon
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, West</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\lb.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/lebanon-population/">5,353,930</a><br />10,230</td>
+			<td style="text-align: right;">	Lebanese pound<br>LBP</td>
+			<td style="text-align: right;">Beirut</td>
+		</tr>
+		<tr><!-- Lesotho -->
+			<td>96</td>
+			<td style="font-weight: bold; font-size: 15px;">Lesotho
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Lesotho" src="flag-icons-main\flag-icons-main\flags\4x3\ls.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/lesotho-population/">2,330,318</a><br />30,360</td>
+			<td style="text-align: right;">Lesotho loti<br>LSL</td>
+			<td style="text-align: right;">Maseru</td>
+		</tr>
+		<tr><!-- Liberia -->
+			<td>97</td>
+			<td style="font-weight: bold; font-size: 15px;">Liberia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Liberia" src="flag-icons-main\flag-icons-main\flags\4x3\lr.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/liberia-population/">5,418,377</a><br />96,320</td>
+			<td style="text-align: right;">	Liberian dollar<br>LRD</td>
+			<td style="text-align: right;">Monrovia</td>
+		</tr>
+		<tr><!-- Libya -->
+			<td>98</td>
+			<td style="font-weight: bold; font-size: 15px;">Libya
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Libya" src="flag-icons-main\flag-icons-main\flags\4x3\ly.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/libya-population/">6,888,388</a><br />1,759,540</td>
+			<td style="text-align: right;">Libyan dinar<br>LYD</td>
+			<td style="text-align: right;">Tripoli</td>
+		</tr>
+		<tr><!-- Liechtenstein -->
+			<td>99</td>
+			<td style="font-weight: bold; font-size: 15px;">Liechtenstein
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, West</em>
+				</div>
+			</td>
+			<td><img alt="Liechtenstein" src="flag-icons-main\flag-icons-main\flags\4x3\li.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/liechtenstein-population/">39,584</a><br />160</td>
+			<td style="text-align: right;">Swiss franc<br>CHF</td>
+			<td style="text-align: right;">Vaduz</td>
+		</tr>			
+		<tr><!-- Lithuania -->
+			<td>100</td>
+			<td style="font-weight: bold; font-size: 15px;">Lithuania
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Lithuania" src="flag-icons-main\flag-icons-main\flags\4x3\lt.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/lithuania-population/">2,718,352</a><br />62,674</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Vilnius</td>
+		</tr>
+		<tr><!-- Luxembourg -->
+			<td>101</td>
+			<td style="font-weight: bold; font-size: 15px;">Luxembourg
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Luxembourg" src="flag-icons-main\flag-icons-main\flags\4x3\lu.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/luxembourg-population/">654,768</a><br />2,590</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Luxembourg (city)</td>
+		</tr>
+		<tr><!-- Madagascar -->
+			<td>102</td>
+			<td style="font-weight: bold; font-size: 15px;">Madagascar
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, island, Indian</em>
+				</div>
+			</td>
+			<td><img alt="Madagascar" src="flag-icons-main\flag-icons-main\flags\4x3\mg.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/madagascar-population/">30,325,732</a><br />581,795</td>
+			<td style="text-align: right;">Malagasy ariary<br>MGA</td>
+			<td style="text-align: right;">Antananarivo</td>
+		</tr>
+		<tr><!-- Malawi -->
+			<td>103</td>
+			<td style="font-weight: bold; font-size: 15px;">Malawi
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Malawi" src="flag-icons-main\flag-icons-main\flags\4x3\mw.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/malawi-population/">20,931,751</a><br />94,280</td>
+			<td style="text-align: right;">Malawian kwacha<br>MWK</td>
+			<td style="text-align: right;">Lilongwe</td>
+		</tr>
+		<tr><!-- Malaysia -->
+			<td>104</td>
+			<td style="font-weight: bold; font-size: 15px;">Malaysia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\my.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/malaysia-population/">34,308,525</a><br />328,550</td>
+			<td style="text-align: right;">Malaysian ringgit<br>MYR</td>
+			<td style="text-align: right;">Kuala Lumpur</td>
+		</tr>
+		<tr><!-- Maldives -->
+			<td>105</td>
+			<td style="font-weight: bold; font-size: 15px;">Maldives
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\mv.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/maldives-population/">521,021</a><br />300</td>
+			<td style="text-align: right;">Maldivian rufiyaa<br>MVR</td>
+			<td style="text-align: right;">Male</td>
+		</tr>
+		<tr><!-- Mali -->
+			<td>106</td>
+			<td style="font-weight: bold; font-size: 15px;">Mali
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, West</em>
+				</div>
+			</td>
+			<td><img alt="Mali" src="flag-icons-main\flag-icons-main\flags\4x3\ml.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/mali-population/">23,293,698</a><br />1,220,190</td>
+			<td style="text-align: right;">West African CFA franc<br>XOF</td>
+			<td style="text-align: right;">Bamako</td>
+		</tr>
+		<tr><!-- Malta -->
+			<td>107</td>
+			<td style="font-weight: bold; font-size: 15px;">Malta
+				<div style="color: grey; font-size: 12px;">
+					<em>Mediterranean, island</em>
+				</div>
+			</td>
+			<td><img alt="Malta" src="flag-icons-main\flag-icons-main\flags\4x3\mt.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/malta-population/">535,064</a><br />320</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Valletta</td>
+		</tr>
+		<tr><!-- Marshall Islands -->
+			<td>108</td>
+			<td style="font-weight: bold; font-size: 15px;">Marshall Islands
+				<div style="color: grey; font-size: 12px;">
+					<em>Oceania, Pacific</em>
+				</div>
+			</td>
+			<td><img alt="Marshall Islands" src="flag-icons-main\flag-icons-main\flags\4x3\mh.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/marshall-islands-population/">41,996</a><br />180</td>
+			<td style="text-align: right;">United States dollar<br>USD</td>
+			<td style="text-align: right;">Majuro</td>
+		</tr>
+		<tr><!-- Mauritania -->
+			<td>109</td>
+			<td style="font-weight: bold; font-size: 15px;">Mauritania
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, NW</em>
+				</div>
+			</td>
+			<td><img alt="Mauritania" src="flag-icons-main\flag-icons-main\flags\4x3\mr.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/mauritania-population/">4,862,989</a><br />1,030,700</td>
+			<td style="text-align: right;">	Mauritanian ouguiya<br>MRO</td>
+			<td style="text-align: right;">Nouakchott</td>
+		</tr>
+		<tr><!-- Mauritius -->
+			<td>110</td>
+			<td style="font-weight: bold; font-size: 15px;">Mauritius
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, island, Indian ocean</em>
+				</div>
+			</td>
+			<td><img alt="Mauritius" src="flag-icons-main\flag-icons-main\flags\4x3\mu.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/mauritius-population/">1,300,557</a><br />2,030</td>
+			<td style="text-align: right;">Mauritian rupee<br>MUR</td>
+			<td style="text-align: right;">Port Louis</td>
+		</tr>
+		<tr><!-- Mexico -->
+			<td>111</td>
+			<td style="font-weight: bold; font-size: 15px;">Mexico
+				<div style="color: grey; font-size: 12px;">
+					<em>N. America</em>
+				</div>
+			</td>
+			<td><img alt="Mexico" src="flag-icons-main\flag-icons-main\flags\4x3\mx.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/mexico-population/">128,455,567</a><br />1,943,950</td>
+			<td style="text-align: right;">	Mexican peso<br>MXN</td>
+			<td style="text-align: right;">Mexico City</td>
+		</tr>
+		<tr><!-- Micronesia -->
+			<td>112</td>
+			<td style="font-weight: bold; font-size: 15px;">Micronesia
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, SE - Oceania; 2000 islands</em>
+				</div>			
+			</td>
+			<td><img alt="Micronesia" src="flag-icons-main\flag-icons-main\flags\4x3\fm.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/micronesia-population/">544,321</a><br />700</td>
+			<td style="text-align: right;">United States dollar<br>USD</td>
+			<td style="text-align: right;">Palikir</td>
+		</tr>
+		<tr><!-- Moldova -->
+			<td>113</td>
+			<td style="font-weight: bold; font-size: 15px;">Moldova
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, East</em>
+				</div>
+			<td><img alt="Moldova" src="flag-icons-main\flag-icons-main\flags\4x3\md.svg" data-file-width="900" data-file-height="600"></td>
+			</td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/moldova-population/">3,435,931</a><br />32,850</td>
+			<td style="text-align: right;">Moldovan leu<br>MDL</td>
+			<td style="text-align: right;">Chisinau</td>
+		</tr>
+		<tr><!-- Monaco -->
+			<td>114</td>
+			<td style="font-weight: bold; font-size: 15px;">Monaco
+				<div style="color: grey; font-size: 12px;">
+					<em>C. Europe, South</em>
+				</div>
+			</td>
+			<td><img alt="Monaco" src="flag-icons-main\flag-icons-main\flags\4x3\mc.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/monaco-population/">36,297</a>1<br /></td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Monaco</td>
+		</tr>
+		<tr><!-- Mongolia -->
+			<td>115</td>
+			<td style="font-weight: bold; font-size: 15px;">Mongolia
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, East</em>
+				</div>
+			</td>
+			<td><img alt="Mongolia" src="flag-icons-main\flag-icons-main\flags\4x3\mn.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/mongolia-population/">3,447,157</a><br />1,553,560</td>
+			<td style="text-align: right;">	Mongolian tögrög<br>MNT</td>
+			<td style="text-align: right;">Ulaanbaatar</td>
+		</tr>
+		<tr><!-- Montenegro -->
+			<td>116</td>
+			<td style="font-weight: bold; font-size: 15px;">Montenegro
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, East; Balkans</em>
+				</div>
+			</td>
+			<td><img alt="Montenegro" src="flag-icons-main\flag-icons-main\flags\4x3\me.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/montenegro-population/">626,485</a><br />13,450</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Podgorica</td>
+		</tr>
+		<tr><!-- Morocco -->
+			<td>117</td>
+			<td style="font-weight: bold; font-size: 15px;">Morocco
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, NW</em>
+				</div>
+			</td>
+			<td><img alt="Morocco" src="flag-icons-main\flag-icons-main\flags\4x3\ma.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/morocco-population/">37,840,044</a><br />446,300</td>
+			<td style="text-align: right;">	Moroccan dirham<br>MAD</td>
+			<td style="text-align: right;">Rabat</td>
+		</tr>
+		<tr><!-- Mozambique -->
+			<td>118</td>
+			<td style="font-weight: bold; font-size: 15px;">Mozambique
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, SE</em>
+				</div>
+			</td>
+			<td><img alt="Mozambique" src="flag-icons-main\flag-icons-main\flags\4x3\mz.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/mozambique-population/">33,897,354</a><br />786,380</td>
+			<td style="text-align: right;">Mozambican metical<br>MZN</td>
+			<td style="text-align: right;">Maputo</td>
+		</tr>
+		<tr><!-- Myanmar -->
+			<td>119</td>
+			<td style="font-weight: bold; font-size: 15px;">Myanmar (frm. Burma)
+				<div style="color: grey; font-size: 12px;">
+					<em>C. Asia, South</em>
+				</div>
+			</td>
+			<td><img alt="Myanmar" src="flag-icons-main\flag-icons-main\flags\4x3\mm.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/myanmar-population/">54,577,997</a><br />653,290</td>
+			<td style="text-align: right;">Burmese kyat<br>MMK</td>
+			<td style="text-align: right;">Naypyidaw</td>
+		</tr>
+		<tr><!--   -->
+			<td>120</td>
+			<td style="font-weight: bold; font-size: 15px;">Namibia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\na.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/namibia-population/">2,604,172</a><br /></td>
+			<td style="text-align: right;">823,290</td>
+			<td style="text-align: right;">Windhoek</td>
+		</tr>
+		<tr><!--   -->
+			<td>121</td>
+			<td style="font-weight: bold; font-size: 15px;">Nauru
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\nr.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/nauru-population/">12,780</a><br /></td>
+			<td style="text-align: right;">20</td>
+			<td style="text-align: right;">Yaren District (de facto)</td>
+		</tr>
+		<tr><!--   -->
+			<td>122</td>
+			<td style="font-weight: bold; font-size: 15px;">Nepal
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\np.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/nepal-population/">30,896,590</a><br /></td>
+			<td style="text-align: right;">143,350</td>
+			<td style="text-align: right;">Kathmandu</td>
+		</tr>
+		<tr><!--   -->
+			<td>123</td>
+			<td style="font-weight: bold; font-size: 15px;">Netherlands
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\nl.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/netherlands-population/">17,618,299</a><br />33,720</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Amsterdam</td>
+		</tr>
+		<tr><!--   -->
+			<td>124</td>
+			<td style="font-weight: bold; font-size: 15px;">New Zealand
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\nz.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/new-zealand-population/">5,228,100</a><br /></td>
+			<td style="text-align: right;">263,310</td>
+			<td style="text-align: right;">Wellington</td>
+		</tr>
+		<tr><!--   -->
+			<td>125</td>
+			<td style="font-weight: bold; font-size: 15px;">Nicaragua
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\ni.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/nicaragua-population/">7,046,310</a><br />120,340</td>
+			<td style="text-align: right;"></td>
+			<td style="text-align: right;">Managua</td>
+		</tr>
+		<tr><!--   -->
+			<td>126</td>
+			<td style="font-weight: bold; font-size: 15px;">Niger
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\ne.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/niger-population/">27,202,843</a><br />1,266,700</td>
+			<td style="text-align: right;">West African CFA franc<br>XOF</td>
+			<td style="text-align: right;">Niamey</td>
+		</tr>
+		<tr><!--   -->
+			<td>127</td>
+			<td style="font-weight: bold; font-size: 15px;">Nigeria
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\ng.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/nigeria-population/">223,804,632</a><br />910,770</td>
+			<td style="text-align: right;"></td>
+			<td style="text-align: right;">Abuja</td>
+		</tr>
+		<tr><!--   -->
+			<td>128</td>
+			<td style="font-weight: bold; font-size: 15px;">North Korea
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\kp.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/north-korea-population/">26,160,821</a><br />120,410</td>
+			<td style="text-align: right;"></td>
+			<td style="text-align: right;">Pyongyang</td>
+		</tr>
+		<tr><!--   -->
+			<td>129</td>
+			<td style="font-weight: bold; font-size: 15px;">North Macedonia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\mk.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/macedonia-population/">2,085,679</a><br />25,220</td>
+			<td style="text-align: right;"></td>
+			<td style="text-align: right;">Skopje</td>
+		</tr>
+		<tr><!--   -->
+			<td>130</td>
+			<td style="font-weight: bold; font-size: 15px;">Norway
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\no.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/norway-population/">5,474,360</a><br /></td>
+			<td style="text-align: right;">365,268</td>
+			<td style="text-align: right;">Oslo</td>
+		</tr>
+		<tr><!--   -->
+			<td>131</td>
+			<td style="font-weight: bold; font-size: 15px;">Oman
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\om.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/oman-population/">4,644,384</a><br /></td>
+			<td style="text-align: right;">309,500</td>
+			<td style="text-align: right;">Muscat</td>
+		</tr>
+		<tr><!--   -->
+			<td>132</td>
+			<td style="font-weight: bold; font-size: 15px;">Pakistan
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\pk.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/pakistan-population/">240,485,658</a><br /></td>
+			<td style="text-align: right;">770,880</td>
+			<td style="text-align: right;">Islamabad</td>
+		</tr>
+		<tr><!--   -->
+			<td>133</td>
+			<td style="font-weight: bold; font-size: 15px;">Palau
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\pw.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/palau-population/">18,058</a><br />460</td>
+			<td style="text-align: right;">United States dollar<br>USD</td>
+			<td style="text-align: right;">Ngerulmud</td>
+		</tr>
+		<tr><!--   -->
+			<td>134</td>
+			<td style="font-weight: bold; font-size: 15px;">Palestine State
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\ps.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/state-of-palestine-population/">5,371,230</a><br /></td>
+			<td style="text-align: right;">6,020</td>
+			<td style="text-align: right;">Jerusalem (East)</td>
+		</tr>
+		<tr><!--   -->
+			<td>135</td>
+			<td style="font-weight: bold; font-size: 15px;">Panama
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\pa.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/panama-population/">4,468,087</a><br /></td>
+			<td style="text-align: right;">74,340</td>
+			<td style="text-align: right;">Panama City</td>
+		</tr>
+		<tr><!--   -->
+			<td>136</td>
+			<td style="font-weight: bold; font-size: 15px;">Papua New Guinea
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\pg.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/papua-new-guinea-population/">10,329,931</a><br /></td>
+			<td style="text-align: right;">452,860</td>
+			<td style="text-align: right;">Port Moresby</td>
+		</tr>
+		<tr><!--   -->
+			<td>137</td>
+			<td style="font-weight: bold; font-size: 15px;">Paraguay
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\py.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/paraguay-population/">6,861,524</a><br /></td>
+			<td style="text-align: right;">397,300</td>
+			<td style="text-align: right;">Asunción</td>
+		</tr>
+		<tr><!--   -->
+			<td>138</td>
+			<td style="font-weight: bold; font-size: 15px;">Peru
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\pe.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/peru-population/">34,352,719</a><br /></td>
+			<td style="text-align: right;">1,280,000</td>
+			<td style="text-align: right;">Lima</td>
+		</tr>
+		<tr><!--   -->
+			<td>139</td>
+			<td style="font-weight: bold; font-size: 15px;">Philippines
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\ph.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/philippines-population/">117,337,368</a><br /></td>
+			<td style="text-align: right;">298,170</td>
+			<td style="text-align: right;">Manila</td>
+		</tr>			
+		<tr><!--   -->
+			<td>140</td>
+			<td style="font-weight: bold; font-size: 15px;">Poland
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\pl.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/poland-population/">41,026,067</a><br /></td>
+			<td style="text-align: right;">306,230</td>
+			<td style="text-align: right;">Warsaw</td>
+		</tr>
+		<tr><!--   -->
+			<td>141</td>
+			<td style="font-weight: bold; font-size: 15px;">Portugal
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\pt.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/portugal-population/">10,247,605</a><br />91,590</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Lisbon</td>
+		</tr>
+		<tr><!--   -->
+			<td>142</td>
+			<td style="font-weight: bold; font-size: 15px;">Qatar
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Qatar" src="flag-icons-main\flag-icons-main\flags\4x3\qa.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/qatar-population/">2,716,391</a><br /></td>
+			<td style="text-align: right;">11,610</td>
+			<td style="text-align: right;">Doha</td>
+		</tr>
+		<tr><!--   -->
+			<td>143</td>
+			<td style="font-weight: bold; font-size: 15px;">Romania
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Romania" src="flag-icons-main\flag-icons-main\flags\4x3\ro.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/romania-population/">19,892,812</a><br /></td>
+			<td style="text-align: right;">230,170</td>
+			<td style="text-align: right;">Bucharest</td>
+		</tr>
+		<tr><!--   -->
+			<td>144</td>
+			<td style="font-weight: bold; font-size: 15px;">Russia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Russia" src="flag-icons-main\flag-icons-main\flags\4x3\ru.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/russia-population/">144,444,359</a><br /></td>
+			<td style="text-align: right;">16,376,870</td>
+			<td style="text-align: right;">Moscow</td>
+		</tr>
+		<tr><!--   -->
+			<td>145</td>
+			<td style="font-weight: bold; font-size: 15px;">Rwanda
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Rwanda" src="flag-icons-main\flag-icons-main\flags\4x3\rw.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/rwanda-population/">14,094,683</a><br /></td>
+			<td style="text-align: right;">24,670</td>
+			<td style="text-align: right;">Kigali</td>
+		</tr>
+		<tr><!--   -->
+			<td>146</td>
+			<td style="font-weight: bold; font-size: 15px;">Saint Kitts and Nevis
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\kn.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/saint-kitts-and-nevis-population/">47,755</a><br />260</td>
+			<td style="text-align: right;">East Caribbean dollar<br />XCD</td>
+			<td style="text-align: right;">Basseterre</td>
+		</tr>
+		<tr><!--   -->
+			<td>147</td>
+			<td style="font-weight: bold; font-size: 15px;">Saint Lucia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\lc.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/saint-lucia-population/">180,251</a><br />610</td>
+			<td style="text-align: right;">East Caribbean dollar<br />XCD</td>
+			<td style="text-align: right;">Castries</td>
+		</tr>
+		<tr><!--   -->
+			<td>148</td>
+			<td style="font-weight: bold; font-size: 15px;">Saint Vincent and the Grenadines
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\vc.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/saint-vincent-and-the-grenadines-population/">103,698</a><br />390</td>
+			<td style="text-align: right;">East Caribbean dollar<br />XCD</td>
+			<td style="text-align: right;">Kingstown</td>
+		</tr>
+		<tr><!--   -->
+			<td>149</td>
+			<td style="font-weight: bold; font-size: 15px;">Samoa
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\ws.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/samoa-population/">225,681</a><br /></td>
+			<td style="text-align: right;">2,830</td>
+			<td style="text-align: right;">Apia</td>
+		</tr>
+		<tr><!--   -->
+			<td>150</td>
+			<td style="font-weight: bold; font-size: 15px;">San Marino
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sm.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/san-marino-population/">33,642</a><br />60</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">San Marino</td>
+		</tr>
+		<tr><!--   -->
+			<td>151</td>
+			<td style="font-weight: bold; font-size: 15px;">Sao Tome and Principe
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\st.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/sao-tome-and-principe-population/">231,856</a><br /></td>
+			<td style="text-align: right;">960</td>
+			<td style="text-align: right;">São Tomé</td>
+		</tr>
+		<tr><!--   -->
+			<td>152</td>
+			<td style="font-weight: bold; font-size: 15px;">Saudi Arabia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sa.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/saudi-arabia-population/">36,947,025</a><br /></td>
+			<td style="text-align: right;">2,149,690</td>
+			<td style="text-align: right;">Riyadh</td>
+		</tr>
+		<tr><!--   -->
+			<td>153</td>
+			<td style="font-weight: bold; font-size: 15px;">Senegal
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sn.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/senegal-population/">17,763,163</a><br />192,530</td>
+			<td style="text-align: right;">West African CFA franc<br>XOF</td>
+			<td style="text-align: right;">Dakar</td>
+		</tr>
+		<tr><!--   -->
+			<td>154</td>
+			<td style="font-weight: bold; font-size: 15px;">Serbia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\rs.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/serbia-population/">7,149,077</a><br /></td>
+			<td style="text-align: right;">87,460</td>
+			<td style="text-align: right;">Belgrade</td>
+		</tr>
+		<tr><!--   -->
+			<td>155</td>
+			<td style="font-weight: bold; font-size: 15px;">Seychelles
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sc.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/seychelles-population/">107,660</a><br /></td>
+			<td style="text-align: right;">460</td>
+			<td style="text-align: right;">Victoria</td>
+		</tr>
+		<tr><!--   -->
+			<td>156</td>
+			<td style="font-weight: bold; font-size: 15px;">Sierra Leone
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sl.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/sierra-leone-population/">8,791,092</a><br /></td>
+			<td style="text-align: right;">72,180</td>
+			<td style="text-align: right;">Freetown</td>
+		</tr>
+		<tr><!--   -->
+			<td>157</td>
+			<td style="font-weight: bold; font-size: 15px;">Singapore
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sg.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/singapore-population/">6,014,723</a><br /></td>
+			<td style="text-align: right;">700</td>
+			<td style="text-align: right;">Singapore</td>
+		</tr>
+		<tr><!--   -->
+			<td>158</td>
+			<td style="font-weight: bold; font-size: 15px;">Slovakia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. Europe</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sk.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/slovakia-population/">5,795,199</a><br />48,088</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Bratislava</td>
+		</tr>
+		<tr><!--   -->
+			<td>159</td>
+			<td style="font-weight: bold; font-size: 15px;">Slovenia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\si.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/slovenia-population/">2,119,675</a><br />20,140</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Ljubljana</td>
+		</tr>
+		<tr><!--   -->
+			<td>160</td>
+			<td style="font-weight: bold; font-size: 15px;">Solomon Islands
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sb.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/solomon-islands-population/">740,424</a><br /></td>
+			<td style="text-align: right;">27,990</td>
+			<td style="text-align: right;">Honiara</td>
+		</tr>
+		<tr><!--   -->
+			<td>161</td>
+			<td style="font-weight: bold; font-size: 15px;">Somalia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\so.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/somalia-population/">18,143,378</a><br /></td>
+			<td style="text-align: right;">627,340</td>
+			<td style="text-align: right;">Mogadishu</td>
+		</tr>
+		<tr><!--   -->
+			<td>162</td>
+			<td style="font-weight: bold; font-size: 15px;">South Africa
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\za.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/south-africa-population/">60,414,495</a><br /></td>
+			<td style="text-align: right;">1,213,090</td>
+			<td style="text-align: right;">Pretoria (administrative)<br />Cape Town (legislative)<br />Bloemfontein (judicial)</td>
+		</tr>
+		<tr><!--   -->
+			<td>163</td>
+			<td style="font-weight: bold; font-size: 15px;">South Korea
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\kr.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/south-korea-population/">51,784,059</a><br /></td>
+			<td style="text-align: right;">97,230</td>
+			<td style="text-align: right;">Seoul</td>
+		</tr>
+		<tr><!--   -->
+			<td>164</td>
+			<td style="font-weight: bold; font-size: 15px;">South Sudan
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\ss.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/south-sudan-population/">11,088,796</a><br /></td>
+			<td style="text-align: right;">610,952</td>
+			<td style="text-align: right;">Juba</td>
+		</tr>
+		<tr><!--   -->
+			<td>165</td>
+			<td style="font-weight: bold; font-size: 15px;">Spain
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\es.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/spain-population/">47,519,628</a><br />498,800</td>
+			<td style="text-align: right;">Euro<br />EUR</td>
+			<td style="text-align: right;">Madrid</td>
+		</tr>
+		<tr><!--   -->
+			<td>166</td>
+			<td style="font-weight: bold; font-size: 15px;">Sri Lanka
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\lk.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/sri-lanka-population/">21,893,579</a><br /></td>
+			<td style="text-align: right;">62,710</td>
+			<td style="text-align: right;">Sri Jayawardenepura Kotte (legislative)<br />Colombo (executive and judicial)</td>
+		</tr>
+		<tr><!--   -->
+			<td>167</td>
+			<td style="font-weight: bold; font-size: 15px;">Sudan
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sd.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/sudan-population/">48,109,006</a><br /></td>
+			<td style="text-align: right;">1,765,048</td>
+			<td style="text-align: right;">Khartoum</td>
+		</tr>
+		<tr><!--   -->
+			<td>168</td>
+			<td style="font-weight: bold; font-size: 15px;">Suriname
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sr.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/suriname-population/">623,236</a><br /></td>
+			<td style="text-align: right;">156,000</td>
+			<td style="text-align: right;">Paramaribo</td>
+		</tr>
+		<tr><!--   -->
+			<td>169</td>
+			<td style="font-weight: bold; font-size: 15px;">Sweden
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\se.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/sweden-population/">10,612,086</a><br /></td>
+			<td style="text-align: right;">410,340</td>
+			<td style="text-align: right;">Stockholm</td>
+		</tr>
+		<tr><!--   -->
+			<td>170</td>
+			<td style="font-weight: bold; font-size: 15px;">Switzerland
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\ch.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/switzerland-population/">8,796,669</a><br /></td>
+			<td style="text-align: right;">39,516</td>
+			<td style="text-align: right;">Bern</td>
+		</tr>
+		<tr><!--   -->
+			<td>171</td>
+			<td style="font-weight: bold; font-size: 15px;">Syria
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\sy.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/syria-population/">23,227,014</a><br /></td>
+			<td style="text-align: right;">183,630</td>
+			<td style="text-align: right;">Damascus</td>
+		</tr>
+		<tr><!--   -->
+			<td>---</td>
+			<td style="font-weight: bold; font-size: 15px;">Taiwan
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Guatemala" src="flag-icons-main\flag-icons-main\flags\4x3\tw.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;">---</td>
+			<td style="text-align: right;">---</td>
+			<td style="text-align: right;">Taipei</td>
+		</tr>
+		<tr><!--   -->
+			<td>172</td>
+			<td style="font-weight: bold; font-size: 15px;">Tajikistan
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Tajikistan" src="flag-icons-main\flag-icons-main\flags\4x3\tj.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/tajikistan-population/">10,143,543</a><br /></td>
+			<td style="text-align: right;">139,960</td>
+			<td style="text-align: right;">Dushanbe</td>
+		</tr>
+		<tr><!--   -->
+			<td>173</td>
+			<td style="font-weight: bold; font-size: 15px;">Tanzania
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Tanzania" src="flag-icons-main\flag-icons-main\flags\4x3\tz.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/tanzania-population/">67,438,106</a><br /></td>
+			<td style="text-align: right;">885,800</td>
+			<td style="text-align: right;">Dodoma</td>
+		</tr>
+		<tr><!--   -->
+			<td>174</td>
+			<td style="font-weight: bold; font-size: 15px;">Thailand
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Thailand" src="flag-icons-main\flag-icons-main\flags\4x3\th.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/thailand-population/">71,801,279</a><br /></td>
+			<td style="text-align: right;">510,890</td>
+			<td style="text-align: right;">Bangkok</td>
+		</tr>
+		<tr><!--   -->
+			<td>175</td>
+			<td style="font-weight: bold; font-size: 15px;">Timor-Leste
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Timor-Leste" src="flag-icons-main\flag-icons-main\flags\4x3\tl.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/timor-leste-population/">1,360,596</a><br /></td>
+			<td style="text-align: right;">14,870</td>
+			<td style="text-align: right;">Dili</td>
+		</tr>
+		<tr><!--   -->
+			<td>176</td>
+			<td style="font-weight: bold; font-size: 15px;">Togo
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, West</em>
+				</div>
+			</td>
+			<td><img alt="Togo" src="flag-icons-main\flag-icons-main\flags\4x3\tg.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/togo-population/">9,053,799</a><br />54,390</td>
+			<td style="text-align: right;">West African CFA franc<br>XOF</td>
+			<td style="text-align: right;">Lomé</td>
+		</tr>
+		<tr><!-- Tonga  -->
+			<td>177</td>
+			<td style="font-weight: bold; font-size: 15px;">Tonga
+				<div style="color: grey; font-size: 12px;">
+					<em>Pacific, Oceania</em>
+				</div>
+			</td>
+			<td><img alt="Tonga" src="flag-icons-main\flag-icons-main\flags\4x3\to.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/tonga-population/">107,773</a><br /></td>
+			<td style="text-align: right;">720</td>
+			<td style="text-align: right;">Nukuʻalofa</td>
+		</tr>
+		<tr><!-- Trinidad and Tobago -->
+			<td>178</td>
+			<td style="font-weight: bold; font-size: 15px;">Trinidad and Tobago
+				<div style="color: grey; font-size: 12px;">
+					<em>S. America, Carribean</em>
+				</div>
+			</td>
+			<td><img alt="Trinidad and Tobago" src="flag-icons-main\flag-icons-main\flags\4x3\tt.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/trinidad-and-tobago-population/">1,534,937</a><br /></td>
+			<td style="text-align: right;">5,130</td>
+			<td style="text-align: right;">Port of Spain</td>
+		</tr>
+		<tr><!-- Tunis  -->
+			<td>179</td>
+			<td style="font-weight: bold; font-size: 15px;">Tunisia
+				<div style="color: grey; font-size: 12px;">
+					<em>Africa, North</em>
+				</div>
+			</td>
+			<td><img alt="Tunisia" src="flag-icons-main\flag-icons-main\flags\4x3\tn.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/tunisia-population/">12,458,223</a><br /></td>
+			<td style="text-align: right;">155,360</td>
+			<td style="text-align: right;">Tunis</td>
+		</tr>
+		<tr><!-- Turkey  -->
+			<td>180</td>
+			<td style="font-weight: bold; font-size: 15px;">Turkiye
+				<div style="color: grey; font-size: 12px;">
+					<em>Europe, East; Asia, West</em>
+				</div>
+			</td>
+			<td><img alt="Turkey" src="flag-icons-main\flag-icons-main\flags\4x3\tr.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/turkey-population/">85,816,199</a><br /></td>
+			<td style="text-align: right;">769,630</td>
+			<td style="text-align: right;">Ankara</td>
+		</tr>
+		<tr><!-- Turkmenistan  -->
+			<td>181</td>
+			<td style="font-weight: bold; font-size: 15px;">Turkmenistan
+				<div style="color: grey; font-size: 12px;">
+					<em>Asia, West</em>
+				</div>
+			</td>
+			<td><img alt="Turkmenistan" src="flag-icons-main\flag-icons-main\flags\4x3\tm.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/turkmenistan-population/">6,516,100</a><br /></td>
+			<td style="text-align: right;">469,930</td>
+			<td style="text-align: right;">Ashgabat</td>
+		</tr>
+		<tr><!--   -->
+			<td>182</td>
+			<td style="font-weight: bold; font-size: 15px;">Tuvalu
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Tuvalu" src="flag-icons-main\flag-icons-main\flags\4x3\tv.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/tuvalu-population/">11,396</a><br /></td>
+			<td style="text-align: right;">30</td>
+			<td style="text-align: right;">Funafuti</td>
+		</tr>
+		<tr><!--   -->
+			<td>183</td>
+			<td style="font-weight: bold; font-size: 15px;">Uganda
+				<div style="color: grey; font-size: 12px;">
+					<em>S. Africa</em>
+				</div>
+			</td>
+			<td><img alt="Uganda" src="flag-icons-main\flag-icons-main\flags\4x3\ug.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/uganda-population/">48,582,334</a><br /></td>
+			<td style="text-align: right;">199,810</td>
+			<td style="text-align: right;">Kampala</td>
+		</tr>
+		<tr><!--   -->
+			<td>184</td>
+			<td style="font-weight: bold; font-size: 15px;">Ukraine
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Ukraine" src="flag-icons-main\flag-icons-main\flags\4x3\ua.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/ukraine-population/">36,744,634</a><br /></td>
+			<td style="text-align: right;">579,320</td>
+			<td style="text-align: right;">Kyiv</td>
+		</tr>
+		<tr><!--   -->
+			<td>185</td>
+			<td style="font-weight: bold; font-size: 15px;">United Arab Emirates
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="United Arab Emirates" src="flag-icons-main\flag-icons-main\flags\4x3\ae.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/united-arab-emirates-population/">9,516,871</a><br /></td>
+			<td style="text-align: right;">83,600</td>
+			<td style="text-align: right;">Abu Dhabi</td>
+		</tr>
+		<tr><!--   -->
+			<td>186</td>
+			<td style="font-weight: bold; font-size: 15px;">United Kingdom
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="United Kingdom" src="flag-icons-main\flag-icons-main\flags\4x3\gb.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/uk-population/">67,736,802</a><br /></td>
+			<td style="text-align: right;">241,930</td>
+			<td style="text-align: right;">London</td>
+		</tr>
+		<tr><!--   -->
+			<td>187</td>
+			<td style="font-weight: bold; font-size: 15px;">United States of America
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="United States of America" src="flag-icons-main\flag-icons-main\flags\4x3\us.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/us-population/">339,996,563</a><br />9,147,420</td>
+			<td style="text-align: right;">United States dollar<br>USD</td>
+			<td style="text-align: right;">Washington, D.C.</td>
+		</tr>
+		<tr><!--   -->
+			<td>188</td>
+			<td style="font-weight: bold; font-size: 15px;">Uruguay
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Uruguay" src="flag-icons-main\flag-icons-main\flags\4x3\uy.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/uruguay-population/">3,423,108</a><br /></td>
+			<td style="text-align: right;">175,020</td>
+			<td style="text-align: right;">Montevideo</td>
+		</tr>
+		<tr><!--   -->
+			<td>189</td>
+			<td style="font-weight: bold; font-size: 15px;">Uzbekistan
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Uzbekistan" src="flag-icons-main\flag-icons-main\flags\4x3\uz.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/uzbekistan-population/">35,163,944</a><br /></td>
+			<td style="text-align: right;">425,400</td>
+			<td style="text-align: right;">Tashkent</td>
+		</tr>
+		<tr><!--   -->
+			<td>190</td>
+			<td style="font-weight: bold; font-size: 15px;">Vanuatu
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Vanuatu" src="flag-icons-main\flag-icons-main\flags\4x3\vu.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/vanuatu-population/">334,506</a><br /></td>
+			<td style="text-align: right;">12,190</td>
+			<td style="text-align: right;">Port Vila</td>
+		</tr>
+		<tr><!--   -->
+			<td>191</td>
+			<td style="font-weight: bold; font-size: 15px;">Venezuela
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Venezuela" src="flag-icons-main\flag-icons-main\flags\4x3\ve.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/venezuela-population/">28,838,499</a><br /></td>
+			<td style="text-align: right;">882,050</td>
+			<td style="text-align: right;">Caracas</td>
+		</tr>
+		<tr><!--   -->
+			<td>192</td>
+			<td style="font-weight: bold; font-size: 15px;">Vietnam
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Vietnam" src="flag-icons-main\flag-icons-main\flags\4x3\vn.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/vietnam-population/">98,858,950</a><br /></td>
+			<td style="text-align: right;">310,070</td>
+			<td style="text-align: right;">Hanoi</td>
+		</tr>
+		<tr><!--   -->
+			<td>193</td>
+			<td style="font-weight: bold; font-size: 15px;">Yemen
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Yemen" src="flag-icons-main\flag-icons-main\flags\4x3\ye.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/yemen-population/">34,449,825</a><br /></td>
+			<td style="text-align: right;">527,970</td>
+			<td style="text-align: right;">Sana'a</td>
+		</tr>
+		<tr><!--   -->
+			<td>194</td>
+			<td style="font-weight: bold; font-size: 15px;">Zambia
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Zambia" src="flag-icons-main\flag-icons-main\flags\4x3\zm.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/zambia-population/">20,569,737</a><br /></td>
+			<td style="text-align: right;">743,390</td>
+			<td style="text-align: right;">Lusaka</td>
+		</tr>
+		<tr><!--   -->
+			<td>195</td>
+			<td style="font-weight: bold; font-size: 15px;">Zimbabwe
+				<div style="color: grey; font-size: 12px;">
+					<em>C. America</em>
+				</div>
+			</td>
+			<td><img alt="Zimbabwe" src="flag-icons-main\flag-icons-main\flags\4x3\zw.svg" data-file-width="900" data-file-height="600"></td>
+			<td style="font-weight: bold; text-align: right;"><a href="https://www.worldometers.info/world-population/zimbabwe-population/">16,665,409</a><br />386,850</td>
+			<td style="text-align: right;">United States dollar<br>USD</td>
+			<td style="text-align: right;">Harare</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+</div>
+</div>
+</body>
+</html>

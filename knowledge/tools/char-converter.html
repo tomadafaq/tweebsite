@@ -12,6 +12,28 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 </head>
 <body>
+  <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-teal w3-card w3-left-align w3-large">
+    <span class="w3-xxlarge w3-right" style="margin-top:-7px;" onclick="darkModeFn();darkQuoteFn()"><em class="fa fa-adjust fa-fw w3-margin-top w3-right w3-text-white"></em></span>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-teal" href="javascript:void(0);" onclick="myFunction(), darkQuoteFn()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="../../about.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
+    <a href="../../whatwedo.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">What we do?</a>
+    <a href="../../portfolio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Portfolio</a>
+    <a href="../../contacts.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contacts</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <!-- <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a> -->
+    <a href="../../about.html" class="w3-bar-item w3-button w3-padding-large">About</a>
+    <a href="../../whatwedo.html" class="w3-bar-item w3-button w3-padding-large">What we do?</a>
+    <a href="../../portfolio.html" class="w3-bar-item w3-button w3-padding-large">Portfolio</a>
+    <a href="../../contacts.html" class="w3-bar-item w3-button w3-padding-large">Contacts</a>    
+  </div>
+</div>
+<br /><br />
     <h1>Char Converter: 2-way Cyrillic and Latin</h1>  
 
   <p>This is a concept page. It offers simple controls to type in or paste content and convert it using one of the two possible input options: </p>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character Converter: Latin to Cyrillic and Cyrillic to Latin</title>
+  <!-- The favicon -->
+  <link rel="icon" href="../../img/tw-favico.png" type="image/gif" sizes="32x32">
+  <link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">				
+  <!-- Ref to my CSS -->
+  <link rel="stylesheet" type="text/css" href="../widgets/styles.css" />
+  <!-- Link to W3.CSS stylesheet -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+</head>
+<body>
+    <h1>Char Converter: 2-way Cyrillic and Latin</h1>  
+
+  <p>This is a concept page. It offers simple controls to type in or paste content and convert it using one of the two possible input options: </p>
+  <ul>
+    <li>Convert to Latin text typed in Cyrillic using Bulgarian Phonetic Classic keyboard layout.</li>
+    <li>Convert to Cyrillic text typed in Latin: converts according to Bulgarian Phonetic Classic keyboard layout.</li>
+  </ul>
+
+  <p>Sometimes, writers may be too focused on our own thoughts; and not watch what we actually type on the screen. We might realize that we've been using a wrong language for our input several sentences in. This simple 2-way conversion tool is perfect for such use cases.</p>
+
+  <hr />
+
+  <h2>Latin to Cyrillic Converter</h2>
+  <span>
+  <input class="w3-border-lightgrey w3-round-medium" type="text" id="latin-input" placeholder="Enter or paste text consisting of Latin letters" style="width: 500px; min-height: 30px; margin-bottom: 1em; border: solid 2px lightgrey;">
+  </span>
+  <button type="button" id="convert-button">Convert to Cyrillic</button>
+  <br /><br />
+  <p>Result is read-only:</p>  
+
+  <div class="w3-border w3-round-medium" style="border: 5px solid grey; padding: 15px 5px 15px 5px; width: 500px; min-height: 30px; margin-bottom: 1em;" >
+    <output id="cyrillic-output" placeholder="Your converted text appears here..."></output>
+  </div>  
+      <!-- End Cyrillic Converter -->
+  
+    <br /><br />
+  
+  <h1>Cyrillic to Latin Converter</h1>
+
+  <input class="w3-border-lightgrey w3-round-medium" type="text" id="cyrillic-input" placeholder="Enter or paste text consisting of Cyrillic letters" style="width: 500px; min-height: 30px; margin-bottom: 1em; border: solid 2px lightgrey;">
+  <button type="button" id="convert-to-latin-button">Convert to Latin</button>
+  <br />
+  <br />
+  <p>Result is read-only:</p>  
+  <div class="w3-border w3-round-medium" style="border: 1px solid red; padding: 15px 5px 15px 5px; width: 500px; min-height: 30px; margin-bottom: 1em;" >
+    <output id="latin-output"></output>
+  </div>  
+  
+  
+  
+  <script>
+    var cyrillicInput = document.getElementById('cyrillic-input');
+    var latinOutput = document.getElementById('latin-output');
+    var convertToLatinButton = document.getElementById('convert-to-latin-button');
+
+    // Create a lookup table to map Cyrillic letters to Latin letters.
+    const cyrillicToLatinMap = {
+    'а': 'a',
+    'б': 'b',
+    'ц': 'c',
+    'д': 'd',
+    'е': 'e',
+    'ф': 'f',
+    'г': 'g',
+    'х': 'h',
+    'и': 'i',
+	  'й': 'j',
+	  'к': 'k',
+	  'л': 'l',
+	  'м': 'm',
+	  'н': 'n',
+	  'о': 'o',
+	  'п': 'p',
+	  'я': 'q',
+	  'р': 'r',
+	  'с': 's',
+	  'т': 't',
+	  'у': 'u',
+	  'ж': 'v',
+	  'в': 'w',
+	  'ь': 'x',
+	  'ъ': 'y',
+	  'з': 'z',
+	  'А': 'A',
+	  'Б': 'B',
+	  'Ц': 'C',
+    'Д': 'D',
+    'Е': 'E',
+    'Ф': 'F',
+    'Г': 'G',
+    'Х': 'H',
+    'И': 'I',
+	  'Й': 'J',
+	  'К': 'K',
+	  'Л': 'L',
+	  'М': 'M',
+	  'Н': 'N',
+	  'О': 'O',
+	  'П': 'P',
+	  'Я': 'Q',
+	  'Р': 'R',
+	  'С': 'S',
+	  'Т': 'T',
+	  'У': 'U',
+	  'Ж': 'V',
+	  'В': 'W',
+	  'ѝ': 'X',
+	  'Ъ': 'Y',
+	  'З': 'Z',
+    };
+
+    convertToLatinButton.addEventListener('click', function() {
+      // Get the Cyrillic letter or word from the input box.
+      var cyrillicText = cyrillicInput.value;
+
+      // Convert the Cyrillic letter or word to Latin using the lookup table.
+      var latinText = cyrillicText.split('').map(function(letter) {
+        return cyrillicToLatinMap[letter] || letter;
+      }).join('');
+
+      // Display the Latin letter or word in the output field.
+      latinOutput.textContent = latinText;
+    });
+  </script>
+  
+  <!-- End to Latin converter -->
+  
+
+  <script>
+    var latinInput = document.getElementById('latin-input');
+    var cyrillicOutput = document.getElementById('cyrillic-output');
+    var convertButton = document.getElementById('convert-button');
+
+    // Create a lookup table to map Latin letters to Cyrillic letters.
+    var latinToCyrillicMap = {
+      'a': 'а',
+      'b': 'б',
+      'c': 'ц',
+      'd': 'д',
+      'e': 'е',
+      'f': 'ф',
+	  'g': 'г',
+	  'h': 'х',
+	  'i': 'и',
+	  'j': 'й',
+	  'k': 'к',
+	  'l': 'л',
+	  'm': 'м',
+	  'n': 'н',
+	  'o': 'о',
+	  'p': 'п',
+	  'q': 'я',
+	  'r': 'р',
+	  's': 'с',
+	  't': 'т',
+	  'u': 'у',
+	  'v': 'ж',
+	  'w': 'в',
+	  'x': 'ь',
+	  'y': 'ъ',
+	  'z': 'з',
+	  '`': 'ч',
+	  '[': 'ш',
+	  ']': 'щ',
+	  '\\': 'ю',
+	  'A': 'А',
+    'B': 'Б',
+    'C': 'Ц',
+    'D': 'Д',
+    'E': 'Е',
+    'F': 'Ф',
+	  'G': 'Г',
+	  'H': 'Х',
+	  'I': 'И',
+	  'J': 'Й',
+	  'K': 'К',
+	  'L': 'Л',
+	  'M': 'М',
+	  'N': 'Н',
+	  'O': 'О',
+	  'P': 'П',
+	  'Q': 'Я',
+	  'R': 'Р',
+	  'S': 'С',
+	  'T': 'Т',
+	  'U': 'У',
+	  'V': 'Ж',
+	  'W': 'В',
+	  'X': 'ѝ',
+	  'Y': 'Ъ',
+	  'Z': 'З',	  
+	  '~': 'Ч',
+	  '{': 'Ш',
+	  '}': 'Щ',	  
+	  '|': 'Ю',	  
+    };
+
+    convertButton.addEventListener('click', function() {
+      // Get the Latin letter or word from the input box.
+      var latinText = latinInput.value;
+
+      // Convert the Latin letter or word to Cyrillic.
+      var cyrillicText = latinText.split('').map(function(letter) {
+        return latinToCyrillicMap[letter] || letter;
+      }).join('');
+
+      // Display the Cyrillic letter or word in the output field.
+      cyrillicOutput.textContent = cyrillicText;
+    });
+	
+/*	function cyrillicToLatin(cyrillicLetter) {
+  // Create a lookup table to map Cyrillic letters to Latin letters.
+  const cyrillicToLatinMap = {
+    'а': 'e',
+    'б': 'b',
+    'в': 'w',
+    'г': 'g',
+    'д': 'd',
+    'е': 'e'
+  };
+
+  // Convert the Cyrillic letter to Latin using the lookup table.
+  return cyrillicToLatinMap[cyrillicLetter] || cyrillicLetter; 
+}*/
+  </script>
+</body>
+</html>

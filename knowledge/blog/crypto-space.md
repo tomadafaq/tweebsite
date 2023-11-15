@@ -30,6 +30,11 @@ A "reliable" cryptocurrency project must clearly meet several criteria:
 
 There are other characteristics and the discussion is long. Like, really long. The key take-away here is that these criteria are the pillars of the concept of a truly *decentralized* financial model: which is intended to guarantee financial freedom of the network users.
 
+You can more from the whitepapers of the two most popular sufficiently decentralized protocols, as of Oct. 2023:
+
+* [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf)
+* [Ethereum whitepaper](https://ethereum.org/en/whitepaper/)
+
 However, one of the major caveats that crypto might fall into, is simply the current Internet. The widely used Web2, or as we call it, **the Internet**, is centralized and under the rule of governments and agencies across the world. This means that they can easily ban crypto trading, crypto mining, crypto transactions and not just that.
 
 So this is one of the reasons for Web3 to emerge as a concept of the decentralized internet. 
@@ -38,13 +43,21 @@ So this is one of the reasons for Web3 to emerge as a concept of the decentraliz
 
 Because 3 > 2 so it's better, duuh? 
 
-Seriously, the idea of a decentralized internet effectively means that no one owns the Internet, uhm, technically speaking. Some would argue that the current Internet belongs to no one but in truth, a few tech corporations own the largest chunk of all web activity.
+Seriously, the idea of a decentralized internet effectively means that no one owns the Internet, uhm, technically speaking. Some would argue that the current Internet belongs to no one but in truth, a few tech corporations own the largest chunk of all web activity. 
 
 ### What is Decentralized Internet?
 This is the conceptual part so just submerge yourself into it.
 In short, it operates on a blockchain network similar to crypto and NFTs. However, its unique aspect is that it supports all websites and applications, allowing both developers and end users to earn some money from it. ISPs responsibilities would be distributed across the nodes that operate the blockchain, which is natively hooked to the application layer. Thus exchange of data is attached to transactions and this adds incentivization to Web3. So, it is again servers and services but operations and payload are all paid for depending on the tokenomics model. 
 
 The end users would essentially have experience, similar to Web2: they will use web apps and access websites in a similar way. Depending on economics models in these apps, some users would be able to monetize on Web3.
+
+### How is Web3 involved with cryptocurrencies?
+
+Web3 does not just run on random servers. It operates on top of existing blockchain networks, such as Ethereum and Solana. Code of Web3 applications is deployed on the blockchain and it's the users who interact with that code via available user interfaces. 
+
+Web 3 projects are the dark side ot web.
+
+
 
 ### How is Web3 a cryptocurrency?
 
@@ -59,7 +72,7 @@ It is not the subject of this article to name specific projects, so we won't.
 The tools listed are just for references. This list is not comprehensive or complete in ay way.
 
 > **Disclaimer:** 
-> **techwriters.eu** is in no way associated with any of the projects listed herein. In no way do we recommend or endorse any of these tools over others. Basically, this is a selection of the list composed by the guys at  [CoinBureau](https://www.coinbureau.com/review/crypto-research-tools/).
+> **TechWriters.eu** is in no way associated with any of the projects listed herein. In no way do we recommend or endorse any of these tools over others. Basically, this is a selection of the list composed by the guys at  [CoinBureau](https://www.coinbureau.com/review/crypto-research-tools/).
 
 These tools are well-known within the community anyway. At some point we may add others for the sake of making this list more complete.
 

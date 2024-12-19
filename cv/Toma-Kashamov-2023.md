@@ -51,6 +51,12 @@ Stress survivor with curiosity beyond requirements, including interests in basic
 ## Experience
 ---
 
+
+**Senior Technical writer** - 01/2024 to 09/2024 in EnduroSat, Sofia, Bulgaria
+* Preparation of user manuals, data sheets and configuration sheets for EnduroSat's satellite hardware modules, all written in LaTex and maintained in Git repos
+* Preparation and editing of user manuals for EnduroSat's software platforms, all written in MkDocs (doc-as-code platform) and maintained in Git repos
+
+
 **Senior Technical & Content writer** - 04/2023 to 08/2023 in Next Basket, Sofia, Bulgaria
 * Preparation of Marketing & PR articles, preparation of Next Basket’s knowledgebase from scratch (on Hubspot), all maintained in a Git repo, using a structure prepared in MkDocs (doc-as-code platform) 
 * Setup of tech writers' work processes in Jira to fit the SCRUM/Agile approach for deliveries

@@ -15,14 +15,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Local JS -->
     <script src="main.js"></script>
+  
+    <style>
+      .headerURL {
+      a:link {
+        text-decoration: none;
+      }
+      
+      a:visited {
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      a:active {
+        text-decoration: underline;
+      }
+    }
+      </style>
+  
   </head>
 
   <body>
 
+    <!-- the STATIC header -->
+    <!-- <div class="w3-bar w3-flat-midnight-blue w3-large w3-mobile">
+      <a href="index.html" class="w3-bar-item w3-button w3-grey">Home</a>
+      <a href="whatwedo.html" class="w3-bar-item w3-button">Services</a>
+      <a href="portfolio.html" class="w3-bar-item w3-button">CVs and Portfolio</a>
+      <a href="contacts.html" class="w3-bar-item w3-button">Contacts</a>
+    </div>  -->
+
     <nav class="w3-sidenav w3-win8-steel w3-card-2 w3-xlarge" id="hide" style="display: none">      
       <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-right">&times;</a><br />
       <a href="index.html"><span style="padding-right: 0.7em">Home</span></a>
-      <!--<a href="about.html"><span style="padding-right: 0.7em;">About</span></a>--> 
       <a href="whatwedo.html"><span style="padding-right: 0.7em">Services</span></a>
       <a href="portfolio.html"><span style="padding-right: 0.7em">CVs and Portfolio</span></a>
       <a href="contacts.html"><span style="padding-right: 0.7em">Contacts</span></a>
@@ -32,44 +60,59 @@
     <header class="w3-container w3-flat-midnight-blue">
       <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
       <span class="w3-xxlarge w3-right" onclick="darkModeFn()"><em class="fa fa-adjust fa-fw w3-margin-top w3-right w3-text-white"></em></span>
-      <h1 class="w3-xxxlarge">Welcome to tech<span class="w3-text-aqua">writers</span>.eu!</h1>
-      <p class="w3-large w3-opacity-min">A personal website by Toma Kashamov, a senior technical writer.</p>      
+      <h1 class="w3-xxlarge">Welcome to tech<span class="w3-text-aqua">writers</span>.eu!</h1>
+      <p class="w3-large w3-opacity-min headerURL">A personal website by <a href="cv/w3css-cv-Toma-dark.html" target="_blank" class="w3-text-aqua"><b>Toma Kashamov</b></a>, a senior technical writer.</p>      
         <!-- <a href="https://www.w3schools.com/w3css/tryw3css_templates_teal.htm">Kitchen Sink theme</a> as provided by W3schools.</p> -->
     </header>
+
 
     <!-- CVs -->
     <div class="w3-row-padding">
       <div class="w3-quarter">
-        <h3>About</h3>
-        <p>
-          I am <a href="cv/w3css-cv-Toma-dark.html">Toma Kashamov</a>, a seasoned tech writer with a comprehensive skill set.</p>
-          
-        <!-- <h4>Purpose</h4>   -->
-          <p>I compose, edit, and maintain technical content, mostly for IT projects.</p>
-          <!-- Whether you call us technical writers or technical authors, or technical communicators, that's us. -->
-          <p>
-          My job is to innovate, improve and organize tech docs for any type of software and hardware components.</p>
+        <h2 >About me</h2>
+        <!-- class="w3-margin-top" -->
+        <p>I am Toma, an expert Technical and Content Writer, specialized in hardware and software technologies.</p>
+        <p>I have experience with blockchain and Web3, network security, Forex trading, online gaming, and VoIP. </p>        
+        <!-- <hr class="w3-opacity-max"/> -->        
+        <!-- <h3>About <a href="">techwriters.eu</a></h3>  
+        <p>Currently, this website serves as a location for my portfolio and showcases my web programming endeavors.</p>
+        <p>The few pages on <b>techwriters.eu</b> are prepared from scratch in HTML, using the W3.CSS framework.</p>
+        <p> I also played around with some CSS and a bit of Javascript.</p> -->
+        <!-- <p>Initially its purpose was to present a team of tech writers; however, with the rapid advancement of AI, this may never come to fruition.</p> -->
       </div>
+      
       <div class="w3-half">
-        <h3>Mission</h3>
-        <p>Currently, this website serves as a web location for my portfolio and eventually, my blog. I had a dream to form a team of esteemed writers; however, with AI evolving so fast these days, my dream may never come to fruition.</p>
-          <!-- iTechWriters.eu offer the entire spectrum of technical writing services. In the beginning,
-          <strong>techwriters.eu</strong> will hold a <a href="portfolio.html">simple portfolio</a> showcasing
-          some CVs, a <a href="knowledge/blog/blog-space.html">blog</a> and different approaches to technical docs with example doc portals. -->
+        <h2>About <a href="">techwriters.eu</a></h2>  
+        <p>Currently, this website serves as a location for my portfolio and showcases my playful attempts with basic web programming. In the future I hope to regularly start adding content to my blog.</p>
+        <p>The few pages on <b>techwriters.eu</b> are prepared from scratch in HTML, using the W3.CSS framework. I also played around with some CSS and a bit of Javascript.</p>
+
+
+        <!-- <h2>Mission</h2>
+        <p>Currently, this website serves as a web location for my portfolio and eventually, my blog.</p>
           
-          <!-- Eventually, we will demonstrate implementations some
-          doc portals. </p> -->
+        <p>I had a dream to form a team of esteemed writers; however, with AI evolving so fast these days, my dream may never come to fruition.</p>
         
         <p>I can work with any technology and system with your documentation. I have vast experience with any aspect of tech docs. I also consult on technical documentation strategy and content management.</p>
 
-        <p><a href="contacts.html">Contact me</a> with inquiries of request for quotes regarding your project</p>
+        <p><a href="contacts.html">Contact me</a> with inquiries of request for quotes regarding your project</p> -->
 
       </div>
       <div class="w3-quarter">
-        <h3>Benefits</h3>
-        <p>My mission is to make technical documentation better and adjust it to the processes of your organization! </p>
+   
+   
+        <!-- <h3>Expert Technical writing</h3> -->
+      
+        <span class="w3-tag w3-round w3-teal w3-margin-top w3-margin-left " style="padding:3px">
+          <span class="w3-tag w3-round w3-teal w3-border w3-border-white w3-xlarge"><h3 class="w3-xxlarge">Expert Technical writer</h3>
+            <span class="w3-xlarge w3-text-lime"><a href="contacts.html" style="text-decoration: none;">Contact me!</a><br /> </span> <br /> 
+          </span>          
+        </span>
+        <br />
+
+        
+        <!-- <p>My mission is to make technical documentation better and adjust it to the processes of your organization! </p>
         <p>If your project is too large, I can help recruit the workforce necessary to deliver.</p>
-        <p>Visit the <a href="whatwedo.html">Services</a> section to see details on available services.</p>
+        <p>Visit the <a href="whatwedo.html">Services</a> section to see details on available services.</p> -->
 
         <br />
       </div>
@@ -77,12 +120,18 @@
     <!-- End Div row-padding -->
     </div>
     
-    <div class="w3-container">
-
-      <img src="img/home-img-resized.jpg" alt="TechWriters.eu" class="w3-opacity-min resPic" style="max-width: 100%; height: auto;">
-      
+    <div class="w3-row">
+      <div class="w3-display-container">
+        <img src="img/home-img-resized.jpg" alt="TechWriters.eu" class="w3-image resPic">
     </div>
-    <br />
+    
+    </div>
+    <!-- <div class="w3-row">
+      <div class="w3-container">
+        <img src="img/home-img-resized.jpg" alt="TechWriters.eu" class="w3-opacity-min resPic w3-image" style="max-width: 100%; height: auto;">      
+      </div>
+    </div> -->
+    
     <!--the Footer-->
     <!-- <footer class="w3-container w3-light-blue">
   <p>Technical writers EU | 2023<p>
